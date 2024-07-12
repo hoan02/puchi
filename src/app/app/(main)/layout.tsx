@@ -1,21 +1,21 @@
-import {Metadata} from 'next';
-import {NextIntlClientProvider} from 'next-intl';
-import {getLocale, getMessages} from 'next-intl/server';
-import {ReactNode} from 'react';
-import AppNavigation from './AppNavigation';
-import AppNavigationLocaleSwitcher from './AppNavigationLocaleSwitcher';
-import Logout from './Logout';
-import Document from '@/components/Document';
+import { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
+import { ReactNode } from "react";
+import AppNavigation from "./AppNavigation";
+import AppNavigationLocaleSwitcher from "../AppNavigationLocaleSwitcher";
+import Logout from "../Logout";
+import Document from "@/components/Document";
 
 type Props = {
   children: ReactNode;
 };
 
 export const metadata: Metadata = {
-  title: 'next-intl-mixed-routing (app)'
+  title: "next-intl-mixed-routing (app)",
 };
 
-export default async function LocaleLayout({children}: Props) {
+export default async function LocaleLayout({ children }: Props) {
   const locale = await getLocale();
 
   // Providing all messages to the client
