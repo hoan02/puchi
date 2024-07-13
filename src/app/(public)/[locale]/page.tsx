@@ -1,7 +1,20 @@
-import {useTranslations} from 'next-intl';
-import PageTitle from '@/components/PageTitle';
+import Hero from "@/components/landing/Hero";
+import Languages from "@/components/landing/Languages";
+import Metrics from "@/components/landing/Metrics";
+import Fluency from "@/components/landing/Fluency";
+import Reasons from "@/components/landing/Reasons";
 
-export default function Index() {
-  const t = useTranslations('Index');
-  return <PageTitle>{t('title')}</PageTitle>;
-}
+const HomePage = () => {
+  return (
+    <>
+      <Hero />
+      <Languages />
+      <Metrics>
+        <Fluency />
+      </Metrics>
+      <Reasons />
+    </>
+  );
+};
+
+export default HomePage;

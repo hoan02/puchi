@@ -1,20 +1,19 @@
-import {Inter} from 'next/font/google';
-import {ReactNode} from 'react';
-import './globals.css';
+import { ReactNode } from "react";
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap'
-});
+import "@/styles/globals.css";
 
 type Props = {
   children: ReactNode;
   locale: string;
 };
 
-export default function Document({children, locale}: Props) {
+export default function Document({ children, locale }: Props) {
   return (
-    <html className={inter.className} lang={locale}>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className="relative scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-green-300"
+    >
       <body>{children}</body>
     </html>
   );

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import {useRouter} from 'next/navigation';
-import {useLocale} from 'next-intl';
-import updateLocale from './updateLocale';
-import {Locale} from '@/config';
+import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
+import updateLocale from "./updateLocale";
+import { Locale } from "@/lib/config";
 
 export default function AppNavigationLocaleSwitcher() {
   const router = useRouter();
@@ -24,12 +24,12 @@ export default function AppNavigationLocaleSwitcher() {
   );
 }
 
-function LocaleButton({locale}: {locale: Locale}) {
+function LocaleButton({ locale }: { locale: Locale }) {
   const curLocale = useLocale();
 
   return (
     <button
-      className={curLocale === locale ? 'underline' : undefined}
+      className={curLocale === locale ? "underline" : undefined}
       name="locale"
       type="submit"
       value={locale}

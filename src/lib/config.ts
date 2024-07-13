@@ -3,28 +3,30 @@ import { Pathnames, LocalePrefix } from "next-intl/routing";
 export const defaultLocale = "en" as const;
 export const locales = [
   "en",
-  // "cn",
+  "cn",
   "de",
-  // "es",
-  // "fr",
-  // "it",
-  // "jp",
-  // "kr",
-  // "ru",
+  "es",
+  "fr",
+  "it",
+  "jp",
+  "kr",
+  "ru",
 ] as const;
+
+export type Locale = (typeof locales)[number];
 
 export const pathnames: Pathnames<typeof locales> = {
   "/": "/",
   "/app/profile": {
     en: "/profile",
-    // cn: "/profile",
+    cn: "/profile",
     de: "/profile",
-    // es: "/profile",
-    // fr: "/profile",
-    // it: "/profile",
-    // jp: "/profile",
-    // kr: "/profile",
-    // ru: "/profile",
+    es: "/profile",
+    fr: "/profile",
+    it: "/profile",
+    jp: "/profile",
+    kr: "/profile",
+    ru: "/profile",
   },
 };
 

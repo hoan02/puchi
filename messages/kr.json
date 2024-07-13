@@ -1,0 +1,28 @@
+{
+  "Locale": {
+    "key": "ko",
+    "name": "한국어"
+  },
+  "Error": {
+    "description": "<p>죄송합니다. 오류가 발생했습니다.</p><p>방문 중인 페이지를 <retry>다시 로드</retry> 해보십시오.</p>",
+    "title": "문제가 발생했습니다!"
+  },
+  "Manifest": {
+    "name": "Puchi"
+  },
+  "NotFoundPage": {
+    "description": "브라우저 주소 표시줄을 다시 확인하거나 탐색을 사용하여 알려진 페이지로 이동하십시오.",
+    "title": "페이지를 찾을 수 없습니다"
+  },
+  "Navigation": {
+    "review": "리뷰",
+    "learn": "배우다",
+    "conversation": "대화",
+    "write": "쓰기",
+    "event": "이벤트"
+  },
+  "PublicLayout": {
+    "title": "puchi.io.vn - 베트남어를 마스터하세요. 이동 중에 배우십시오.",
+    "description": "puchi.io.vn은 베트남어 학습을 재미있고 매력적으로 만들기 위해 설계된 인터랙티브 플랫폼입니다. 포괄적이고 즐거운 언어 학습 경험을 위해 우리와 함께하십시오."
+  }
+}

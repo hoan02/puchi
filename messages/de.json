@@ -1,28 +1,28 @@
 {
-  "About": {
-    "title": "Über uns"
+  "Locale": {
+    "key": "de",
+    "name": "Deutsch"
   },
-  "App": {
-    "title": "Startseite"
+  "Error": {
+    "description": "<p>Leider ist ein Fehler aufgetreten.</p><p>Sie können versuchen, die <retry>Seite neu zu laden</retry>.</p>",
+    "title": "Etwas ist schief gelaufen!"
   },
-  "AppNavigation": {
-    "home": "Start",
-    "profile": "Profil"
+  "Manifest": {
+    "name": "Puchi"
   },
-  "Index": {
-    "title": "Start"
+  "NotFoundPage": {
+    "description": "Bitte überprüfen Sie die Adressleiste des Browsers oder verwenden Sie die Navigation, um zu einer bekannten Seite zu gelangen.",
+    "title": "Seite nicht gefunden"
   },
-  "Login": {
-    "label": "Anmelden →"
+  "Navigation": {
+    "review": "Überprüfung",
+    "learn": "Lernen",
+    "conversation": "Gespräch",
+    "write": "Schreiben",
+    "event": "Veranstaltung"
   },
-  "Logout": {
-    "label": "Abmelden →"
-  },
-  "PublicNavigation": {
-    "about": "Über uns",
-    "home": "Start"
-  },
-  "Profile": {
-    "title": "Profil"
+  "PublicLayout": {
+    "title": "puchi.io.vn - Beherrsche Vietnamesisch. Lerne unterwegs.",
+    "description": "puchi.io.vn ist eine interaktive Plattform, die darauf abzielt, das Lernen von Vietnamesisch unterhaltsam und ansprechend zu gestalten. Schließen Sie sich uns an für eine umfassende und angenehme Sprachlernerfahrung."
   }
 }

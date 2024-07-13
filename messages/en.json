@@ -1,28 +1,28 @@
 {
-  "About": {
-    "title": "About"
+  "Locale": {
+    "key": "en",
+    "name": "English"
   },
-  "App": {
-    "title": "Home"
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
   },
-  "AppNavigation": {
-    "home": "Home",
-    "profile": "Profile"
+  "Manifest": {
+    "name": "Puchi"
   },
-  "Index": {
-    "title": "Home"
+  "NotFoundPage": {
+    "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
+    "title": "Page not found"
   },
-  "Login": {
-    "label": "Login →"
+  "Navigation": {
+    "review": "Review",
+    "learn": "Learn",
+    "conversation": "Conversation",
+    "write": "Write",
+    "event": "Event"
   },
-  "Logout": {
-    "label": "Logout →"
-  },
-  "PublicNavigation": {
-    "about": "About",
-    "home": "Home"
-  },
-  "Profile": {
-    "title": "Profile"
+  "PublicLayout": {
+    "title": "puchi.io.vn - Master Vietnamese. Learn on the go.",
+    "description": "puchi.io.vn is an interactive platform designed to make learning Vietnamese fun and engaging. Join us for a comprehensive and enjoyable language learning experience."
   }
 }

@@ -1,0 +1,28 @@
+{
+  "Locale": {
+    "key": "es",
+    "name": "Español"
+  },
+  "Error": {
+    "description": "<p>Lamentablemente, hemos encontrado un error.</p><p>Puede intentar <retry>recargar la página</retry> que estaba visitando.</p>",
+    "title": "¡Algo salió mal!"
+  },
+  "Manifest": {
+    "name": "Puchi"
+  },
+  "NotFoundPage": {
+    "description": "Por favor, revise la barra de direcciones del navegador o use la navegación para ir a una página conocida.",
+    "title": "Página no encontrada"
+  },
+  "Navigation": {
+    "review": "Revisión",
+    "learn": "Aprender",
+    "conversation": "Conversación",
+    "write": "Escribir",
+    "event": "Evento"
+  },
+  "PublicLayout": {
+    "title": "puchi.io.vn - Domina el vietnamita. Aprende en movimiento.",
+    "description": "puchi.io.vn es una plataforma interactiva diseñada para hacer que aprender vietnamita sea divertido y atractivo. Únase a nosotros para una experiencia de aprendizaje de idiomas integral y agradable."
+  }
+}
