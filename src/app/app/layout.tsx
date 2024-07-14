@@ -1,43 +1,33 @@
-import ClerkLocalizationProvider from "@/components/providers/ClerkLocalizationProvider";
-import { cn } from "@/lib/utils";
-import { fonts } from "@/styles/fonts";
+import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
-import { ThemeProvider } from "next-themes";
-import "@/styles/globals.css";
+import { getMessages } from "next-intl/server";
+
+import ClerkLocalizationProvider from "@/components/providers/ClerkLocalizationProvider";
+import Document from "@/components/Document";
 
 export const metadata = {
   title: "",
   description: "",
 };
 
-export default async function AuthLayout({
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
+};
+
+export default async function LocaleLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const locale = await getLocale();
+  params: { locale },
+}: Props) {
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className="relative scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-green-300"
-    >
+    <Document locale={locale}>
       <ClerkLocalizationProvider locale={locale}>
-        <body className={cn(fonts, "flex flex-col font-sans")}>
-          <ThemeProvider
-            attribute="class"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <NextIntlClientProvider messages={messages}>
-              <main className="min-h-screen w-screen">{children}</main>;
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </body>
+        <NextIntlClientProvider messages={messages}>
+          <main className="min-h-screen w-screen">{children}</main>;
+        </NextIntlClientProvider>
       </ClerkLocalizationProvider>
-    </html>
+    </Document>
   );
 }

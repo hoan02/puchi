@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-import { defaultLocale, locales } from "@/lib/config";
+import { defaultLocale, locales, localePrefix, pathnames } from "@/lib/config";
 
 export default clerkMiddleware(
   (auth, req) => {
@@ -11,6 +11,8 @@ export default clerkMiddleware(
     const intlMiddleware = createMiddleware({
       locales,
       defaultLocale,
+      localePrefix,
+      pathnames,
     });
 
     if (isAppRoute) {

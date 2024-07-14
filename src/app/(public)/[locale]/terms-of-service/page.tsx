@@ -1,4 +1,12 @@
-const TermsOfServicePage = () => {
+import { unstable_setRequestLocale } from "next-intl/server";
+
+type Props = {
+  params: { locale: string };
+};
+
+const TermsOfServicePage = ({ params: { locale } }: Props) => {
+  unstable_setRequestLocale(locale);
+
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-4xl mx-auto bg-white p-8 shadow-md rounded-lg">

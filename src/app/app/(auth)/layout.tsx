@@ -14,10 +14,8 @@ export default async function AuthLayout({
   const locale = await getLocale();
 
   return (
-    <ClerkLocalizationProvider locale={locale}>
-      <main className="min-h-screen w-screen flex items-center">
-        <div className="m-auto py-10">{children}</div>
-      </main>
-    </ClerkLocalizationProvider>
+    <main className="min-h-screen w-screen flex items-center">
+      <div className="m-auto py-10">{children}</div>
+    </main>
   );
 }

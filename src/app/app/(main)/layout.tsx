@@ -21,17 +21,13 @@ export default async function AppLayout({ children }: Props) {
   const messages = await getMessages();
 
   return (
-    <Document locale={locale}>
-      <NextIntlClientProvider messages={messages}>
-        <div className="flex">
-          <div className="flex min-h-[100vh] w-[270px] shrink-0 flex-col justify-between bg-slate-100 p-8">
-            <div className="flex items-center justify-between">
-              <AppNavigationLocaleSwitcher />
-            </div>
-          </div>
-          <div className="p-8">{children}</div>
+    <div className="flex">
+      <div className="flex min-h-[100vh] w-[270px] shrink-0 flex-col justify-between bg-slate-100 p-8">
+        <div className="flex items-center justify-between">
+          <AppNavigationLocaleSwitcher />
         </div>
-      </NextIntlClientProvider>
-    </Document>
+      </div>
+      <div className="p-8">{children}</div>
+    </div>
   );
 }

@@ -1,14 +1,15 @@
 import { ReactNode } from "react";
-import { getMessages, getTranslations } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  unstable_setRequestLocale,
+} from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
+import Document from "@/components/Document";
 import { locales } from "@/lib/config";
-import ThemeProvider from "@/components/providers/ThemeProvider";
-import { NextIntlClientProvider } from "next-intl";
-import { cn } from "@/lib/utils";
-import { fonts } from "@/styles/fonts";
-import "@/styles/globals.css";
 
 type Props = {
   children: ReactNode;
@@ -34,25 +35,18 @@ export default async function PublicLayout({
   children,
   params: { locale },
 }: Props) {
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className="relative scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-green-300"
-    >
-      <body className={cn(fonts, "flex flex-col font-sans")}>
-        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
-          <NextIntlClientProvider messages={messages}>
-            <div className="container flex flex-grow flex-col px-0">
-              <Header />
-              <main className="flex flex-1 flex-col">{children}</main>
-              <Footer />
-            </div>
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <Document locale={locale}>
+      <NextIntlClientProvider messages={messages}>
+        <div className="container flex flex-grow flex-col px-0">
+          <Header />
+          <main className="flex flex-1 flex-col">{children}</main>
+          <Footer />
+        </div>
+      </NextIntlClientProvider>
+    </Document>
   );
 }
