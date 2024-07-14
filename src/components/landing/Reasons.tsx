@@ -1,8 +1,8 @@
+import { useTranslations } from "next-intl";
 import { Atom, Earth, Orbit, Trophy, Zap } from "lucide-react";
 
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
 import ReasonsItem from "@/components/landing/ReasonsItem";
-import { useTranslations } from "next-intl";
 
 const Reasons = () => {
   const t = useTranslations("Reasons");

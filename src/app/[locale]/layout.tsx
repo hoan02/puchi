@@ -10,6 +10,7 @@ import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import Document from "@/components/Document";
 import { locales } from "@/lib/config";
+import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
 
 type Props = {
   children: ReactNode;
@@ -41,11 +42,13 @@ export default async function PublicLayout({
   return (
     <Document locale={locale}>
       <NextIntlClientProvider messages={messages}>
-        <div className="container flex flex-grow flex-col px-0">
-          <Header />
-          <main className="flex flex-1 flex-col">{children}</main>
-          <Footer />
-        </div>
+        <LazyMotionProvider>
+          <div className="container flex flex-grow flex-col px-0">
+            <Header />
+            <main className="flex flex-1 flex-col">{children}</main>
+            <Footer />
+          </div>
+        </LazyMotionProvider>
       </NextIntlClientProvider>
     </Document>
   );

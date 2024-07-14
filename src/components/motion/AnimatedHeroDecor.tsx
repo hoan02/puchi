@@ -1,7 +1,9 @@
 "use client";
 
 import { type PropsWithChildren, useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useScroll, useSpring, useTransform } from "framer-motion";
+
+import { MotionDiv } from "@/components/motion";
 
 type AnimatedHeroDecorProps = {
   className?: string;
@@ -29,15 +31,15 @@ const AnimatedHeroDecor = ({
   const y = useTransform(scroll, [0, 1], ["0%", `-${move}%`]);
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, scale: 0.2 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ type: "spring", bounce: 0.4, duration: 1.2, delay }}
     >
-      <motion.div ref={ref} className={className} style={{ y, scale, opacity }}>
+      <MotionDiv ref={ref} className={className} style={{ y, scale, opacity }}>
         {children}
-      </motion.div>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   );
 };
 

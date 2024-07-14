@@ -1,8 +1,8 @@
 "use client";
 
 import type { PropsWithChildren } from "react";
-import { motion } from "framer-motion";
 
+import { MotionDiv } from "@/components/motion";
 import { cn } from "@/lib/utils";
 
 type AnimatedTitleProps = {
@@ -16,7 +16,7 @@ const AnimatedTitle = ({
   className,
 }: PropsWithChildren<AnimatedTitleProps>) => {
   return (
-    <motion.div
+    <MotionDiv
       initial={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
       whileInView={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
       viewport={{ once: true }}
@@ -27,7 +27,7 @@ const AnimatedTitle = ({
       )}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 };
 

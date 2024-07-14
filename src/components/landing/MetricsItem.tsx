@@ -2,7 +2,6 @@
 
 import { type PropsWithChildren, useRef } from "react";
 import {
-  motion,
   useScroll,
   useSpring,
   useTransform,
@@ -10,7 +9,10 @@ import {
 } from "framer-motion";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import AnimatedNumber, { type AnimatedNumberProps } from "@/components/motion/AnimatedNumber";
+import { MotionDiv } from "@/components/motion";
+import AnimatedNumber, {
+  type AnimatedNumberProps,
+} from "@/components/motion/AnimatedNumber";
 import { cn } from "@/lib/utils";
 
 type MetricsItemProps = {
@@ -57,8 +59,8 @@ const MetricsItem = ({
 
   const originTop = last && { className: "lg:origin-top" };
   return (
-    <motion.div ref={ref} {...originTop} style={{ scale, opacity }}>
-      <motion.div
+    <MotionDiv ref={ref} {...originTop} style={{ scale, opacity }}>
+      <MotionDiv
         {...originTop}
         style={{ scale: exitScale, opacity: exitOpacity }}
       >
@@ -79,8 +81,8 @@ const MetricsItem = ({
             </span>
           </span>
         </AspectRatio>
-      </motion.div>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   );
 };
 

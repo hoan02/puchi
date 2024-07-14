@@ -2,14 +2,15 @@
 
 import { type PropsWithChildren, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { useScroll, useTransform, useSpring, motion } from "framer-motion";
+import { useScroll, useTransform, useSpring } from "framer-motion";
 
-import MetricsItem from "@/components/landing/MetricsItem";
-import AnimatedTitle from "@/components/motion/AnimatedTitle";
 import FaceOneSVG from "@public/images/face-1.svg";
 import FaceTwoSVG from "@public/images/face-2.svg";
 import FaceThreeSVG from "@public/images/face-3.svg";
 import FaceFourSVG from "@public/images/face-4.svg";
+import { MotionDiv } from "@/components/motion";
+import MetricsItem from "@/components/landing/MetricsItem";
+import AnimatedTitle from "@/components/motion/AnimatedTitle";
 
 const Metrics = ({ children }: PropsWithChildren) => {
   const t = useTranslations("Metrics");
@@ -89,7 +90,7 @@ const Metrics = ({ children }: PropsWithChildren) => {
           <div className="">{children}</div>
         </li>
       </ul>
-      <motion.div
+      <MotionDiv
         className="bg-primary-dark fixed inset-0 -z-1"
         style={{ opacity }}
       />

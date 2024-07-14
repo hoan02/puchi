@@ -1,7 +1,8 @@
 "use client";
 
 import type { PropsWithChildren } from "react";
-import { motion, type Variant } from "framer-motion";
+import { type Variant } from "framer-motion";
+import { MotionLi, MotionUl } from "@/components/motion";
 
 type AnimatedListProps = {
   variants: {
@@ -17,7 +18,7 @@ export const AnimatedList = ({
   className,
 }: PropsWithChildren<AnimatedListProps>) => {
   return (
-    <motion.ul
+    <MotionUl
       className={className}
       variants={variants}
       initial="hidden"
@@ -25,7 +26,7 @@ export const AnimatedList = ({
       viewport={{ once: true }}
     >
       {children}
-    </motion.ul>
+    </MotionUl>
   );
 };
 
@@ -35,8 +36,8 @@ export function AnimatedListItem({
   className,
 }: PropsWithChildren<AnimatedListProps>) {
   return (
-    <motion.li className={className} variants={variants}>
+    <MotionLi className={className} variants={variants}>
       {children}
-    </motion.li>
+    </MotionLi>
   );
 }

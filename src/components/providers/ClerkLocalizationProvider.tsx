@@ -11,15 +11,12 @@ export const localizations: Localizations = {
   en: enUS,
 };
 
-type ClerkLocalizationProviderProps = {
+type Props = {
   children: React.ReactNode;
   locale: string;
 };
 
-const ClerkLocalizationProvider = ({
-  children,
-  locale,
-}: ClerkLocalizationProviderProps) => {
+const ClerkLocalizationProvider = ({ children, locale }: Props) => {
   return (
     <ClerkProvider
       appearance={{

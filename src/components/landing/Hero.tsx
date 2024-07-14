@@ -1,3 +1,5 @@
+"use client";
+
 import { Globe } from "lucide-react";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "next-intl";

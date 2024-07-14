@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { type PropsWithChildren, useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 
 import { type PillProps, Pill } from "@/components/ui/pill";
+import { MotionDiv } from "@/components/motion";
 
 export type PillVariant = PillProps["variant"];
 
@@ -23,8 +24,6 @@ const LanguagePill = ({
   flag,
   tilt = 0,
   variant = "primary",
-  className,
-  children,
 }: PropsWithChildren<LanguagePillProps>) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -44,7 +43,7 @@ const LanguagePill = ({
   const left = useTransform(progress, [0.2, 0.4], ["0%", `${50 * tilt}%`]);
 
   return (
-    <motion.div
+    <MotionDiv
       ref={ref}
       className="relative"
       style={{ opacity, scale, rotate, skewX, x, left }}
@@ -65,7 +64,7 @@ const LanguagePill = ({
           </span>
         </span>
       </Pill>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

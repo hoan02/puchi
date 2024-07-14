@@ -1,3 +1,5 @@
+"use client";
+
 import { Asterisk, ArrowDown } from "lucide-react";
 
 import { MotionDiv } from "@/components/motion";
