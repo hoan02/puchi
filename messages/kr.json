@@ -1,7 +1,8 @@
 {
   "Locale": {
     "key": "ko",
-    "name": "한국어"
+    "name": "한국어",
+    "siteLanguage": "사이트 언어"
   },
   "Error": {
     "description": "<p>죄송합니다. 오류가 발생했습니다.</p><p>방문 중인 페이지를 <retry>다시 로드</retry> 해보십시오.</p>",

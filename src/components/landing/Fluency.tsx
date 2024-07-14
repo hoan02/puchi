@@ -1,5 +1,7 @@
-import LanguagePill, { type PillVariant } from "@/components/landing/LanguagePill";
-import { languages } from "@/constants/languages";
+import LanguagePill, {
+  type PillVariant,
+} from "@/components/landing/LanguagePill";
+import { countries } from "@/constants/countries";
 
 const variants: NonNullable<PillVariant>[] = [
   "secondary",
@@ -14,12 +16,12 @@ const variants: NonNullable<PillVariant>[] = [
 const Fluency = () => {
   return (
     <ul className="flex flex-col gap-8 px-[5%] lg:px-0">
-      {languages.map(({ flag, title, word }, index) => (
-        <li key={title} className="flex justify-center">
+      {countries.map(([locale, country], index) => (
+        <li key={country.title} className="flex justify-center">
           <LanguagePill
-            title={title}
-            word={word}
-            flag={flag}
+            title={country.title}
+            word={country.word}
+            flag={country.flag}
             tilt={index % 2 === 0 ? -1 : 1}
             variant={variants[index % variants.length]}
           />

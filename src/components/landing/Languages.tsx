@@ -1,6 +1,7 @@
 "use client";
 
-import NextImage from "next/image";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 import type { Variants } from "framer-motion";
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -10,8 +11,7 @@ import {
   AnimatedList,
   AnimatedListItem,
 } from "@/components/motion/AnimatedList";
-
-import { languages } from "@/constants/languages";
+import { countries } from "@/constants/countries";
 
 const list = {
   visible: {
@@ -30,16 +30,14 @@ const item = {
 } satisfies Variants;
 
 const Languages = () => {
-  const clickChoseLocale = (locale: string) => {
-    alert(`You chose ${locale}`);
-  };
+  const t = useTranslations("Languages");
 
   return (
     <section className="space-y-20 px-4 py-8 sm:px-[10%] md:py-20">
       <AnimatedTitle>
         <h2 className="heading-section">
-          <span className="text-highlight-depth">Multi-language </span>
-          support website
+          <span className="text-highlight-depth">{t("multiLanguage")} </span>
+          {t("supportWebsite")}
         </h2>
       </AnimatedTitle>
       <div className="mx-auto max-w-screen-lg">
@@ -47,9 +45,9 @@ const Languages = () => {
           className="flex flex-wrap justify-center gap-2 text-center lg:gap-4"
           variants={list}
         >
-          {languages.map(({ flag, title }) => (
+          {countries.map(([locale, country]) => (
             <AnimatedListItem
-              key={title}
+              key={locale}
               className="basis-28 md:basis-40"
               variants={item}
             >
@@ -57,20 +55,19 @@ const Languages = () => {
                 variant="ghost"
                 size="lg"
                 className="size-full flex-wrap bg-secondary/10 px-0 pb-4 transition active:scale-95 lg:text-base"
-                onClick={() => clickChoseLocale(title)}
               >
                 <AspectRatio
                   ratio={3 / 2}
                   className="!top-1/2 mx-auto h-1/2 w-1/2 -translate-y-1/2"
                 >
-                  <NextImage
-                    src={`/images/flag/${flag}.svg`}
-                    alt={`${title} flag`}
+                  <Image
+                    src={`/images/flag/${country.flag}.svg`}
+                    alt={`${country.title} flag`}
                     fill
                     className="rounded-md object-cover"
                   />
                 </AspectRatio>
-                <span>{title}</span>
+                <span>{country.title}</span>
               </Button>
             </AnimatedListItem>
           ))}

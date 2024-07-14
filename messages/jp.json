@@ -1,7 +1,8 @@
 {
   "Locale": {
     "key": "ja",
-    "name": "日本語"
+    "name": "日本語",
+    "siteLanguage": "サイトの言語"
   },
   "Error": {
     "description": "<p>申し訳ありませんが、エラーが発生しました。</p><p>訪問していたページを <retry>再読み込み</retry> してみてください。</p>",

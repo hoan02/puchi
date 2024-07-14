@@ -1,38 +1,16 @@
 import { Globe } from "lucide-react";
 import type { Variants } from "framer-motion";
-// import {
-//   ClerkLoaded,
-//   SignedIn,
-//   SignedOut,
-//   SignInButton,
-//   SignUpButton,
-// } from "@clerk/nextjs";
+import { useTranslations } from "next-intl";
 
 import { Link } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/components/motion";
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
 import AnimatedHeroDecor from "@/components/motion/AnimatedHeroDecor";
-import {
-  AnimatedList,
-  AnimatedListItem,
-} from "@/components/motion/AnimatedList";
 import LangSVG from "@public/images/lang.svg";
 import VoiceSVG from "@public/images/voice.svg";
 import BulbSVG from "@public/images/bulb.svg";
 import RewardSVG from "@public/images/reward.svg";
-
-const list = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.08,
-      delayChildren: 0.5,
-    },
-  },
-  hidden: { opacity: 0 },
-} satisfies Variants;
 
 const item = {
   visible: { opacity: 1, y: "0%", scale: 1, transition: { duration: 0.45 } },
@@ -40,6 +18,8 @@ const item = {
 } satisfies Variants;
 
 const Hero = () => {
+  const t = useTranslations("Hero");
+
   return (
     <section className="relative overflow-hidden px-4 pb-8 pt-32 lg:pt-24">
       <AnimatedTitle>
@@ -77,7 +57,7 @@ const Hero = () => {
         >
           <Button variant="primary" size="lg" className="w-full" asChild>
             <Link href="app/learn" className="truncate">
-              Continue Learning
+              {t("continueLearning")}
             </Link>
           </Button>
         </MotionDiv>

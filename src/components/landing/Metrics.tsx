@@ -1,6 +1,7 @@
 "use client";
 
 import { type PropsWithChildren, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 
 import MetricsItem from "@/components/landing/MetricsItem";
@@ -11,6 +12,7 @@ import FaceThreeSVG from "@public/images/face-3.svg";
 import FaceFourSVG from "@public/images/face-4.svg";
 
 const Metrics = ({ children }: PropsWithChildren) => {
+  const t = useTranslations("Metrics");
   const ref = useRef<HTMLUListElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -25,9 +27,9 @@ const Metrics = ({ children }: PropsWithChildren) => {
     <section className="pb-8 pt-16 md:py-20">
       <AnimatedTitle>
         <h2 className="heading-section">
-          <span className="text-primary">Puchi</span> by the{" "}
+          <span className="text-primary">Puchi</span> {t("byThe")}{" "}
           <span className="text-secondary underline decoration-wavy underline-offset-4 md:underline-offset-8">
-            numbers
+            {t("numbers")}
           </span>
         </h2>
       </AnimatedTitle>
@@ -39,7 +41,7 @@ const Metrics = ({ children }: PropsWithChildren) => {
           <MetricsItem
             className="bg-primary-light"
             number={1000}
-            description="hours of fun content"
+            description={t("hoursOfFunContent")}
             offset={20}
             progress={scrollYProgress}
           >
@@ -50,7 +52,7 @@ const Metrics = ({ children }: PropsWithChildren) => {
           <MetricsItem
             className="bg-secondary"
             number={23}
-            description="language courses"
+            description={t("languageCourses")}
             offset={22.5}
             progress={scrollYProgress}
           >
@@ -63,7 +65,7 @@ const Metrics = ({ children }: PropsWithChildren) => {
             number={100}
             prefix="~"
             suffix="K"
-            description="users globally"
+            description={t("usersGlobally")}
             offset={25}
             progress={scrollYProgress}
           >
@@ -75,7 +77,7 @@ const Metrics = ({ children }: PropsWithChildren) => {
             className="bg-gradient-to-b from-primary to-primary-depth to-80%"
             number={93}
             suffix="%"
-            description="fluency in two months"
+            description={t("fluencyInTwoMonths")}
             offset={20}
             progress={scrollYProgress}
             last

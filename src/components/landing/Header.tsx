@@ -1,8 +1,9 @@
 import { Link } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
-import ThemeToggle from "@/components/custom-ui/toggle";
 import GithubSVG from "@public/images/github.svg";
 import LogoSVG from "@public/images/logo/logo.svg";
+import ThemeToggle from "../custom-ui/ThemeToggle";
+import NavigationLocaleSwitcherPublic from "../custom-ui/NavigationLocaleSwitcherPublic";
 
 const Header = () => {
   return (
@@ -32,7 +33,7 @@ const Header = () => {
           </span>
         </Link>
         <div className="flex flex-1 items-center justify-end">
-          <div>Chọn ngôn ngữ</div>
+          <NavigationLocaleSwitcherPublic />
         </div>
       </div>
       <div className="fixed bottom-4 right-4 z-50 sm:hidden">

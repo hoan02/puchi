@@ -1,6 +1,6 @@
 "use client";
 
-import NextImage from "next/image";
+import Image from "next/image";
 import { type PropsWithChildren, useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -56,7 +56,7 @@ const LanguagePill = ({
         <span className="capitalize">{word}</span>
         <span className="rounded-full bg-white p-[0.15em] shadow-md">
           <span className="relative block size-[1.1em] overflow-hidden rounded-inherit">
-            <NextImage
+            <Image
               src={`/images/flag/${flag}.svg`}
               alt={`${title} flag`}
               fill

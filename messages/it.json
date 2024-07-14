@@ -1,7 +1,8 @@
 {
   "Locale": {
     "key": "it",
-    "name": "Italiano"
+    "name": "Italiano",
+    "siteLanguage": "Lingua del sito"
   },
   "Error": {
     "description": "<p>Purtroppo abbiamo riscontrato un errore.</p><p>Puoi provare a <retry>ricaricare la pagina</retry> che stavi visitando.</p>",

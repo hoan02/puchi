@@ -1,6 +1,6 @@
 "use client";
 
-import NextImage from "next/image";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Link, usePathname } from "@/lib/navigation";
@@ -32,7 +32,7 @@ const SideMenuItem = ({ href, icon, label, hideLabel }: SideMenuItemProps) => {
           {...(hideLabel && { "aria-label": label })}
         >
           <span className="relative block size-10">
-            <NextImage
+            <Image
               className="object-cover"
               src={`/icons/${icon}.svg`}
               alt={`${label} icon`}

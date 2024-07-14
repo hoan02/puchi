@@ -1,7 +1,8 @@
 {
   "Locale": {
     "key": "zh",
-    "name": "中文"
+    "name": "中文",
+    "siteLanguage": "网站语言"
   },
   "Error": {
     "description": "<p>很抱歉，我们遇到了一些问题。</p><p>您可以尝试 <retry>重新加载页面</retry>。</p>",

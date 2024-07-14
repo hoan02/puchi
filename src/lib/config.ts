@@ -1,6 +1,7 @@
 import { Pathnames, LocalePrefix } from "next-intl/routing";
 
 export const defaultLocale = "en" as const;
+
 export const locales = [
   "en",
   "cn",
@@ -12,7 +13,6 @@ export const locales = [
   "kr",
   "ru",
 ] as const;
-
 export type Locale = (typeof locales)[number];
 
 export const pathnames: Pathnames<typeof locales> = {
@@ -27,6 +27,17 @@ export const pathnames: Pathnames<typeof locales> = {
     jp: "/profile",
     kr: "/profile",
     ru: "/profile",
+  },
+  "/app/learn": {
+    en: "/learn",
+    cn: "/learn",
+    de: "/learn",
+    es: "/learn",
+    fr: "/learn",
+    it: "/learn",
+    jp: "/learn",
+    kr: "/learn",
+    ru: "/learn",
   },
 };
 

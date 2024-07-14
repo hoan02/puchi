@@ -2,15 +2,19 @@ import { Atom, Earth, Orbit, Trophy, Zap } from "lucide-react";
 
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
 import ReasonsItem from "@/components/landing/ReasonsItem";
+import { useTranslations } from "next-intl";
 
 const Reasons = () => {
+  const t = useTranslations("Reasons");
+
   return (
     <section className="space-y-28 px-1 pb-1">
       <AnimatedTitle>
         <h2 className="heading-section">
-          The <span className="text-highlight-depth">future</span> of{" "}
+          {t("the")} <span className="text-highlight-depth">{t("future")}</span>{" "}
+          {t("of")}{" "}
           <span className="relative inline-block before:absolute before:-bottom-0 before:-right-[0.6em] before:-z-1 before:size-[1.375em] before:rounded-full before:bg-primary-light/60">
-            learning
+            {t("learning")}
           </span>
         </h2>
       </AnimatedTitle>

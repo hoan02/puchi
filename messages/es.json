@@ -1,7 +1,8 @@
 {
   "Locale": {
     "key": "es",
-    "name": "Español"
+    "name": "Español",
+    "siteLanguage": "Idioma del sitio"
   },
   "Error": {
     "description": "<p>Lamentablemente, hemos encontrado un error.</p><p>Puede intentar <retry>recargar la página</retry> que estaba visitando.</p>",

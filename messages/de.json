@@ -1,7 +1,8 @@
 {
   "Locale": {
     "key": "de",
-    "name": "Deutsch"
+    "name": "Deutsch",
+    "siteLanguage": "Sprache der Website"
   },
   "Error": {
     "description": "<p>Leider ist ein Fehler aufgetreten.</p><p>Sie können versuchen, die <retry>Seite neu zu laden</retry>.</p>",

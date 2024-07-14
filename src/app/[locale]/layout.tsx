@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
+import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
   getTranslations,
   unstable_setRequestLocale,
 } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
 
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";

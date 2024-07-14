@@ -1,7 +1,8 @@
 {
   "Locale": {
     "key": "en",
-    "name": "English"
+    "name": "English",
+    "siteLanguage": "Site language"
   },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
@@ -24,5 +25,32 @@
   "PublicLayout": {
     "title": "puchi.io.vn - Master Vietnamese. Learn on the go.",
     "description": "puchi.io.vn is an interactive platform designed to make learning Vietnamese fun and engaging. Join us for a comprehensive and enjoyable language learning experience."
+  },
+  "Hero": {
+    "continueLearning": "Continue Learning"
+  },
+  "Languages": {
+    "multiLanguage": "Multi-language",
+    "supportWebsite": "support website"
+  },
+  "Metrics": {
+    "byThe": "by the",
+    "numbers": "numbers",
+    "hoursOfFunContent": "hours of fun content",
+    "languageCourses": "language courses",
+    "usersGlobally": "users globally",
+    "fluencyInTwoMonths": "fluency in two months"
+  },
+  "Reasons": {
+    "the": "The",
+    "future": "future",
+    "of": "of",
+    "learning": "learning",
+    "items": [
+      "Learn 5x faster, 5x more fun",
+      "Custom lessons backed by science",
+      "Fun challenges to stay motivated",
+      "Use Puchi wherever you go"
+    ]
   }
 }

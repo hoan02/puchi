@@ -10,5 +10,5 @@ export default async function updateLocale(data: FormData) {
 
   // Note: We need to call `router.refresh()` additionally on
   // the client side for the client receive updated markup
-  revalidatePath("/app");
+  revalidatePath("/");
 }

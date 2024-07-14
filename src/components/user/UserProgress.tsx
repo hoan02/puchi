@@ -1,4 +1,4 @@
-import NextImage from "next/image";
+import Image from "next/image";
 import { InfinityIcon, Ban } from "lucide-react";
 
 import { Link } from "@/lib/navigation";
@@ -28,7 +28,7 @@ const UserProgress = async ({
       >
         <Link href="/courses">
           {altCode ? (
-            <NextImage
+            <Image
               src={`/images/flag/${altCode}.svg`}
               alt={title}
               width={32}
@@ -55,7 +55,7 @@ const UserProgress = async ({
         asChild
       >
         <Link href="/shop">
-          <NextImage
+          <Image
             src="/icons/xp.svg"
             alt="points"
             width={28}
@@ -73,7 +73,7 @@ const UserProgress = async ({
         asChild
       >
         <Link href="/shop">
-          <NextImage
+          <Image
             src="/icons/heart.svg"
             alt="hearts"
             width={22}
