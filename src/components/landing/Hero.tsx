@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { Globe } from "lucide-react";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-import { Link } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/components/motion";
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
@@ -58,7 +58,7 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
         >
           <Button variant="primary" size="lg" className="w-full" asChild>
-            <Link href="app/learn" className="truncate">
+            <Link href="/app" className="truncate">
               {t("continueLearning")}
             </Link>
           </Button>

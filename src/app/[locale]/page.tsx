@@ -1,10 +1,11 @@
+import dynamic from "next/dynamic";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-import Hero from "@/components/landing/Hero";
-import Languages from "@/components/landing/Languages";
-import Metrics from "@/components/landing/Metrics";
-import Fluency from "@/components/landing/Fluency";
-import Reasons from "@/components/landing/Reasons";
+const Hero = dynamic(() => import("@/components/landing/Hero"));
+const Languages = dynamic(() => import("@/components/landing/Languages"));
+const Metrics = dynamic(() => import("@/components/landing/Metrics"));
+const Fluency = dynamic(() => import("@/components/landing/Fluency"));
+const Reasons = dynamic(() => import("@/components/landing/Reasons"));
 
 type Props = {
   params: { locale: string };

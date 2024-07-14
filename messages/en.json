@@ -8,9 +8,6 @@
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"
   },
-  "Manifest": {
-    "name": "Puchi"
-  },
   "NotFoundPage": {
     "description": "Please double-check the browser address bar or use the navigation to go to a known page.",
     "title": "Page not found"
@@ -52,5 +49,10 @@
       "Fun challenges to stay motivated",
       "Use Puchi wherever you go"
     ]
+  },
+  "Footer": {
+    "startYourLanguageJourneyHere": "start your language journey here.",
+    "learnAnytimeLearnAnywhere": "learn anytime, learn anywhere.",
+    "start": "start"
   }
 }

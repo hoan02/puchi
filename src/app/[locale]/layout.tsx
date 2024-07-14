@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import dynamic from "next/dynamic";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -6,11 +7,12 @@ import {
   unstable_setRequestLocale,
 } from "next-intl/server";
 
-import Header from "@/components/landing/Header";
-import Footer from "@/components/landing/Footer";
 import Document from "@/components/Document";
 import { locales } from "@/lib/config";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
+
+const Header = dynamic(() => import("@/components/landing/Header"));
+const Footer = dynamic(() => import("@/components/landing/Footer"));
 
 type Props = {
   children: ReactNode;

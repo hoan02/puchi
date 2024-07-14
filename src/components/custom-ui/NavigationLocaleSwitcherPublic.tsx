@@ -12,7 +12,7 @@ const NavigationLocaleSwitcherPublic = () => {
   return (
     <div className="group">
       <div className="w-full p-2 cursor-pointer">
-        <span className="text-lg text-gray-400 font-semibold uppercase">
+        <span className="md:text-lg text-sm text-gray-400 font-semibold uppercase">
           {t("siteLanguage")}: {t("name")}
         </span>
       </div>

@@ -22,7 +22,7 @@ const Reasons = () => {
         <li>
           <ReasonsItem
             className="text-primary-dark bg-primary/80 hover:bg-primary/65 dark:hover:bg-primary"
-            reason="Learn 5x faster, 5x more fun"
+            reason={t.raw('items')[0]}
           >
             <Zap />
           </ReasonsItem>
@@ -30,7 +30,7 @@ const Reasons = () => {
         <li>
           <ReasonsItem
             className="bg-secondary/60 text-secondary-depth hover:bg-secondary/40 dark:bg-secondary/85 dark:hover:bg-secondary"
-            reason="Custom lessons backed by science"
+            reason={t.raw('items')[1]}
             delay={0.2}
           >
             <Atom />
@@ -38,8 +38,8 @@ const Reasons = () => {
         </li>
         <li>
           <ReasonsItem
-            reason="Fun challenges to stay motivated"
             className="bg-highlight/60 text-highlight-depth hover:bg-highlight/40 dark:bg-highlight/85 dark:hover:bg-highlight"
+            reason={t.raw('items')[2]}
             delay={0.3}
           >
             <Trophy />
@@ -47,8 +47,8 @@ const Reasons = () => {
         </li>
         <li>
           <ReasonsItem
-            reason="Use Puchi wherever you go"
             className="bg-primary-light/60 text-primary-depth hover:bg-primary-light/40 dark:hover:bg-primary-light"
+            reason={t.raw('items')[3]}
             delay={0.4}
           >
             <Earth />

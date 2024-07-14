@@ -8,9 +8,6 @@
     "description": "<p>Nous avons malheureusement rencontré une erreur.</p><p>Vous pouvez essayer de <retry>recharger la page</retry> que vous visitiez.</p>",
     "title": "Quelque chose s'est mal passé!"
   },
-  "Manifest": {
-    "name": "Puchi"
-  },
   "NotFoundPage": {
     "description": "Veuillez vérifier l'adresse du navigateur ou utiliser la navigation pour aller à une page connue.",
     "title": "Page non trouvée"
@@ -25,5 +22,37 @@
   "PublicLayout": {
     "title": "puchi.io.vn - Maîtrisez le vietnamien. Apprenez en déplacement.",
     "description": "puchi.io.vn est une plateforme interactive conçue pour rendre l'apprentissage du vietnamien amusant et engageant. Rejoignez-nous pour une expérience d'apprentissage de la langue complète et agréable."
+  },
+  "Hero": {
+    "continueLearning": "Continuer à apprendre"
+  },
+  "Languages": {
+    "multiLanguage": "Multilingue",
+    "supportWebsite": "site web de support"
+  },
+  "Metrics": {
+    "byThe": "par les",
+    "numbers": "chiffres",
+    "hoursOfFunContent": "heures de contenu amusant",
+    "languageCourses": "cours de langues",
+    "usersGlobally": "utilisateurs dans le monde",
+    "fluencyInTwoMonths": "fluidité en deux mois"
+  },
+  "Reasons": {
+    "the": "L'",
+    "future": "avenir",
+    "of": "de",
+    "learning": "l'apprentissage",
+    "items": [
+      "Apprenez 5 fois plus vite, 5 fois plus amusant",
+      "Leçons personnalisées basées sur la science",
+      "Défis amusants pour rester motivé",
+      "Utilisez Puchi où que vous alliez"
+    ]
+  },
+  "Footer": {
+    "startYourLanguageJourneyHere": "commencez votre voyage linguistique ici.",
+    "learnAnytimeLearnAnywhere": "apprenez à tout moment, apprenez partout.",
+    "start": "commencer"
   }
 }

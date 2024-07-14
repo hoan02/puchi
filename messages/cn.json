@@ -8,9 +8,6 @@
     "description": "<p>很抱歉，我们遇到了一些问题。</p><p>您可以尝试 <retry>重新加载页面</retry>。</p>",
     "title": "出了点问题！"
   },
-  "Manifest": {
-    "name": "Puchi"
-  },
   "NotFoundPage": {
     "description": "请仔细检查浏览器地址栏或使用导航前往已知页面。",
     "title": "页面未找到"
@@ -25,5 +22,37 @@
   "PublicLayout": {
     "title": "puchi.io.vn - 掌握越南语。随时随地学习。",
     "description": "puchi.io.vn 是一个互动平台，旨在使学习越南语变得有趣且引人入胜。加入我们，享受全面且愉快的语言学习体验。"
+  },
+  "Hero": {
+    "continueLearning": "继续学习"
+  },
+  "Languages": {
+    "multiLanguage": "多语言",
+    "supportWebsite": "支持网站"
+  },
+  "Metrics": {
+    "byThe": "由",
+    "numbers": "数字",
+    "hoursOfFunContent": "小时的有趣内容",
+    "languageCourses": "语言课程",
+    "usersGlobally": "全球用户",
+    "fluencyInTwoMonths": "两个月内流利"
+  },
+  "Reasons": {
+    "the": "未来",
+    "future": "的",
+    "of": "学习",
+    "learning": "",
+    "items": [
+      "学习速度快5倍，乐趣增加5倍",
+      "基于科学的自定义课程",
+      "有趣的挑战保持动力",
+      "无论你走到哪里都能使用Puchi"
+    ]
+  },
+  "Footer": {
+    "startYourLanguageJourneyHere": "从这里开始你的语言之旅。",
+    "learnAnytimeLearnAnywhere": "随时随地学习。",
+    "start": "开始"
   }
 }
