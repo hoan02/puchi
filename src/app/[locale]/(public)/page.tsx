@@ -6,6 +6,10 @@ const Metrics = dynamic(() => import("@/components/landing/Metrics"));
 const Fluency = dynamic(() => import("@/components/landing/Fluency"));
 const Reasons = dynamic(() => import("@/components/landing/Reasons"));
 
+type HomePageProps = {
+  params: Promise<{ locale: string }>;
+};
+
 const HomePage = () => {
   return (
     <>

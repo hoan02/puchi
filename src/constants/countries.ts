@@ -1,4 +1,4 @@
-import { Locale } from "@/lib/config";
+import { Locale } from "@/i18n/config";
 
 interface Country {
   title: string;

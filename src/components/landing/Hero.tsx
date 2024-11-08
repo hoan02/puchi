@@ -58,7 +58,7 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
         >
           <Button variant="primary" size="lg" className="w-full" asChild>
-            <Link href="/app" className="truncate">
+            <Link href="/learn" className="truncate">
               {t("continueLearning")}
             </Link>
           </Button>

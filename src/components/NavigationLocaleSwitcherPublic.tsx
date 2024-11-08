@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/lib/navigation";
+
+import { Link, usePathname } from "@/i18n/routing.public";
 import { countries } from "@/constants/countries";
 
 const NavigationLocaleSwitcherPublic = () => {
