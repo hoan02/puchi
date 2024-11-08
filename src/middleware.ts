@@ -16,7 +16,7 @@ export default clerkMiddleware(
   (auth, req) => {
     if (isProtectedRoute(req)) {
       req.headers.set("x-app-route", "true");
-      auth().protect();
+      auth.protect();
       return NextResponse.next({ headers: req.headers });
     }
 

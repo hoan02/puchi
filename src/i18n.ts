@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
 import { locales } from "@/lib/config";
-import { getUserLocale } from "./lib/db";
+import { getUserLocale } from "@/lib/db";
 
 async function getConfig(locale: string) {
   // Validate that the incoming `locale` parameter is valid
@@ -15,7 +15,7 @@ async function getConfig(locale: string) {
 
 export default getRequestConfig(async (params) => {
   // Read a hint that was set in the middleware
-  const isAppRoute = headers().get("x-app-route") === "true";
+  const isAppRoute = (await headers()).get("x-app-route") === "true";
 
   if (isAppRoute) {
     const locale = await getUserLocale();

@@ -2,8 +2,8 @@ import { Link } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
 import GithubSVG from "@public/images/github.svg";
 import LogoSVG from "@public/images/logo/logo.svg";
-import ThemeToggle from "../custom-ui/ThemeToggle";
-import NavigationLocaleSwitcherPublic from "../custom-ui/NavigationLocaleSwitcherPublic";
+import ThemeToggle from "@/components/ThemeToggle";
+import NavigationLocaleSwitcherPublic from "@/components/NavigationLocaleSwitcherPublic";
 
 const Header = () => {
   return (

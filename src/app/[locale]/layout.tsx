@@ -1,57 +1,69 @@
-import { ReactNode } from "react";
-import dynamic from "next/dynamic";
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
+import { getLocale, getMessages, setRequestLocale } from "next-intl/server";
 
-import Document from "@/components/Document";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 import { locales } from "@/lib/config";
+import { cn } from "@/lib/utils";
+import { fonts } from "@/styles/fonts";
+import Header from "@/components/landing/Header";
+import Footer from "@/components/landing/Footer";
+import "@/styles/globals.css";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
 
-const Header = dynamic(() => import("@/components/landing/Header"));
-const Footer = dynamic(() => import("@/components/landing/Footer"));
-
-type Props = {
-  children: ReactNode;
-  params: { locale: string };
+export const metadata: Metadata = {
+  generator: "Next.js",
+  applicationName: "Puchi",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Puchi", "learn vietnamese", "HoanIT", "hoan02"],
+  authors: [
+    { name: "Hoan" },
+    { name: "Hoan", url: "https://www.facebook.com/hoanit02" },
+  ],
+  creator: "Lê Công Hoan",
+  publisher: "Hoan IT",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
-  const t = await getTranslations({ locale, namespace: "PublicLayout" });
-
-  return {
-    title: t("title"),
-    description: t("description"),
-  };
-}
-
-export default async function PublicLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
-}: Props) {
-  unstable_setRequestLocale(locale);
+}: {
+  children: React.ReactNode;
+}) {
+  const locale = await getLocale();
   const messages = await getMessages();
+  setRequestLocale(locale);
 
   return (
-    <Document locale={locale}>
-      <NextIntlClientProvider messages={messages}>
-        <LazyMotionProvider>
-          <div className="container flex flex-grow flex-col px-0">
-            <Header />
-            <main className="flex flex-1 flex-col">{children}</main>
-            <Footer />
-          </div>
-        </LazyMotionProvider>
-      </NextIntlClientProvider>
-    </Document>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className="relative scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-green-300"
+    >
+      <body
+        className={cn(fonts, "flex flex-col font-sans")}
+        suppressHydrationWarning
+      >
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <LazyMotionProvider>
+              <div className="container flex flex-grow flex-col px-0">
+                <Header />
+                <main className="flex flex-1 flex-col">{children}</main>
+                <Footer />
+              </div>
+            </LazyMotionProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
