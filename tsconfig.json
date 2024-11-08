@@ -26,9 +26,10 @@
       ],
       "@public/*": [
         "./public/*"
-      ]
+      ],
     },
-    "strict": false
+    "strict": false,
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",

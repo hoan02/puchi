@@ -1,57 +1,65 @@
-import { ReactNode } from "react";
-import dynamic from "next/dynamic";
+import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 
-import Document from "@/components/Document";
-import { locales } from "@/lib/config";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
+import { cn } from "@/lib/utils";
+import { fonts } from "@/styles/fonts";
 
-const Header = dynamic(() => import("@/components/landing/Header"));
-const Footer = dynamic(() => import("@/components/landing/Footer"));
+import "@/styles/globals.css";
 
-type Props = {
-  children: ReactNode;
-  params: { locale: string };
+export const metadata: Metadata = {
+  generator: "Next.js",
+  applicationName: "Puchi",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Puchi", "learn vietnamese", "HoanIT", "hoan02"],
+  authors: [
+    { name: "Hoan" },
+    { name: "Hoan", url: "https://www.facebook.com/hoanit02" },
+  ],
+  creator: "Lê Công Hoan",
+  publisher: "Hoan IT",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+type RootLayoutProps = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
 
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
-  const t = await getTranslations({ locale, namespace: "PublicLayout" });
-
-  return {
-    title: t("title"),
-    description: t("description"),
-  };
-}
-
-export default async function PublicLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
-}: Props) {
-  unstable_setRequestLocale(locale);
+  params,
+}: RootLayoutProps) {
+  const { locale } = await params;
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
-    <Document locale={locale}>
-      <NextIntlClientProvider messages={messages}>
-        <LazyMotionProvider>
-          <div className="container flex flex-grow flex-col px-0">
-            <Header />
-            <main className="flex flex-1 flex-col">{children}</main>
-            <Footer />
-          </div>
-        </LazyMotionProvider>
-      </NextIntlClientProvider>
-    </Document>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className="relative scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-green-300"
+    >
+      <body
+        className={cn(fonts, "flex flex-col font-sans")}
+        suppressHydrationWarning
+      >
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <LazyMotionProvider>{children}</LazyMotionProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
