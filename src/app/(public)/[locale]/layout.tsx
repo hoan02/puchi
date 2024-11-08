@@ -1,6 +1,10 @@
-import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages, setRequestLocale } from "next-intl/server";
+import {
+  getLocale,
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import { locales } from "@/lib/config";
@@ -11,23 +15,14 @@ import Footer from "@/components/landing/Footer";
 import "@/styles/globals.css";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
 
-export const metadata: Metadata = {
-  generator: "Next.js",
-  applicationName: "Puchi",
-  referrer: "origin-when-cross-origin",
-  keywords: ["Puchi", "learn vietnamese", "HoanIT", "hoan02"],
-  authors: [
-    { name: "Hoan" },
-    { name: "Hoan", url: "https://www.facebook.com/hoanit02" },
-  ],
-  creator: "Lê Công Hoan",
-  publisher: "Hoan IT",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-};
+export async function generateMetadata() {
+  const t = await getTranslations("PublicLayout");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
