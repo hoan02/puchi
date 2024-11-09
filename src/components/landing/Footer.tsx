@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Asterisk, ArrowDown } from "lucide-react";
 
+import { Link } from "@/i18n/routing.public";
 import { MotionDiv } from "@/components/motion";
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
 import LogoSVG from "@public/images/logo/logo.svg";
@@ -110,7 +110,7 @@ const Footer = () => {
         </div>
 
         <div className="absolute right-1/4 top-1/3 md:right-1/3 md:top-[30%]">
-          <Link href="/app" className="rounded-full">
+          <Link href="/learn" className="rounded-full">
             <span className="sr-only">Start Learning</span>
             <StartCTA label={t("start")} />
           </Link>

@@ -33,21 +33,11 @@ export const localizations: Localizations = {
 type Props = {
   children: React.ReactNode;
   locale: string;
-  dynamic?: boolean; // Set to true to enable dynamic localization
 };
 
-// Static rendering by default
-// As a best practice, also consider wrapping <ClerkProvider dynamic> in <Suspense> to setup your application to take advantage of PPR.
-// https://clerk.com/docs/references/nextjs/rendering-modes
-
-const ClerkLocalizationProvider = ({
-  children,
-  locale,
-  dynamic = false,
-}: Props) => {
+const ClerkLocalizationProvider = ({ children, locale }: Props) => {
   return (
     <ClerkProvider
-      dynamic={dynamic}
       appearance={{
         variables: {
           fontSize: "0.875rem",
