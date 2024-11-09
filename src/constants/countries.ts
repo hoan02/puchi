@@ -27,14 +27,14 @@ const recordCountries: Record<Locale, Country> = {
     flag: "kr",
     word: "Annyeong",
   },
-  jp: {
+  ja: {
     title: "Japanese",
-    flag: "jp",
+    flag: "ja",
     word: "Konnichiwa",
   },
-  cn: {
+  zh: {
     title: "Mandarin",
-    flag: "cn",
+    flag: "zh",
     word: "Nǐ hǎo",
   },
   it: {
