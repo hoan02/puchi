@@ -1,4 +1,4 @@
-import { LocalePrefix } from "next-intl/routing";
+import { Pathnames, LocalePrefixMode } from "next-intl/routing";
 
 export const defaultLocale = "en" as const;
 
@@ -15,4 +15,4 @@ export const locales = [
 ] as const;
 export type Locale = (typeof locales)[number];
 
-export const localePrefix: LocalePrefix<typeof locales> = "always";
+export const localePrefix: LocalePrefixMode = "never";

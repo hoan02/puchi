@@ -78,6 +78,16 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          accent: "hsl(var(--sidebar-accent))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+        },
       },
       zIndex: {
         "1": "1",
@@ -93,21 +103,39 @@ const config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
         "footer-marquee": {
-          from: { transform: "translateX(0%)" },
-          to: { transform: "translateX(-100%)" },
+          from: {
+            transform: "translateX(0%)",
+          },
+          to: {
+            transform: "translateX(-100%)",
+          },
         },
         "footer-pulse": {
-          "0%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.1)" },
-          "100%": { transform: "scale(1)" },
+          "0%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
         },
       },
       animation: {

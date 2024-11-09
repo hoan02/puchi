@@ -2,15 +2,12 @@ import { NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-import { defaultLocale, locales, localePrefix } from "@/i18n/config";
+import { routing } from "./i18n/routing.public";
+import { localizedProtectedRoute } from "./constants/paths";
 
-const intlMiddleware = createMiddleware({
-  locales,
-  defaultLocale,
-  localePrefix,
-});
+const intlMiddleware = createMiddleware(routing);
 
-const isProtectedRoute = createRouteMatcher(["learn/(.*)"]);
+const isProtectedRoute = createRouteMatcher(localizedProtectedRoute);
 
 export default clerkMiddleware(
   async (auth, req) => {
@@ -21,16 +18,12 @@ export default clerkMiddleware(
     }
 
     return intlMiddleware(req);
-  }
-  // { debug: process.env.NODE_ENV === "development" }
+  },
+  { debug: process.env.NODE_ENV === "development" }
 );
 
 export const config = {
   matcher: [
-    // "/",
-    // "/:locale",
-    // "/learn/:path*",
-
     // Skip Next.js internals and all static files, unless found in search params
     "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
     // Always run for API routes
