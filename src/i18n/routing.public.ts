@@ -5,12 +5,12 @@ import { locales, localePrefix, defaultLocale } from "@/i18n/config";
 export const routing = defineRouting({
   locales,
   defaultLocale,
+  localePrefix,
 });
 
 export const { Link, getPathname, redirect, usePathname, useRouter } =
   createNavigation({
     locales,
-    // pathnames,
     localePrefix,
   });
 
