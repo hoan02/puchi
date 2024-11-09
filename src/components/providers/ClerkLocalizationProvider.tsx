@@ -1,4 +1,4 @@
-import { ClerkLoaded, ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import {
   enUS,
   zhCN,
@@ -57,7 +57,7 @@ const ClerkLocalizationProvider = ({
       }}
       localization={localizations[locale]}
     >
-      <ClerkLoaded>{children}</ClerkLoaded>
+      {children}
     </ClerkProvider>
   );
 };

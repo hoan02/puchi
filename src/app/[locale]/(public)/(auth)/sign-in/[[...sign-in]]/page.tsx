@@ -1,35 +1,20 @@
-import ClerkLocalizationProvider from "@/components/providers/ClerkLocalizationProvider";
 import { Skeleton } from "@/components/ui/skeleton";
-import { locales } from "@/i18n/config";
-import { ClerkLoaded, SignIn } from "@clerk/nextjs";
-import { Suspense } from "react";
+import { ClerkLoaded, ClerkLoading, SignIn } from "@clerk/nextjs";
 
 export const metadata = {
   title: "Đăng nhập",
   description: "Đăng nhập",
 };
 
-type Params = {
-  params: Promise<{ locale: string }>;
-};
-
-const SignInPage = async ({ params }: Params) => {
-  const { locale } = await params;
+const SignInPage = () => {
   return (
-    <Suspense fallback={<SkeletonCard />}>
-      <ClerkLocalizationProvider locale={locale}>
-        <ClerkLoaded>
-          <SignIn />
-        </ClerkLoaded>
-      </ClerkLocalizationProvider>
-    </Suspense>
-  );
-};
-
-const SkeletonCard = () => {
-  return (
-    <div className="h-[500px] w-[386px] rounded-xl">
-      <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+    <div className="min-h-[490.55px]">
+      <ClerkLoading>
+        <Skeleton className="h-[490.55px] w-[400px] rounded-xl" />
+      </ClerkLoading>
+      <ClerkLoaded>
+        <SignIn />
+      </ClerkLoaded>
     </div>
   );
 };
