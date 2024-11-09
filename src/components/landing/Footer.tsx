@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Asterisk, ArrowDown } from "lucide-react";
 
-import { Link } from "@/i18n/routing.public";
 import { MotionDiv } from "@/components/motion";
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
 import LogoSVG from "@public/images/logo/logo.svg";

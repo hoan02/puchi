@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { Globe } from "lucide-react";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-import { Link } from "@/i18n/routing.public";
 import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/components/motion";
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
