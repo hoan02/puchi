@@ -1,4 +1,4 @@
-FROM node:23-alpine3.19 AS builder
+FROM node:22-alpine3.19 AS builder
 
 # Declare build time environment variables (if needed)
 ARG MONGO_PASSWORD_ENV
@@ -10,9 +10,9 @@ ENV SITE_URL_ENV=$SITE_URL_ENV
 
 WORKDIR /app
 COPY package*.json ./
-RUN  npm install --production
+RUN  npm install
 COPY . .
 RUN npm run build
 
 EXPOSE 3000
-CMD ["npm","run", "start"]  # Start the Next.js server in production mode
+CMD ["npm", "run", "start"]  # Start the Next.js server in production mode
