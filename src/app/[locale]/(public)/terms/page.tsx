@@ -214,7 +214,7 @@ const TermsPage = () => {
                 directors, officers, employees, contractors, agents, suppliers,
                 licensors, successors and assigns, from and against any and all
                 losses, claims, causes of action, obligations, liabilities and
-                damages whatsoever, including attorneys' fees, arising out of or
+                damages whatsoever, including attorneys&apos; fees, arising out of or
                 relating to your access or use of the Service, any false
                 representation made to us (as part of these Terms and Conditions
                 or otherwise), your breach of any of these Terms and Conditions,

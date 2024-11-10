@@ -176,7 +176,7 @@ const GuidelinesPage = () => {
         </CardContent>
         <CardFooter>
           <p className="text-justify text-gray-700 dark:text-gray-300">
-            Please don't waste your time looking for loopholes; we will remove
+            Please don&apos;t waste your time looking for loopholes; we will remove
             any content that violates the spirit of these guidelines and you
             will risk losing partial or full access to Puchi without warning. By
             following these guidelines, we will all contribute to an interesting
