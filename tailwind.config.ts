@@ -22,6 +22,7 @@ const config = {
       fontFamily: {
         sans: "var(--font-gabarito)",
         display: "var(--font-capriola)",
+        din: "var(--font-din)",
       },
       colors: {
         border: "hsl(var(--border))",
