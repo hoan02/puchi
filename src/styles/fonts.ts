@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 const capriola = Capriola({
   variable: "--font-capriola",
   subsets: ["latin"],
+  display: "swap",
   weight: ["400"],
 });
 
@@ -17,6 +18,7 @@ const gabarito = Gabarito({
 const din = localFont({
   src: "../../public/fonts/DINRoundPro-Medi.woff2",
   variable: "--font-din",
+  display: "swap",
   weight: "400",
 });
 
