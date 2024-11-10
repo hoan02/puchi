@@ -158,7 +158,7 @@ const TermsPage = () => {
                 a country or territory that is the target of comprehensive U.S.
                 economic or trade sanctions (i.e., an embargo); (2) identified
                 on a list of prohibited or restricted persons, such as the U.S.
-                Treasury Department’s List of Specially Designated Nationals and
+                Treasury Department&apos;s List of Specially Designated Nationals and
                 Blocked Persons; or (3) otherwise the target of U.S. sanctions.
               </p>
             </li>
@@ -191,10 +191,10 @@ const TermsPage = () => {
                 threatening, harassing, hateful, offensive, or otherwise
                 violates any law or infringes upon the right of any third party
                 (including copyright, trademark, privacy, publicity, or other
-                personal or proprietary rights); (ii) in Puchi’s sole judgment,
+                personal or proprietary rights); (ii) in Puchi&apos;s sole judgment,
                 is objectionable, restricts or inhibits any other person from
                 using the Service, or may expose Puchi or its users to any harm
-                or liability of any kind; or (iii) violates Puchi’s{" "}
+                or liability of any kind; or (iii) violates Puchi&apos;s{" "}
                 <Link
                   href="/guidelines"
                   className="underline underline-offset-1"
