@@ -1,11 +1,16 @@
 // @ts-check
-const withNextIntl = require('next-intl/plugin')();
+const withNextIntl = require("next-intl/plugin")();
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
 /** @type {import('next').NextConfig} */
 const config = {
   webpack(config) {
     // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'))
+    const fileLoaderRule = config.module.rules.find((rule) =>
+      rule.test?.test?.(".svg")
+    );
 
     config.module.rules.push(
       // Reapply the existing rule, but only for svg imports ending in ?url
@@ -21,32 +26,33 @@ const config = {
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
         use: [
           {
-            loader: '@svgr/webpack',
+            loader: "@svgr/webpack",
             options: {
               svgProps: {
-                fill: 'currentcolor',
+                fill: "currentcolor",
               },
             },
           },
         ],
       }
-    )
+    );
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
-    fileLoaderRule.exclude = /\.svg$/i
+    fileLoaderRule.exclude = /\.svg$/i;
 
-    return config
+    return config;
   },
 
   // ...other config
   experimental: {
     typedRoutes: true,
+    bundlePagesRouterDependencies: true,
   },
   logging: {
     fetches: {
       fullUrl: true,
     },
   },
-}
+};
 
-module.exports = withNextIntl(config);
+module.exports = withBundleAnalyzer(withNextIntl(config));
