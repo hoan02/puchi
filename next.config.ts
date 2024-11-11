@@ -45,8 +45,7 @@ const config = {
 
   // ...other config
   experimental: {
-    typedRoutes: true,
-    bundlePagesRouterDependencies: true,
+    // typedRoutes: true,
   },
   logging: {
     fetches: {
