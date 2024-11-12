@@ -16,7 +16,7 @@ export default async function ProtectedLayout({
     <ClerkLocalizationProvider locale={locale}>
       <div className="flex flex-col sm:flex-row min-h-screen">
         <SidebarLeft />
-        <main className="flex-1 bg-white">{children}</main>
+        <main className="flex-1">{children}</main>
         <BottomNavBar />
       </div>
     </ClerkLocalizationProvider>
