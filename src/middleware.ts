@@ -3,11 +3,11 @@ import createMiddleware from "next-intl/middleware";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 import { routing } from "./i18n/routing.public";
-import { localizedProtectedRoute } from "./constants/paths";
+import { protectedRoute } from "./constants/paths";
 
 const intlMiddleware = createMiddleware(routing);
 
-const isProtectedRoute = createRouteMatcher(localizedProtectedRoute);
+const isProtectedRoute = createRouteMatcher(protectedRoute);
 
 export default clerkMiddleware(
   async (auth, req) => {
