@@ -1,21 +1,19 @@
+import LearnContainer from "@/components/learn/LearnContainer";
 import SectionInfo from "@/components/SectionInfo";
-import { Card, CardContent } from "@/components/ui/card";
 
 const LearnPage = () => {
   return (
-    <div className="p-4 gap-4 flex max-md:flex-col">
-      <div className="w-full md:hidden">
-        <SectionInfo />
+    <div className="relative">
+      <div className="fixed top-0 left-0 right-0 sm:left-[84px] lg:left-60 h-28 md:h-20 border-b-2 bg-background">
+        <div className="w-full flex md:flex-row max-md:flex-col p-2 md:p-4">
+          <div className="flex-1 md:mr-4 max-md:order-2">bài 1</div>
+          <div className="w-full md:w-96 max-md:w-full max-md:order-1">
+            <SectionInfo />
+          </div>
+        </div>
       </div>
-      <div className="flex-1">learn content</div>
-      <div className="w-96 hidden md:flex flex-col gap-4">
-        <SectionInfo />
-        <Card className="py-4">
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-        </Card>
-      </div>
+
+      <LearnContainer />
     </div>
   );
 };

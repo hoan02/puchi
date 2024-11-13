@@ -1,7 +1,23 @@
-import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
+import { SignOutButton } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 
-const SectionInfo = () => {
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { Link } from "@/i18n/routing.public";
+
+const SectionInfo = async () => {
+  const user = await currentUser();
+  const avt = user.imageUrl;
+  const userFullName = user.fullName;
+
   const heart = "5";
   const gem = "10";
   const streak = "3";
@@ -24,7 +40,41 @@ const SectionInfo = () => {
       </div>
 
       <div className="flex items-center w-12">
-        <UserButton />
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Avatar>
+              <AvatarImage src={avt} />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="mr-6">
+            <DropdownMenuLabel>
+              <span className="text-green-500 font-bold">{userFullName}</span>
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Link
+                href="/profile"
+                className="text-sm font-medium text-foreground"
+              >
+                Profile
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link
+                href="/settings"
+                className="text-sm font-medium text-foreground"
+              >
+                Settings
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <SignOutButton>
+                <span className="text-red-500 cursor-pointer">Logout</span>
+              </SignOutButton>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );

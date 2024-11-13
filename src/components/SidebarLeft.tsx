@@ -11,7 +11,7 @@ const SidebarLeft = () => {
   const pathname = usePathname();
 
   return (
-    <div className="font-din hidden sm:flex sm:w-[84px] lg:w-60 p-4 flex-col items-center lg:items-start space-y-4 border-r-2">
+    <div className="fixed top-0 left-0 h-full font-din hidden sm:flex sm:w-[84px] lg:w-60 p-4 flex-col items-center lg:items-start space-y-4 border-r-2">
       {/* Logo at the top */}
       <Link
         href="/"

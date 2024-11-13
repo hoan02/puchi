@@ -10,7 +10,7 @@ const BottomNavBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="sm:hidden border-t-2 w-full py-2 sm:py-4 flex justify-around">
+    <div className="sticky bottom-0 bg-background sm:hidden border-t-2 w-full py-2 sm:py-4 flex justify-around">
       {navigationList.map((item) => {
         const isActive = pathname.split("/")[1] === item.slug;
         return (

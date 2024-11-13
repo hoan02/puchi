@@ -19,7 +19,7 @@ const useThemeToggle = () => {
     setHydrated(true);
   }, []);
 
-  return { isDark, toggle, hydrated, theme: resolvedTheme };
+  return { isDark, toggle, hydrated, setTheme, theme: resolvedTheme };
 };
 
 export default useThemeToggle;
