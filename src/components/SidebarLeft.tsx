@@ -2,17 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { UserButton } from "@clerk/nextjs";
 
 import LogoSVG from "@public/images/logo/logo.svg";
+import { usePathname } from "@/i18n/routing.public";
 import { navigationList } from "@/constants/navigation";
 
 const SidebarLeft = () => {
   const pathname = usePathname();
 
   return (
-    <div className="font-din hidden sm:flex sm:w-[84px] lg:w-56 p-4 flex-col items-center lg:items-start space-y-4 border-r-2">
+    <div className="font-din hidden sm:flex sm:w-[84px] lg:w-60 p-4 flex-col items-center lg:items-start space-y-4 border-r-2">
       {/* Logo at the top */}
       <Link
         href="/"
@@ -28,7 +27,7 @@ const SidebarLeft = () => {
       {/* Sidebar content */}
       <div className="flex-1 flex flex-col items-center lg:items-start gap-2 w-full">
         {navigationList.map((item) => {
-          const isActive = pathname === `/${item.slug}`;
+          const isActive = pathname.split("/")[1] === item.slug;
           return (
             <div
               key={item.slug}
@@ -58,7 +57,6 @@ const SidebarLeft = () => {
 
       {/* Bottom section */}
       <div className="w-full mt-auto p-2">
-        <UserButton />
         <span></span>
       </div>
     </div>
