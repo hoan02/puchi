@@ -47,30 +47,24 @@ const SectionInfo = async () => {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="mr-6">
+          <DropdownMenuContent className="mr-4">
             <DropdownMenuLabel>
-              <span className="text-green-500 font-bold">{userFullName}</span>
+              <span className="text-green-500 text-base font-bold">{userFullName}</span>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link
-                href="/profile"
-                className="text-sm font-medium text-foreground"
-              >
+              <Link href="/profile" className="text-base">
                 Profile
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link
-                href="/settings"
-                className="text-sm font-medium text-foreground"
-              >
+              <Link href="/settings" className="text-base">
                 Settings
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <SignOutButton>
-                <span className="text-red-500 cursor-pointer">Logout</span>
+                <span className="text-base text-red-500 cursor-pointer">Logout</span>
               </SignOutButton>
             </DropdownMenuItem>
           </DropdownMenuContent>
