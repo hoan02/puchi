@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { navigationList } from "@/constants/navigation";
-import { usePathname } from "@/i18n/routing.public";
+import { Link, usePathname } from "@/i18n/routing";
 
 const BottomNavBar = () => {
   const pathname = usePathname();

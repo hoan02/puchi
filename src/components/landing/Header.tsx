@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/routing.public";
+import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import GithubSVG from "@public/images/github.svg";
 import LogoSVG from "@public/images/logo/logo.svg";

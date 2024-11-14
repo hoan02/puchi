@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Globe } from "lucide-react";
 import type { Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -11,6 +10,7 @@ import LangSVG from "@public/images/lang.svg";
 import VoiceSVG from "@public/images/voice.svg";
 import BulbSVG from "@public/images/bulb.svg";
 import RewardSVG from "@public/images/reward.svg";
+import { Link } from "@/i18n/routing";
 
 const item = {
   visible: { opacity: 1, y: "0%", scale: 1, transition: { duration: 0.45 } },

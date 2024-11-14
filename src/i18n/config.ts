@@ -13,6 +13,11 @@ export const locales = [
   "kr",
   "ru",
 ] as const;
+
+export const pathnames: Pathnames<typeof locales> = {
+  "/settings": "/settings/account",
+};
+
 export type Locale = (typeof locales)[number];
 
 export const localePrefix: LocalePrefixMode = "always";

@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import LogoSVG from "@public/images/logo/logo.svg";
-import { usePathname } from "@/i18n/routing.public";
+import { Link, usePathname } from "@/i18n/routing";
 import { navigationList } from "@/constants/navigation";
 
 const SidebarLeft = () => {
@@ -14,7 +13,7 @@ const SidebarLeft = () => {
     <div className="fixed top-0 left-0 h-full font-din hidden sm:flex sm:w-[84px] lg:w-60 p-4 flex-col items-center lg:items-start space-y-4 border-r-2">
       {/* Logo at the top */}
       <Link
-        href="/"
+        href="/learn"
         className="w-full py-2 px-4 max-lg:p-0 focus-visible group flex items-center gap-4 text-2xl sm:text-3xl lg:text-4xl"
         title="Puchi app"
       >

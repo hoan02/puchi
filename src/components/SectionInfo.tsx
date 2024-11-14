@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { Link } from "@/i18n/routing.public";
+import { Link } from "@/i18n/routing";
 
 const SectionInfo = async () => {
   const user = await currentUser();
@@ -49,7 +49,9 @@ const SectionInfo = async () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="mr-4">
             <DropdownMenuLabel>
-              <span className="text-green-500 text-base font-bold">{userFullName}</span>
+              <span className="text-green-500 text-base font-bold">
+                {userFullName}
+              </span>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
@@ -64,7 +66,9 @@ const SectionInfo = async () => {
             </DropdownMenuItem>
             <DropdownMenuItem>
               <SignOutButton>
-                <span className="text-base text-red-500 cursor-pointer">Logout</span>
+                <span className="text-base text-red-500 cursor-pointer">
+                  Logout
+                </span>
               </SignOutButton>
             </DropdownMenuItem>
           </DropdownMenuContent>

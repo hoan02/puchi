@@ -1,7 +1,7 @@
 import { ArrowLeft, Notebook } from "lucide-react";
 
 import { Button } from "../ui/button";
-import { Link } from "@/i18n/routing.public";
+import { Link } from "@/i18n/routing";
 
 const LearnTitle = () => {
   return (
@@ -16,7 +16,7 @@ const LearnTitle = () => {
         <h1 className="lg:ml-2 ml-6">Introduce yourself</h1>
       </div>
       <Link href={`/guidebook/1`} className="items-center">
-        <Button  variant="primary">
+        <Button variant="primary">
           <Notebook />
           <span className="ml-2 max-xl:hidden">GUIDEBOOK</span>
         </Button>
