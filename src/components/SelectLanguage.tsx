@@ -32,14 +32,15 @@ const SelectLanguage = () => {
         {countries.map(([locale, country]) => {
           return (
             <SelectItem key={locale} value={locale}>
-              <div className="flex gap-4 items-center">
+              <div className="flex">
                 <Image
                   src={`/images/flag/${country.flag}.svg`}
                   alt={`${country.title} flag`}
                   width={24}
                   height={16}
                 />
-                <p className="uppercase">{country.title}</p>
+                <p className="ml-4 mr-1 uppercase">{country.title}</p>
+                <p>({country.flag})</p>
               </div>
             </SelectItem>
           );

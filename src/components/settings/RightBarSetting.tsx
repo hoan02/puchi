@@ -4,10 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const settingAccount = {
   title: "Account",
   items: [
-    { label: "Preferences", href: "/settings/preferences" },
+    { label: "Preferences", href: "/settings/account" },
     { label: "Profile", href: "/settings/profile" },
     { label: "Notifications", href: "/settings/notifications" },
     { label: "Privacy settings", href: "/settings/privacy" },
+    { label: "Language", href: "/settings/language" },
   ],
 };
 
@@ -17,7 +18,7 @@ const settingSubscription = {
 };
 
 const settingSupport = {
-  title: "Subscription",
+  title: "Support",
   items: [{ label: "Help Center", href: "/help" }],
 };
 
