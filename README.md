@@ -1,12 +1,10 @@
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployment-success?style=for-the-badge&logo=vercel)](https://vercel.com/hoan02/puchi)
-
 # Puchi
 
 Master Vietnamese. Learn On The Go.
 
 <div align="center">
   <a href="https://puchi.io.vn/">
-    <img width="600" src="./assets/puchi-cover.webp" alt="Puchi brand banner" title="Puchi" />
+    <img src="./assets/puchi-cover.webp" alt="Puchi brand banner" title="Puchi" />
   </a>
 </div>
 
@@ -14,23 +12,38 @@ Master Vietnamese. Learn On The Go.
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Getting Started](#getting-started)
 - [Key Features](#key-features)
 - [Performance](#performance)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
 
 ## Introduction
 
 Puchi is an innovative platform designed to help users master Vietnamese. With Puchi, you can learn Vietnamese anytime and anywhere, making it perfect for busy learners who want to study on the go.
+
+## Getting Started
+
+To get started with Puchi:
+
+1. Visit [puchi.io.vn](https://puchi.io.vn/), or search for it here:  
+   <div align="center">
+     <a href="https://www.google.com/search?q=puchi+vietnamese">
+       <img src="./assets/search-puchi-vietnamese.png" alt="Search Puchi" />
+     </a>
+     <p>*(Hint: You’ll find it right at the top of the search results! 😘)*</p>
+   </div>  
+
+2. Sign up and choose your learning plan.  
+3. Begin your Vietnamese learning journey today!
 
 ## Key Features
 
 - 🌐 **Built with Next.js 15** & Server Actions for fast and efficient server-side rendering.
 - 🎨 **Beautiful Component System** using Shadcn UI for a clean and consistent design.
 - 📱 **Responsive Design** for optimal experience on mobile and desktop devices.
-- 🧩 **Modular and Scalable Architecture** for future-proof expansion.
 - 🌍 **Internationalization (i18n)** support for multiple languages.
 - 🔒 **Secure Authentication** powered by Clerk to keep your data safe.
 - 📊 **Analytics Integration** to track user progress and optimize the learning experience.
@@ -44,14 +57,6 @@ Puchi is optimized for speed and performance. Check the latest Google PageSpeed 
 
 Click the badge above to see Puchi’s current performance score and suggestions for further optimization.
 
-## Getting Started
-
-To get started with Puchi:
-
-1. Visit [Puchi's official website](https://puchi.io.vn/).
-2. Sign up and choose your learning plan.
-3. Start your Vietnamese learning journey!
-
 ## Usage
 
 Puchi is designed to be accessible on both mobile and desktop devices. Simply log in, select your course, and begin learning.
@@ -64,6 +69,12 @@ We welcome contributions! Feel free to open issues, submit pull requests, or pro
 
 Puchi is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
+## Contact
+
+For any questions or support, please contact us at:
+> Email: lehoan.dev@gmail.com</br>
+> Facebook: [Lê Công Hoan](https://www.facebook.com/hoanit02)
+
 ---
 
-Happy learning! 🎉
+Puchi © 2024. All rights reserved.
