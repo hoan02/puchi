@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { IApiResponse } from '@/interfaces/api-response';
 import { IUserProfile } from '@/interfaces/user';
 import {
