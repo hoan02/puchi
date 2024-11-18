@@ -2,14 +2,39 @@ import { getTranslations } from "next-intl/server";
 
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
-import { locales } from "@/i18n/config";
+import { locales, defaultLocale } from "@/i18n/config";
+import { getBaseUrl } from "@/lib/helpers";
 
-export async function generateMetadata() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const t = await getTranslations("PublicLayout");
+  const currentLocale = (await params).locale || defaultLocale || "en";
+  const baseUrl = getBaseUrl();
+
+  const alternates = {
+    canonical: `${baseUrl}/${currentLocale}`,
+    languages: locales.reduce((acc, locale) => {
+      acc[locale] = `${baseUrl}/${locale}`;
+      return acc;
+    }, {} as Record<string, string>),
+  };
 
   return {
     title: t("title"),
     description: t("description"),
+    alternates,
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${baseUrl}/${currentLocale}`,
+      siteName: "Puchi",
+      locale: currentLocale,
+      type: "website",
+      images: ["/og-image.jpg"],
+    },
   };
 }
 

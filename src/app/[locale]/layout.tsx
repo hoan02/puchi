@@ -4,20 +4,26 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
+import { getBaseUrl } from "@/lib/helpers";
 import { cn } from "@/lib/utils";
 import { fonts } from "@/styles/fonts";
 
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getBaseUrl()),
   generator: "Next.js",
   applicationName: "Puchi",
   referrer: "origin-when-cross-origin",
-  keywords: ["Puchi", "learn vietnamese", "HoanIT", "hoan02"],
-  authors: [
-    { name: "Hoan" },
-    { name: "Hoan", url: "https://www.facebook.com/hoanit02" },
+  keywords: [
+    "Puchi",
+    "vietnamese",
+    "learn vietnamese",
+    "HoanIT",
+    "hoan02",
+    "Viet Nam",
   ],
+  authors: [{ name: "Hoan", url: "https://www.facebook.com/hoanit02" }],
   creator: "Lê Công Hoan",
   publisher: "Hoan IT",
   formatDetection: {
