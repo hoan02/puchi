@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  facebook: {
+    appId: "961750142645211",
+  },
 };
 
 type RootLayoutProps = {
