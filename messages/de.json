@@ -54,5 +54,80 @@
     "startYourLanguageJourneyHere": "Beginnen Sie hier Ihre Sprachreise.",
     "learnAnytimeLearnAnywhere": "Lernen Sie jederzeit, lernen Sie überall.",
     "start": "Start"
+  },
+  "HelpPage": {
+    "breadcrumbs": {
+      "helpCenter": "HILFEZENTRUM",
+      "home": "STARTSEITE"
+    },
+    "faqTitle": "Häufig gestellte Fragen",
+    "sections": {
+      "usingPuchi": "Puchi verwenden",
+      "accountManagement": "Kontoverwaltung"
+    },
+    "questions": {
+      "whatIsStreak": "Was ist eine Serie?",
+      "whatAreLeaderboards": "Was sind Bestenlisten und Ligen?",
+      "openSourceLibraries": "Verwendet Puchi Open-Source-Bibliotheken?",
+      "changeUsernameOrEmail": "Wie ändere ich meinen Benutzernamen oder meine E-Mail-Adresse?",
+      "findFollowBlockUsers": "Wie finde, folge und blockiere ich Benutzer auf Puchi?"
+    },
+    "answers": {
+      "whatIsStreak": {
+        "part1": "Ihre Serie (Flammen-Symbol) zeigt an, wie viele Tage in Folge Sie eine Lektion auf Puchi abgeschlossen haben.",
+        "part2": "Sprachenlernen bedeutet, über Zeit hinweg Ziele aufzubauen, und Serien sind eine bewährte Methode, um Sie zu motivieren, jeden Tag zu lernen und zu üben.",
+        "part3": "Tipp: Erinnerungen an Übungen können Ihnen helfen, Ihre Lektionen nicht zu vergessen. In Ihren Benachrichtigungseinstellungen können Sie Erinnerungen aktivieren und die für Sie passende Zeit festlegen."
+      },
+      "whatAreLeaderboards": {
+        "part1": "Bestenlisten sind eine unterhaltsame Möglichkeit, in einem wöchentlichen Wettbewerb mit anderen Puchi-Lernenden zu konkurrieren. Je mehr XP (Erfahrungspunkte) Sie mit jeder Lektion verdienen, desto höher steigen Sie in der Rangliste auf. Jede Woche treten Sie gegen eine neue Gruppe an. Sehen Sie sich die Bestenlisten-Registerkarte in der App an, um den Wettbewerb zu starten!"
+      },
+      "openSourceLibraries": {
+        "part1": "Ja. Sie können unsere Open-Source-Attributionen auf dieser",
+        "linkText": "Seite"
+      },
+      "changeUsernameOrEmail": {
+        "part1": "Wenn Sie Ihren Puchi-Benutzernamen oder Ihre E-Mail-Adresse bearbeiten möchten, gehen Sie zu Ihren Einstellungen",
+        "linkText": "gehen Sie zu Ihren Einstellungen",
+        "part2": "und bearbeiten Sie den Benutzernamen oder die E-Mail-Adresse. Ihr Benutzername erscheint in Ihrer wöchentlichen Bestenliste. Vergessen Sie nicht, auf 'Änderungen speichern' zu klicken."
+      },
+      "findFollowBlockUsers": {
+        "part1": "Sie können mit anderen Lernenden auf Puchi in Kontakt treten!",
+        "part2": "Wenn Sie jemandem folgen, erscheint dieser auf Ihrer Freundesliste, und Sie können sich gegenseitig ermutigen, Ihre Sprachziele zu erreichen!"
+      }
+    },
+    "feedbackPrompt": "Noch unsicher bei etwas?",
+    "sendFeedback": "FEEDBACK SENDEN"
+  },
+  "PrivacyPage": {
+    "title": "Datenschutzrichtlinie",
+    "lastRevised": "Bitte beachten Sie, dass die Datenschutzrichtlinie zuletzt am 10. November 2024 überarbeitet wurde",
+    "footer": "Zuletzt überarbeitet am 10. November 2024",
+    "sections": {
+      "general": {
+        "title": "Allgemeines",
+        "part1": "Bei Puchi kümmern wir uns um Ihre persönlichen Informationen, weshalb wir diese Datenschutzrichtlinie erstellt haben, um zu erklären, wie wir diese sammeln, verwenden und weitergeben.",
+        "part2": "Diese Datenschutzrichtlinie gilt für die Websites, mobilen Apps und damit verbundenen Dienste von Puchi („Dienst“). Durch die Nutzung des Dienstes stimmen Sie der Sammlung, Verwendung und Weitergabe Ihrer persönlichen Informationen durch Puchi gemäß den Bestimmungen dieser Datenschutzrichtlinie zu."
+      },
+      "updates": {
+        "title": "Aktualisierungen der Datenschutzrichtlinie",
+        "part1": "Wir können unsere Datenschutzrichtlinie aktualisieren, um Änderungen in unseren Informationspraktiken widerzuspiegeln.",
+        "part2": "Wenn wir dies tun und die Änderungen wesentlich sind, werden wir eine Mitteilung veröffentlichen, dass wir diese Datenschutzrichtlinie auf der Website mindestens sieben (7) Tage vor Inkrafttreten der Änderungen geändert haben."
+      },
+      "retention": {
+        "title": "Datenaufbewahrung",
+        "part1": "Puchi wird Ihre persönlichen Informationen in der Regel bis zur Löschung Ihres Kontos aufbewahren. Puchi kann jedoch bestimmte Informationen länger aufbewahren, wenn dies erforderlich ist, um unseren Dienst bereitzustellen, unsere berechtigten Interessen oder die Interessen Dritter zu verteidigen, rechtlichen Anforderungen zu entsprechen, uns in Streitfällen zu verteidigen, Missbrauch oder Störungen des Dienstes zu untersuchen oder Vereinbarungen zu erfüllen."
+      },
+      "doNotTrack": {
+        "title": "Nicht verfolgen",
+        "part1": "Der Dienst ist nicht darauf ausgelegt, auf „Nicht verfolgen“-Signale zu reagieren, die von einigen Browsern gesendet werden."
+      },
+      "contactUs": {
+        "title": "Kontaktieren Sie uns",
+        "part1": "Puchi, Inc. ist der für Ihre Daten verantwortlich, gemäß der Allgemeinen Datenschutzverordnung (GDPR) und anderer relevanter lokaler Gesetze.",
+        "part2": "Der Sitz von Puchi befindet sich in Vietnam in:",
+        "part3": "Hanoi, Vietnam",
+        "email": "Für alle Anfragen zum Datenschutz und Fragen zu dieser Datenschutzrichtlinie wenden Sie sich bitte an unseren Datenschutzbeauftragten unter: lehoan.dev@gmail.com"
+      }
+    }
   }
 }

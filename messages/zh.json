@@ -54,5 +54,80 @@
     "startYourLanguageJourneyHere": "从这里开始你的语言之旅。",
     "learnAnytimeLearnAnywhere": "随时随地学习。",
     "start": "开始"
+  },
+  "HelpPage": {
+    "breadcrumbs": {
+      "helpCenter": "帮助中心",
+      "home": "主页"
+    },
+    "faqTitle": "常见问题",
+    "sections": {
+      "usingPuchi": "使用 Puchi",
+      "accountManagement": "账户管理"
+    },
+    "questions": {
+      "whatIsStreak": "什么是连续记录？",
+      "whatAreLeaderboards": "什么是排行榜和联赛？",
+      "openSourceLibraries": "Puchi 是否使用开源库？",
+      "changeUsernameOrEmail": "如何更改用户名或电子邮箱地址？",
+      "findFollowBlockUsers": "如何在 Puchi 中查找、关注或屏蔽用户？"
+    },
+    "answers": {
+      "whatIsStreak": {
+        "part1": "您的连续记录（火焰图标）表示您在 Puchi 上连续完成课程的天数。",
+        "part2": "学习语言是一个需要长期建立目标的过程，而连续记录是一种经过验证的方式，可以激励您每天继续学习和练习。",
+        "part3": "提示：练习提醒可以帮助您记得完成课程。在通知设置中，您可以打开练习提醒并设置最适合您的时间。"
+      },
+      "whatAreLeaderboards": {
+        "part1": "排行榜是一个有趣的方式，可以与其他 Puchi 学习者在每周比赛中竞争。随着每次课程获得的 XP（经验值）增加，您的排名会提升。每周，您都会面对一组新的竞争者。请查看应用程序中的排行榜标签，开始比赛吧！"
+      },
+      "openSourceLibraries": {
+        "part1": "是的。您可以在此",
+        "linkText": "页面"
+      },
+      "changeUsernameOrEmail": {
+        "part1": "如果您想更改 Puchi 的用户名或电子邮箱地址，请转到设置",
+        "linkText": "转到设置",
+        "part2": "并修改用户名或电子邮箱地址。您的用户名会显示在每周的排行榜中。记得点击“保存更改”。"
+      },
+      "findFollowBlockUsers": {
+        "part1": "您可以在 Puchi 上与其他学习者建立联系！",
+        "part2": "当您关注某人时，他们会显示在您的好友列表中，您可以互相鼓励，保持您的语言学习目标！"
+      }
+    },
+    "feedbackPrompt": "还有其他疑问吗？",
+    "sendFeedback": "发送反馈"
+  },
+  "PrivacyPage": {
+    "title": "隐私政策",
+    "lastRevised": "请注意，隐私政策最后修订日期为2024年11月10日",
+    "footer": "最后修订日期：2024年11月10日",
+    "sections": {
+      "general": {
+        "title": "总则",
+        "part1": "在Puchi，我们关心您的个人信息，因此我们制定了此隐私政策，解释我们如何收集、使用和共享这些信息。",
+        "part2": "本隐私政策适用于Puchi的网站、移动应用和相关服务（以下简称“服务”）。通过使用服务，您同意Puchi根据本隐私政策的条款收集、使用和共享您的个人信息。"
+      },
+      "updates": {
+        "title": "隐私政策更新",
+        "part1": "我们可能会更新隐私政策，以反映我们信息处理方式的变化。",
+        "part2": "如果我们这样做，并且这些更改是重要的，我们将在网站上发布通知，说明我们已在更改生效前至少七（7）天对隐私政策进行了修改。"
+      },
+      "retention": {
+        "title": "数据保留",
+        "part1": "Puchi通常会保留您的个人信息，直到您的帐户被删除。但是，Puchi在某些情况下可能会保留某些信息更长时间，如果这样做是为了提供我们的服务、保护我们或第三方的合法利益、遵守法律要求、解决或防御争议、调查滥用或干扰服务，或者执行协议。"
+      },
+      "doNotTrack": {
+        "title": "禁止跟踪",
+        "part1": "该服务未设计为响应某些浏览器发送的“禁止跟踪”信号。"
+      },
+      "contactUs": {
+        "title": "联系我们",
+        "part1": "Puchi, Inc.是您数据的控制者，符合《通用数据保护条例》（GDPR）以及任何相关的当地法律。",
+        "part2": "Puchi的总部位于越南，地址如下：",
+        "part3": "河内，越南",
+        "email": "有关数据隐私的所有查询，以及您对本隐私政策的任何问题或关注，请通过以下电子邮件与我们的数据保护官联系：lehoan.dev@gmail.com"
+      }
+    }
   }
 }
