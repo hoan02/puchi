@@ -97,5 +97,37 @@
     },
     "feedbackPrompt": "Noch unsicher bei etwas?",
     "sendFeedback": "FEEDBACK SENDEN"
+  },
+  "PrivacyPage": {
+    "title": "Datenschutzrichtlinie",
+    "lastRevised": "Bitte beachten Sie, dass die Datenschutzrichtlinie zuletzt am 10. November 2024 überarbeitet wurde",
+    "footer": "Zuletzt überarbeitet am 10. November 2024",
+    "sections": {
+      "general": {
+        "title": "Allgemeines",
+        "part1": "Bei Puchi kümmern wir uns um Ihre persönlichen Informationen, weshalb wir diese Datenschutzrichtlinie erstellt haben, um zu erklären, wie wir diese sammeln, verwenden und weitergeben.",
+        "part2": "Diese Datenschutzrichtlinie gilt für die Websites, mobilen Apps und damit verbundenen Dienste von Puchi („Dienst“). Durch die Nutzung des Dienstes stimmen Sie der Sammlung, Verwendung und Weitergabe Ihrer persönlichen Informationen durch Puchi gemäß den Bestimmungen dieser Datenschutzrichtlinie zu."
+      },
+      "updates": {
+        "title": "Aktualisierungen der Datenschutzrichtlinie",
+        "part1": "Wir können unsere Datenschutzrichtlinie aktualisieren, um Änderungen in unseren Informationspraktiken widerzuspiegeln.",
+        "part2": "Wenn wir dies tun und die Änderungen wesentlich sind, werden wir eine Mitteilung veröffentlichen, dass wir diese Datenschutzrichtlinie auf der Website mindestens sieben (7) Tage vor Inkrafttreten der Änderungen geändert haben."
+      },
+      "retention": {
+        "title": "Datenaufbewahrung",
+        "part1": "Puchi wird Ihre persönlichen Informationen in der Regel bis zur Löschung Ihres Kontos aufbewahren. Puchi kann jedoch bestimmte Informationen länger aufbewahren, wenn dies erforderlich ist, um unseren Dienst bereitzustellen, unsere berechtigten Interessen oder die Interessen Dritter zu verteidigen, rechtlichen Anforderungen zu entsprechen, uns in Streitfällen zu verteidigen, Missbrauch oder Störungen des Dienstes zu untersuchen oder Vereinbarungen zu erfüllen."
+      },
+      "doNotTrack": {
+        "title": "Nicht verfolgen",
+        "part1": "Der Dienst ist nicht darauf ausgelegt, auf „Nicht verfolgen“-Signale zu reagieren, die von einigen Browsern gesendet werden."
+      },
+      "contactUs": {
+        "title": "Kontaktieren Sie uns",
+        "part1": "Puchi, Inc. ist der für Ihre Daten verantwortlich, gemäß der Allgemeinen Datenschutzverordnung (GDPR) und anderer relevanter lokaler Gesetze.",
+        "part2": "Der Sitz von Puchi befindet sich in Vietnam in:",
+        "part3": "Hanoi, Vietnam",
+        "email": "Für alle Anfragen zum Datenschutz und Fragen zu dieser Datenschutzrichtlinie wenden Sie sich bitte an unseren Datenschutzbeauftragten unter: lehoan.dev@gmail.com"
+      }
+    }
   }
 }

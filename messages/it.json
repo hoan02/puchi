@@ -97,5 +97,37 @@
     },
     "feedbackPrompt": "Non sei ancora sicuro di qualcosa?",
     "sendFeedback": "INVIA FEEDBACK"
+  },
+  "PrivacyPage": {
+    "title": "Politica sulla Privacy",
+    "lastRevised": "Si noti che la Politica sulla Privacy è stata rivista l'ultima volta il 10 novembre 2024",
+    "footer": "Ultima revisione il 10 novembre 2024",
+    "sections": {
+      "general": {
+        "title": "Generale",
+        "part1": "In Puchi, ci preoccupiamo delle tue informazioni personali, per cui abbiamo preparato questa Politica sulla Privacy per spiegare come raccogliamo, usiamo e condividiamo le tue informazioni.",
+        "part2": "Questa Politica sulla Privacy si applica ai siti web, alle app mobili e ai servizi correlati di Puchi (“Servizio”). Utilizzando il Servizio, accetti la raccolta, l'uso e la condivisione delle tue informazioni personali da parte di Puchi in conformità con i termini di questa Politica sulla Privacy."
+      },
+      "updates": {
+        "title": "Aggiornamenti della Politica sulla Privacy",
+        "part1": "Potremmo aggiornare la nostra Politica sulla Privacy per riflettere modifiche nelle nostre pratiche informative.",
+        "part2": "Se lo facciamo e le modifiche sono sostanziali, pubblicheremo un avviso che indica che abbiamo modificato questa Politica sulla Privacy sul sito web per almeno sette (7) giorni prima che le modifiche abbiano effetto."
+      },
+      "retention": {
+        "title": "Conservazione dei Dati",
+        "part1": "Puchi conserverà generalmente le tue informazioni personali fino a quando il tuo account non verrà eliminato. Tuttavia, Puchi potrebbe conservare alcune informazioni per un periodo più lungo se necessario per fornire il nostro Servizio, difendere i nostri legittimi interessi o quelli di terzi, rispettare requisiti legali, risolvere o difenderci in contenziosi, indagare su abusi o interruzioni del Servizio, o eseguire accordi."
+      },
+      "doNotTrack": {
+        "title": "Non Tracciare",
+        "part1": "Il Servizio non è progettato per rispondere ai segnali di \"non tracciare\" inviati da alcuni browser."
+      },
+      "contactUs": {
+        "title": "Contattaci",
+        "part1": "Puchi, Inc. è il controllore dei tuoi dati per scopi del Regolamento Generale sulla Protezione dei Dati (GDPR) e di qualsiasi legislazione locale rilevante.",
+        "part2": "La sede di Puchi si trova in Vietnam a:",
+        "part3": "Hanoi, Vietnam",
+        "email": "Per tutte le richieste di privacy dei dati e qualsiasi domanda o preoccupazione riguardante questa Politica sulla Privacy, contatta il nostro Responsabile della Protezione dei Dati all'indirizzo: lehoan.dev@gmail.com"
+      }
+    }
   }
 }

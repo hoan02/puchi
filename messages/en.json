@@ -97,5 +97,37 @@
     },
     "feedbackPrompt": "Still unsure about something?",
     "sendFeedback": "SEND FEEDBACK"
+  },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "lastRevised": "Please note that Privacy Policy was last revised on November 10th, 2024",
+    "footer": "Last revised on November 10th, 2024",
+    "sections": {
+      "general": {
+        "title": "General",
+        "part1": "At Puchi, we care about your personal information, so we have prepared this Privacy Policy to explain how we collect, use, and share it.",
+        "part2": "This Privacy Policy applies to Puchi websites, mobile apps, and related services (“Service”). By using the Service, you agree with Puchi’s collection, use, and sharing of your personal information in accordance with the terms of this Privacy Policy."
+      },
+      "updates": {
+        "title": "Privacy Policy Updates",
+        "part1": "We may update our Privacy Policy to reflect changes to our information practices.",
+        "part2": "If we do this and the changes are material, we will post a notice that we have made changes to this Privacy Policy on the Website for at least seven (7) days before the changes are made."
+      },
+      "retention": {
+        "title": "Data Retention",
+        "part1": "Puchi will generally retain your personal information until your account is deleted. However, Puchi may retain certain information longer if necessary to provide our Service, defend our legitimate interests or those of third parties, comply with legal requirements, resolve or defend ourselves in disputes, investigate misuse or disruption of the Service, or perform agreements."
+      },
+      "doNotTrack": {
+        "title": "Do Not Track",
+        "part1": "The Service is not designed to respond to “do not track” signals sent by some browsers."
+      },
+      "contactUs": {
+        "title": "Contact Us",
+        "part1": "Puchi, Inc. is the data controller of your data for the purposes of the General Data Protection Regulation (“GDPR”) and any relevant local legislation.",
+        "part2": "Puchi’s headquarters are located within the Viet Nam at:",
+        "part3": "Ha Noi, Viet Nam",
+        "email": "For all data privacy inquiries and any questions or concerns you have about this Privacy Policy, please contact our Data Protection Officer at: lehoan.dev@gmail.com"
+      }
+    }
   }
 }
