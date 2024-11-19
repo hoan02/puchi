@@ -54,5 +54,48 @@
     "startYourLanguageJourneyHere": "inizia qui il tuo viaggio linguistico.",
     "learnAnytimeLearnAnywhere": "impara in qualsiasi momento, impara ovunque.",
     "start": "inizia"
+  },
+  "HelpPage": {
+    "breadcrumbs": {
+      "helpCenter": "CENTRO ASSISTENZA",
+      "home": "HOME"
+    },
+    "faqTitle": "Domande Frequenti",
+    "sections": {
+      "usingPuchi": "Utilizzo di Puchi",
+      "accountManagement": "Gestione Account"
+    },
+    "questions": {
+      "whatIsStreak": "Cos'è una serie?",
+      "whatAreLeaderboards": "Cosa sono le classifiche e le leghe?",
+      "openSourceLibraries": "Puchi utilizza librerie open source?",
+      "changeUsernameOrEmail": "Come cambio il mio nome utente o indirizzo e-mail?",
+      "findFollowBlockUsers": "Come trovo, seguo e blocco utenti su Puchi?"
+    },
+    "answers": {
+      "whatIsStreak": {
+        "part1": "La tua serie (icona a fiamma) rappresenta il numero di giorni consecutivi in cui hai completato una lezione su Puchi.",
+        "part2": "Imparare una lingua significa costruire obiettivi nel tempo, e la serie è un modo comprovato per motivarti a continuare a imparare e praticare ogni giorno.",
+        "part3": "Suggerimento: i promemoria di pratica possono aiutarti a ricordare di fare le tue lezioni. Nelle impostazioni di notifica puoi attivare i promemoria di pratica e impostare l'orario che funziona meglio per te."
+      },
+      "whatAreLeaderboards": {
+        "part1": "Le classifiche sono un modo divertente per competere con altri studenti di Puchi in una competizione settimanale. Man mano che guadagni più XP (punti esperienza) con ogni lezione, sali nella classifica. Ogni settimana affronti un nuovo gruppo di concorrenti. Dai un'occhiata alla scheda Classifiche nell'app per iniziare la competizione!"
+      },
+      "openSourceLibraries": {
+        "part1": "Sì. Puoi visualizzare i nostri riconoscimenti open source e saperne di più in questa",
+        "linkText": "pagina"
+      },
+      "changeUsernameOrEmail": {
+        "part1": "Se desideri modificare il tuo nome utente o indirizzo e-mail di Puchi, vai alle impostazioni",
+        "linkText": "vai alle impostazioni",
+        "part2": "e modifica il nome utente o l'indirizzo e-mail. Il tuo nome utente appare nella tua classifica settimanale. Ricorda di fare clic su 'Salva modifiche'."
+      },
+      "findFollowBlockUsers": {
+        "part1": "Puoi connetterti con altri studenti su Puchi!",
+        "part2": "Quando segui qualcuno, apparirà nella tua lista amici e potrai incoraggiarti a vicenda a raggiungere i tuoi obiettivi linguistici!"
+      }
+    },
+    "feedbackPrompt": "Non sei ancora sicuro di qualcosa?",
+    "sendFeedback": "INVIA FEEDBACK"
   }
 }

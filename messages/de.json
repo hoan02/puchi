@@ -54,5 +54,48 @@
     "startYourLanguageJourneyHere": "Beginnen Sie hier Ihre Sprachreise.",
     "learnAnytimeLearnAnywhere": "Lernen Sie jederzeit, lernen Sie überall.",
     "start": "Start"
+  },
+  "HelpPage": {
+    "breadcrumbs": {
+      "helpCenter": "HILFEZENTRUM",
+      "home": "STARTSEITE"
+    },
+    "faqTitle": "Häufig gestellte Fragen",
+    "sections": {
+      "usingPuchi": "Puchi verwenden",
+      "accountManagement": "Kontoverwaltung"
+    },
+    "questions": {
+      "whatIsStreak": "Was ist eine Serie?",
+      "whatAreLeaderboards": "Was sind Bestenlisten und Ligen?",
+      "openSourceLibraries": "Verwendet Puchi Open-Source-Bibliotheken?",
+      "changeUsernameOrEmail": "Wie ändere ich meinen Benutzernamen oder meine E-Mail-Adresse?",
+      "findFollowBlockUsers": "Wie finde, folge und blockiere ich Benutzer auf Puchi?"
+    },
+    "answers": {
+      "whatIsStreak": {
+        "part1": "Ihre Serie (Flammen-Symbol) zeigt an, wie viele Tage in Folge Sie eine Lektion auf Puchi abgeschlossen haben.",
+        "part2": "Sprachenlernen bedeutet, über Zeit hinweg Ziele aufzubauen, und Serien sind eine bewährte Methode, um Sie zu motivieren, jeden Tag zu lernen und zu üben.",
+        "part3": "Tipp: Erinnerungen an Übungen können Ihnen helfen, Ihre Lektionen nicht zu vergessen. In Ihren Benachrichtigungseinstellungen können Sie Erinnerungen aktivieren und die für Sie passende Zeit festlegen."
+      },
+      "whatAreLeaderboards": {
+        "part1": "Bestenlisten sind eine unterhaltsame Möglichkeit, in einem wöchentlichen Wettbewerb mit anderen Puchi-Lernenden zu konkurrieren. Je mehr XP (Erfahrungspunkte) Sie mit jeder Lektion verdienen, desto höher steigen Sie in der Rangliste auf. Jede Woche treten Sie gegen eine neue Gruppe an. Sehen Sie sich die Bestenlisten-Registerkarte in der App an, um den Wettbewerb zu starten!"
+      },
+      "openSourceLibraries": {
+        "part1": "Ja. Sie können unsere Open-Source-Attributionen auf dieser",
+        "linkText": "Seite"
+      },
+      "changeUsernameOrEmail": {
+        "part1": "Wenn Sie Ihren Puchi-Benutzernamen oder Ihre E-Mail-Adresse bearbeiten möchten, gehen Sie zu Ihren Einstellungen",
+        "linkText": "gehen Sie zu Ihren Einstellungen",
+        "part2": "und bearbeiten Sie den Benutzernamen oder die E-Mail-Adresse. Ihr Benutzername erscheint in Ihrer wöchentlichen Bestenliste. Vergessen Sie nicht, auf 'Änderungen speichern' zu klicken."
+      },
+      "findFollowBlockUsers": {
+        "part1": "Sie können mit anderen Lernenden auf Puchi in Kontakt treten!",
+        "part2": "Wenn Sie jemandem folgen, erscheint dieser auf Ihrer Freundesliste, und Sie können sich gegenseitig ermutigen, Ihre Sprachziele zu erreichen!"
+      }
+    },
+    "feedbackPrompt": "Noch unsicher bei etwas?",
+    "sendFeedback": "FEEDBACK SENDEN"
   }
 }

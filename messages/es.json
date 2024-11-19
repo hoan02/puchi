@@ -54,5 +54,48 @@
     "startYourLanguageJourneyHere": "comienza tu viaje lingüístico aquí.",
     "learnAnytimeLearnAnywhere": "aprende en cualquier momento, aprende en cualquier lugar.",
     "start": "comenzar"
+  },
+  "HelpPage": {
+    "breadcrumbs": {
+      "helpCenter": "CENTRO DE AYUDA",
+      "home": "INICIO"
+    },
+    "faqTitle": "Preguntas Frecuentes",
+    "sections": {
+      "usingPuchi": "Usando Puchi",
+      "accountManagement": "Gestión de Cuenta"
+    },
+    "questions": {
+      "whatIsStreak": "¿Qué es una racha?",
+      "whatAreLeaderboards": "¿Qué son los rankings y las ligas?",
+      "openSourceLibraries": "¿Puchi usa bibliotecas de código abierto?",
+      "changeUsernameOrEmail": "¿Cómo cambio mi nombre de usuario o dirección de correo electrónico?",
+      "findFollowBlockUsers": "¿Cómo encuentro, sigo y bloqueo usuarios en Puchi?"
+    },
+    "answers": {
+      "whatIsStreak": {
+        "part1": "Tu racha (icono de llama) representa el número de días consecutivos que has completado una lección en Puchi.",
+        "part2": "El aprendizaje de idiomas se basa en construir objetivos a lo largo del tiempo, y la racha es una forma comprobada de motivarte para seguir aprendiendo y practicando todos los días.",
+        "part3": "Consejo: Las notificaciones de práctica pueden ayudarte a recordar hacer tus lecciones. En la configuración de notificaciones, puedes activar recordatorios de práctica y establecer el horario que mejor funcione para ti."
+      },
+      "whatAreLeaderboards": {
+        "part1": "Los rankings son una forma divertida de competir con otros estudiantes de Puchi en un concurso semanal. A medida que ganas más XP (puntos de experiencia) con cada lección, subirás en la clasificación. Cada semana te enfrentarás a un nuevo grupo de competidores. ¡Consulta la pestaña de Rankings en la aplicación para comenzar la competencia!"
+      },
+      "openSourceLibraries": {
+        "part1": "Sí. Puedes ver nuestras atribuciones de código abierto y obtener más información en esta",
+        "linkText": "página"
+      },
+      "changeUsernameOrEmail": {
+        "part1": "Si deseas editar tu nombre de usuario o dirección de correo electrónico de Puchi, ve a tu configuración",
+        "linkText": "ve a tu configuración",
+        "part2": "y edita el nombre de usuario o la dirección de correo electrónico. Tu nombre de usuario aparece en tu clasificación semanal. Recuerda presionar 'Guardar cambios' cuando realices cualquier cambio."
+      },
+      "findFollowBlockUsers": {
+        "part1": "¡Puedes conectar con otros estudiantes en Puchi!",
+        "part2": "Cuando sigues a alguien, aparecerá en tu lista de amigos y pueden motivarse mutuamente para cumplir con tus objetivos de aprendizaje de idiomas."
+      }
+    },
+    "feedbackPrompt": "¿Aún tienes dudas sobre algo?",
+    "sendFeedback": "ENVIAR COMENTARIOS"
   }
 }

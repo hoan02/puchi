@@ -54,5 +54,48 @@
     "startYourLanguageJourneyHere": "ここから言語の旅を始めましょう。",
     "learnAnytimeLearnAnywhere": "いつでも、どこでも学ぶ。",
     "start": "開始"
+  },
+  "HelpPage": {
+    "breadcrumbs": {
+      "helpCenter": "ヘルプセンター",
+      "home": "ホーム"
+    },
+    "faqTitle": "よくある質問",
+    "sections": {
+      "usingPuchi": "Puchiの使い方",
+      "accountManagement": "アカウント管理"
+    },
+    "questions": {
+      "whatIsStreak": "ストリークとは何ですか？",
+      "whatAreLeaderboards": "リーダーボードとリーグとは何ですか？",
+      "openSourceLibraries": "Puchiはオープンソースライブラリを使用していますか？",
+      "changeUsernameOrEmail": "ユーザー名やメールアドレスを変更するには？",
+      "findFollowBlockUsers": "Puchiでユーザーを見つけ、フォローし、ブロックするには？"
+    },
+    "answers": {
+      "whatIsStreak": {
+        "part1": "ストリーク（炎のアイコン）は、Puchiで連続してレッスンを完了した日数を表します。",
+        "part2": "語学学習は目標を時間をかけて積み上げていくものです。ストリークは、毎日学び、練習を続けるためのモチベーションを高める効果的な方法です。",
+        "part3": "ヒント: 練習リマインダーを設定すると、レッスンを忘れずに続けることができます。通知設定でリマインダーをオンにして、自分に合った時間を設定してください。"
+      },
+      "whatAreLeaderboards": {
+        "part1": "リーダーボードは、Puchiの他の学習者と週ごとのコンテストで競い合う楽しい方法です。レッスンごとにXP（経験値）を獲得することで、ランキングが上がります。毎週、新しいグループと対戦します。アプリのリーダーボードタブをチェックして、競争を始めましょう！"
+      },
+      "openSourceLibraries": {
+        "part1": "はい。オープンソースの帰属情報は、この",
+        "linkText": "ページ"
+      },
+      "changeUsernameOrEmail": {
+        "part1": "Puchiのユーザー名やメールアドレスを変更する場合は、設定にアクセスしてください",
+        "linkText": "設定にアクセスしてください",
+        "part2": "そこでユーザー名またはメールアドレスを編集できます。ユーザー名は毎週のリーダーボードに表示されます。変更した場合は必ず「変更を保存」をクリックしてください。"
+      },
+      "findFollowBlockUsers": {
+        "part1": "Puchiで他の学習者とつながることができます！",
+        "part2": "誰かをフォローすると、その人が友達リストに表示され、語学目標を達成するためにお互いを励まし合うことができます！"
+      }
+    },
+    "feedbackPrompt": "まだ不明な点がありますか？",
+    "sendFeedback": "フィードバックを送信"
   }
 }
