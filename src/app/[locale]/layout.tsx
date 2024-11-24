@@ -57,7 +57,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className="relative scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-green-300"
+      className="relative scrollbar-thin"
     >
       <body
         className={cn(fonts, "flex flex-col font-sans")}
