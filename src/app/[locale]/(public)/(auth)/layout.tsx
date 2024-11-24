@@ -13,3 +13,5 @@ export default async function AuthLayout({ children, params }: Props) {
     </ClerkLocalizationProvider>
   );
 }
+
+export const revalidate = 60
