@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
@@ -68,6 +69,7 @@ export default async function RootLayout({
             <LazyMotionProvider>{children}</LazyMotionProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-RW2JTZ2VRX" />
       </body>
     </html>
   );
