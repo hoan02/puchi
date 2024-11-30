@@ -9,7 +9,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.10.2",
     "@clerk/localizations": "^3.7.0",
     "@clerk/nextjs": "^6.5.1",
     "@next/bundle-analyzer": "^15.0.3",

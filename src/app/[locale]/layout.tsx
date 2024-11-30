@@ -1,8 +1,6 @@
 import { Metadata } from "next";
-import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { Partytown } from "@builder.io/partytown/react";
 
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
@@ -48,11 +46,7 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const { locale } = await params;
-  // Enable static rendering
   setRequestLocale(locale);
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
@@ -70,12 +64,6 @@ export default async function RootLayout({
             <LazyMotionProvider>{children}</LazyMotionProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-SRHPF5QE5Y"
-          type="text/partytown"
-        />
-        <Partytown debug={false} forward={["dataLayer.push"]} />
       </body>
     </html>
   );
