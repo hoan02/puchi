@@ -1,7 +1,8 @@
 import { Metadata } from "next";
+import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { Partytown } from "@builder.io/partytown/react";
 
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
@@ -69,7 +70,23 @@ export default async function RootLayout({
             <LazyMotionProvider>{children}</LazyMotionProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
-        <GoogleAnalytics gaId="G-RW2JTZ2VRX" />
+        <Partytown debug={true} forward={["dataLayer.push"]} />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SRHPF5QE5Y"
+          type="text/partytown"
+        />
+        <Script
+          id="google-analytics"
+          type="text/partytown"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SRHPF5QE5Y');
+            `,
+          }}
+        />
       </body>
     </html>
   );
