@@ -70,23 +70,12 @@ export default async function RootLayout({
             <LazyMotionProvider>{children}</LazyMotionProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
-        <Partytown debug={true} forward={["dataLayer.push"]} />
         <Script
+          async
           src="https://www.googletagmanager.com/gtag/js?id=G-SRHPF5QE5Y"
           type="text/partytown"
         />
-        <Script
-          id="google-analytics"
-          type="text/partytown"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SRHPF5QE5Y');
-            `,
-          }}
-        />
+        <Partytown debug={false} forward={["dataLayer.push"]} />
       </body>
     </html>
   );
