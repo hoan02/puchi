@@ -1,12 +1,12 @@
 "use client";
 
-import n2words from "n2words";
+import { useParams } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "@/styles/swiper.css";
-import { useParams } from "next/navigation";
+import { numToWords } from "@/lib/n2words";
 
 const FlashCardNumber = () => {
   const params = useParams<{ locale: string }>();
@@ -24,10 +24,8 @@ const FlashCardNumber = () => {
           <SwiperSlide key={index} className="rounded-xl">
             <div className="h-full flex flex-col justify-center items-center">
               <p className="font-bold text-[200px] leading-[200px]">{value}</p>
-              <p className="text-3xl">{n2words(value, { lang: "vi" })}</p>
-              <p className="text-1xl">
-                ({n2words(value, { lang: params.locale })})
-              </p>
+              <p className="text-3xl">{numToWords(value, "vi")}</p>
+              <p className="text-1xl">({numToWords(value, params.locale)})</p>
             </div>
           </SwiperSlide>
         ))}
