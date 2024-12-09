@@ -22,9 +22,9 @@ const recordCountries: Record<Locale, Country> = {
     flag: "fr",
     word: "Bonjour",
   },
-  kr: {
+  ko: {
     title: "Korean",
-    flag: "kr",
+    flag: "ko",
     word: "Annyeong",
   },
   ja: {
