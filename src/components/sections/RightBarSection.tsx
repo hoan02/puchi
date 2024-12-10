@@ -33,7 +33,7 @@ const RightBarSection = async () => {
         <Card>
           <CardHeader className="flex-row items-center justify-between">
             <span className="text-xl font-bold">Daily Quests</span>
-            <Link className="text-sky-500 pb-[6px]" href={``}>
+            <Link className="text-sky-500 pb-[6px]" href='/quests'>
               VIEW ALL
             </Link>
           </CardHeader>
