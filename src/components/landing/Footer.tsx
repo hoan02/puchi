@@ -5,6 +5,7 @@ import { MotionDiv } from "@/components/motion";
 import AnimatedTitle from "@/components/motion/AnimatedTitle";
 import LogoSVG from "@public/images/logo/logo.svg";
 import { Link } from "@/i18n/routing";
+import FooterLink from "../FooterLink";
 
 const StartCTA = ({ label }: { label: string }) => {
   return (
@@ -114,6 +115,7 @@ const Footer = () => {
           </Link>
         </div>
       </MotionDiv>
+      <FooterLink />
       <p className="text-center max-sm:text-sm">
         © 2024 — Puchi by{" "}
         <a
