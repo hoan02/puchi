@@ -50,7 +50,7 @@ const FlashCardNumber = () => {
       >
         {numbers.map((value, index) => (
           <SwiperSlide key={index} className="rounded-xl">
-            <div className="h-full flex flex-col justify-center items-center">
+            <div className="h-full flex flex-col justify-center items-center text-gray-300">
               <p className="font-bold text-[200px] leading-[200px]">{value}</p>
               <p className="text-3xl">{numToWords(value, "vi")}</p>
               <p className="text-1xl mb-2">
