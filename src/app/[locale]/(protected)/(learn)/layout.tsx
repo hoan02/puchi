@@ -13,7 +13,7 @@ export default async function LearnLayout({ children }: LearnLayoutProps) {
       </div>
       <div className="flex justify-center">
         <div className="h-full flex xl:w-[1024px] w-full relative">
-          <div className="bg-slate-600 min-w-[300px] absolute left-0 right-0 xl:right-[350px]">
+          <div className="min-w-[300px] absolute left-0 right-0 xl:right-[350px]">
             {children}
           </div>
           <div

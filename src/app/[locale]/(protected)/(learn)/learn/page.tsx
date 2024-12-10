@@ -1,10 +1,12 @@
 "use client";
 
+import LearnTitle from "@/components/learn/LearnTitle";
 import { useState, useEffect, useRef } from "react";
 
-const sections = Array.from({ length: 20 }, (_, index) => ({
-  id: `section-${index + 1}`,
-  content: `Content ${index + 1}`,
+const data = Array.from({ length: 20 }, (_, index) => ({
+  name: `Unit ${index + 1}`,
+  numSection: 1,
+  numUnit: index + 1,
 }));
 
 const colors = [
@@ -20,39 +22,48 @@ const colors = [
 ];
 
 export default function ScrollHighlight() {
-  const [bgColor, setBgColor] = useState(colors[0]);
-  const [sectionContent, setSectionContent] = useState("");
-  const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [titleHighlight, setTitleHighlight] = useState({
+    numSection: 0,
+    numUnit: 0,
+    name: "",
+    color: colors[0],
+  });
+  const titlesRef = useRef<(HTMLDivElement | null)[]>([]);
   const stickyRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const checkIntersection = () => {
+    const checkInterTitle = () => {
       if (stickyRef.current) {
         const stickyElement = stickyRef.current.getBoundingClientRect();
 
-        sectionsRef.current.forEach((section, index) => {
-          if (section) {
-            const sectionElement = section.getBoundingClientRect();
+        titlesRef.current.forEach((title, index) => {
+          if (title) {
+            const titleElement = title.getBoundingClientRect();
 
             if (
-              sectionElement.top <= stickyElement.bottom &&
-              sectionElement.bottom >= stickyElement.top
+              titleElement.top <= stickyElement.bottom &&
+              titleElement.bottom >= stickyElement.top
             ) {
-              setBgColor(colors[index % colors.length]);
-              setSectionContent(sections[index].content);
+              const currentTitle = data[index];
+              setTitleHighlight({
+                numSection: currentTitle.numSection,
+                numUnit: currentTitle.numUnit,
+                name: currentTitle.name,
+                color: colors[index % colors.length],
+              });
             }
           }
         });
       }
     };
 
-    window.addEventListener("scroll", checkIntersection);
+    window.addEventListener("scroll", checkInterTitle);
 
-    checkIntersection();
+    checkInterTitle();
 
     // Cleanup listener khi component unmount
     return () => {
-      window.removeEventListener("scroll", checkIntersection);
+      window.removeEventListener("scroll", checkInterTitle);
     };
   }, []);
 
@@ -60,25 +71,27 @@ export default function ScrollHighlight() {
     <div className="w-full xl:pr-8 pr-0">
       <div
         ref={stickyRef}
-        className={`sticky top-4 transition-colors duration-300`}
-        style={{ backgroundColor: bgColor }}
+        className="sticky top-0 pt-4 transition-colors duration-300"
       >
-        <div className="mt-4 mx-auto max-w-[600px] h-[100px] rounded-xl">
-          {sectionContent}
-        </div>
+        <LearnTitle
+          numSection={titleHighlight.numSection}
+          numUnit={titleHighlight.numUnit}
+          name={titleHighlight.name}
+          color={titleHighlight.color}
+        />
       </div>
 
       <div className="w-full">
-        {sections.map((section, index) => (
+        {data.map((title, index) => (
           <div
-            key={section.id}
-            id={section.id}
+            key={index}
             ref={(el) => {
-              sectionsRef.current[index] = el;
+              titlesRef.current[index] = el;
             }}
             className="h-[500px]"
           >
-            {section.content}
+            <p className="font-bold text-lg">{title.name}</p>
+            <p>Number of Units: {title.numUnit}</p>
           </div>
         ))}
       </div>
