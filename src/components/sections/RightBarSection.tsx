@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader } from "../ui/card";
-import SectionInfo from "../SectionInfo";
+import ItemsInfo from "../ItemsInfo";
 import { Link } from "@/i18n/routing";
 import { Button } from "../ui/button";
 import { currentUser } from "@clerk/nextjs/server";
@@ -10,9 +10,9 @@ const RightBarSection = async () => {
   const user = await currentUser();
 
   return (
-    <div className="w-full">
-      <SectionInfo />
-      <div className="space-y-6 mt-6">
+    <div className="w-full h-full">
+      <ItemsInfo />
+      <div className="space-y-6 mt-6 overflow-y-auto max-h-[calc(100vh-88px)] scrollbar-hide">
         <Card>
           <CardHeader className="text-xl font-bold">
             Unlock Leaderboards!
@@ -33,7 +33,7 @@ const RightBarSection = async () => {
         <Card>
           <CardHeader className="flex-row items-center justify-between">
             <span className="text-xl font-bold">Daily Quests</span>
-            <Link className="text-sky-500 pb-[6px]" href='/quests'>
+            <Link className="text-sky-500 pb-[6px]" href="/quests">
               VIEW ALL
             </Link>
           </CardHeader>
