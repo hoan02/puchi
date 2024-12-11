@@ -1,26 +1,45 @@
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import GithubSVG from "@public/images/github.svg";
+import FacebookSVG from "@public/images/facebook.svg";
 import LogoSVG from "@public/images/logo/logo.svg";
 import ThemeToggle from "@/components/ThemeToggle";
 import NavigationLocaleSwitcherPublic from "@/components/NavigationLocaleSwitcherPublic";
+
+const LinkNav = () => {
+  return (
+    <>
+      <ThemeToggle />
+      <Button variant="ghost" size="icon" asChild>
+        <a
+          href="https://github.com/hoan02/puchi"
+          target="_blank"
+          aria-label="GitHub repo"
+          title="Github repo"
+        >
+          <GithubSVG className="size-6" />
+        </a>
+      </Button>
+      <Button variant="ghost" size="icon" asChild>
+        <a
+          href="https://www.facebook.com/profile.php?id=61569075361529"
+          target="_blank"
+          aria-label="Facebook group"
+          title="Facebook group"
+        >
+          <FacebookSVG className="size-6" />
+        </a>
+      </Button>
+    </>
+  );
+};
 
 const Header = () => {
   return (
     <header className="relative flex justify-center">
       <div className="z-1 flex w-full items-center justify-between gap-2 px-2 sm:px-8">
         <div className="flex flex-1 items-center justify-start gap-1 max-sm:hidden">
-          <Button variant="ghost" size="icon" asChild>
-            <a
-              href="https://github.com/hoan02/puchi"
-              target="_blank"
-              aria-label="GitHub repo"
-              title="Github repo"
-            >
-              <GithubSVG className="size-6" />
-            </a>
-          </Button>
-          <ThemeToggle />
+          <LinkNav />
         </div>
         <Link
           href="/"
@@ -33,11 +52,11 @@ const Header = () => {
           </span>
         </Link>
         <div className="flex flex-1 items-center justify-end">
+          <div className="sm:hidden">
+            <LinkNav />
+          </div>
           <NavigationLocaleSwitcherPublic />
         </div>
-      </div>
-      <div className="fixed bottom-4 right-4 z-50 sm:hidden">
-        <ThemeToggle className="size-12 border border-solid border-border bg-card/40 backdrop-blur-lg"></ThemeToggle>
       </div>
     </header>
   );

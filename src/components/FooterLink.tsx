@@ -2,7 +2,7 @@ import { Link } from "@/i18n/routing";
 
 const FooterLink = () => {
   return (
-    <div className="w-full flex flex-wrap justify-center gap-4 text-sm text-gray-500 text-center font-bold font-din">
+    <div className="w-full py-4 flex flex-wrap justify-center gap-4 text-sm text-gray-500 text-center font-bold font-din">
       <Link href="/about">ABOUT</Link>
       <Link href="/help">HELP</Link>
       <Link href="/attribution">ATTRIBUTION</Link>
