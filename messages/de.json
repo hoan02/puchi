@@ -129,5 +129,12 @@
         "email": "Für alle Anfragen zum Datenschutz und Fragen zu dieser Datenschutzrichtlinie wenden Sie sich bitte an unseren Datenschutzbeauftragten unter: lehoan.dev@gmail.com"
       }
     }
+  },
+  "AboutPage": {
+    "title": "Über Puchi",
+    "intro": "Puchi ist eine innovative Plattform, die Benutzern hilft, Vietnamesisch zu beherrschen. Mit Unterstützung für mehrere Sprachen stellt Puchi sicher, dass Lernende weltweit Zugang haben.",
+    "technologies": "Mit modernen Technologien wie Next.js 15, Shadcn UI und Clerk-Authentifizierung bietet Puchi ein schnelles, sicheres und nahtloses Lernerlebnis. Internationalisierung (i18n) ist eine Kernfunktion, die es Benutzern ermöglicht, Inhalte in ihrer bevorzugten Sprache zu erkunden.",
+    "creator": "Erstellt von Lê Công Hoan, einem leidenschaftlichen Entwickler, der sich der Nutzung von Technologie für Bildung widmet.",
+    "joinCommunity": "Treten Sie unserer Community auf <facebookLink>Facebook</facebookLink> bei, um sich mit anderen Lernenden zu verbinden, oder erkunden Sie den Quellcode des Projekts auf <githubLink>GitHub</githubLink>."
   }
 }
