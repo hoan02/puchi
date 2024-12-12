@@ -129,5 +129,12 @@
         "email": "개인정보 보호 정책에 관한 문의 사항이나 질문이 있으시면 당사의 데이터 보호 책임자에게 연락해 주십시오. 이메일: lehoan.dev@gmail.com"
       }
     }
+  },
+  "AboutPage": {
+    "title": "푸치에 대하여",
+    "intro": "푸치는 사용자가 베트남어를 마스터할 수 있도록 설계된 혁신적인 플랫폼입니다. 여러 언어를 지원하여 전 세계 학습자들에게 접근성을 보장합니다.",
+    "technologies": "Next.js 15, Shadcn UI 및 Clerk 인증과 같은 최신 기술로 구축된 Puchi는 빠르고 안전하며 원활한 학습 경험을 제공합니다. 국제화(i18n)는 핵심 기능으로, 사용자가 선호하는 언어로 콘텐츠를 탐색할 수 있습니다.",
+    "creator": "교육을 위해 기술을 활용하는 데 열정을 가진 개발자 Lê Công Hoan이 제작했습니다.",
+    "joinCommunity": "<facebookLink>Facebook</facebookLink>에서 커뮤니티에 가입하여 다른 학습자와 연결하거나 <githubLink>GitHub</githubLink>에서 프로젝트 소스 코드를 탐색하세요."
   }
 }

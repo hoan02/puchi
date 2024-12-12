@@ -129,5 +129,12 @@
         "email": "有关数据隐私的所有查询，以及您对本隐私政策的任何问题或关注，请通过以下电子邮件与我们的数据保护官联系：lehoan.dev@gmail.com"
       }
     }
+  },
+  "AboutPage": {
+    "title": "关于 Puchi",
+    "intro": "Puchi 是一个创新的平台，旨在帮助用户掌握越南语。通过支持多种语言，Puchi 确保全球学习者都能轻松访问。",
+    "technologies": "Puchi 使用现代技术（如 Next.js 15、Shadcn UI 和 Clerk 身份验证）构建，提供快速、安全和无缝的学习体验。国际化（i18n）是核心功能，使用户能够以首选语言探索内容。",
+    "creator": "由 Lê Công Hoan 创建，他是一位致力于利用技术促进教育的热情开发者。",
+    "joinCommunity": "加入我们的 <facebookLink>Facebook</facebookLink> 社区，与其他学习者联系，或在 <githubLink>GitHub</githubLink> 上探索项目源代码。"
   }
 }
