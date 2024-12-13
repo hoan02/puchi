@@ -52,6 +52,43 @@ const SidebarLeft = () => {
             </div>
           );
         })}
+        <div className="group relative w-full gap-4 p-2 rounded-xl border-2 hover:bg-sky-100 dark:hover:bg-sky-900/40">
+          <div className="flex items-center px-2 max-lg:px-0 gap-4">
+            <Image alt="more" src="/icons/more.svg" width={32} height={32} />
+            <span className="hidden lg:inline uppercase font-bold text-sm">
+              more
+            </span>
+          </div>
+
+          <div className="absolute z-10 -right-4 -top-4 hidden group-hover:block">
+            <div className="py-2 uppercase text-sm translate-x-full bg-white dark:bg-gray-800 shadow-lg border rounded-lg w-48">
+              <Link
+                href="/sign-up"
+                className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer"
+              >
+                Create profile
+              </Link>
+              <Link
+                href="/settings"
+                className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer"
+              >
+                Settings
+              </Link>
+              <Link
+                href="/help"
+                className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer"
+              >
+                Help
+              </Link>
+              <Link
+                href="/sign-up"
+                className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded cursor-pointer"
+              >
+                Sign in
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Bottom section */}

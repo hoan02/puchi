@@ -4,6 +4,7 @@ export enum NavigationSlugs {
   LEADER_BOARD = "leader-board",
   QUESTS = "quests",
   SHOP = "shop",
+  PROFILE = "profile",
 }
 
 export type ItemNav = {
@@ -33,9 +34,14 @@ export const navigationList: ItemNav[] = [
     label: "Quests",
     icon: "/icons/quests.svg",
   },
+  // {
+  //   slug: NavigationSlugs.SHOP,
+  //   label: "Shop",
+  //   icon: "/icons/shop.svg",
+  // },
   {
-    slug: NavigationSlugs.SHOP,
-    label: "Shop",
-    icon: "/icons/shop.svg",
+    slug: NavigationSlugs.PROFILE,
+    label: "Profile",
+    icon: "/icons/profile.svg",
   },
 ];
