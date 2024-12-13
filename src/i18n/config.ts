@@ -14,9 +14,7 @@ export const locales = [
   "ru",
 ] as const;
 
-export const pathnames: Pathnames<typeof locales> = {
-  "/settings": "/settings/account",
-};
+export const pathnames: Pathnames<typeof locales> = {};
 
 export type Locale = (typeof locales)[number];
 

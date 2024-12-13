@@ -79,7 +79,7 @@ const HelpPage = () => {
             <AccordionContent className="text-lg space-y-4 text-justify text-gray-600 dark:text-gray-400">
               <p>
                 {t("answers.changeUsernameOrEmail.part1")}{" "}
-                <Link href="/settings/account" className="text-blue-500">
+                <Link href="/settings/profile" className="text-blue-500">
                   {t("answers.changeUsernameOrEmail.linkText")}
                 </Link>
                 .

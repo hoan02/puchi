@@ -2,7 +2,7 @@ import SelectTheme from "@/components/SelectTheme";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
 
-const SettingAccount = () => {
+const Settings = () => {
   return (
     <div className="flex-1 space-y-10">
       <div className="">
@@ -56,4 +56,4 @@ const SettingAccount = () => {
   );
 };
 
-export default SettingAccount;
+export default Settings;

@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const settingAccount = {
   title: "Account",
   items: [
-    { label: "Preferences", href: "/settings/account" },
+    { label: "Preferences", href: "/settings" },
     { label: "Profile", href: "/settings/profile" },
     { label: "Notifications", href: "/settings/notifications" },
     { label: "Privacy settings", href: "/settings/privacy" },

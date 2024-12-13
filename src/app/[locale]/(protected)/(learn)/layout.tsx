@@ -1,21 +1,14 @@
-import ClerkLocalizationProvider from "@/components/providers/ClerkLocalizationProvider";
 import ItemsInfo from "@/components/ItemsInfo";
 import RightBarSection from "@/components/sections/RightBarSection";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 type LearnLayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 };
 
-export default async function LearnLayout({
-  children,
-  params,
-}: LearnLayoutProps) {
-  const { locale } = await params;
-
+export default async function LearnLayout({ children }: LearnLayoutProps) {
   return (
-    <ClerkLocalizationProvider locale={locale}>
+    <>
       <div className="xl:hidden">
         <ItemsInfo />
       </div>
@@ -33,6 +26,6 @@ export default async function LearnLayout({
           </div>
         </div>
       </div>
-    </ClerkLocalizationProvider>
+    </>
   );
 }
