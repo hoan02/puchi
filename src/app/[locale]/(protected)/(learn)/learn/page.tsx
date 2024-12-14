@@ -1,13 +1,11 @@
 "use client";
 
 import LearnTitle from "@/components/learn/LearnTitle";
+import Unit from "@/components/learn/Unit";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
-
-const data = Array.from({ length: 20 }, (_, index) => ({
-  name: `Unit ${index + 1}`,
-  numSection: 1,
-  numUnit: index + 1,
-}));
 
 const colors = [
   "#58CC02", // Green
@@ -21,15 +19,20 @@ const colors = [
   "#DC8F47", // Gold
 ];
 
+const unitPlaying = 1;
+
+const data = Array.from({ length: 20 }, (_, index) => ({
+  name: `Unit ${index + 1}`,
+  numSection: 1,
+  numUnit: index + 1,
+  color: colors[index % colors.length],
+  isPlaying: index + 1 === unitPlaying,
+}));
+
 export default function ScrollHighlight() {
-  const [titleHighlight, setTitleHighlight] = useState({
-    numSection: 0,
-    numUnit: 0,
-    name: "",
-    color: colors[0],
-  });
   const titlesRef = useRef<(HTMLDivElement | null)[]>([]);
   const stickyRef = useRef<HTMLDivElement | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const checkInterTitle = () => {
@@ -44,13 +47,7 @@ export default function ScrollHighlight() {
               titleElement.top <= stickyElement.bottom &&
               titleElement.bottom >= stickyElement.top
             ) {
-              const currentTitle = data[index];
-              setTitleHighlight({
-                numSection: currentTitle.numSection,
-                numUnit: currentTitle.numUnit,
-                name: currentTitle.name,
-                color: colors[index % colors.length],
-              });
+              setCurrentIndex(index);
             }
           }
         });
@@ -68,33 +65,38 @@ export default function ScrollHighlight() {
   }, []);
 
   return (
-    <div className="w-full xl:pr-8 pr-0">
+    <div className="w-full xl:pr-8 pr-0 font-din">
       <div
         ref={stickyRef}
-        className="sticky top-0 pt-4 transition-colors duration-300"
+        className="sticky z-50 top-0 pt-4 transition-colors duration-300"
       >
-        <LearnTitle
-          numSection={titleHighlight.numSection}
-          numUnit={titleHighlight.numUnit}
-          name={titleHighlight.name}
-          color={titleHighlight.color}
-        />
+        <LearnTitle data={data[currentIndex]} />
       </div>
 
-      <div className="w-full">
+      <div className="w-full relative top-8">
         {data.map((title, index) => (
           <div
             key={index}
             ref={(el) => {
               titlesRef.current[index] = el;
             }}
-            className="h-[500px]"
           >
-            <p className="font-bold text-lg">{title.name}</p>
-            <p>Number of Units: {title.numUnit}</p>
+            <Unit data={data[index]} />
           </div>
         ))}
       </div>
+      <Card className="p-8 text-center mb-10">
+        <Badge variant="secondary" className="uppercase text-gray-100">
+          up next
+        </Badge>
+        <div className="my-4 text-gray-200 text-3xl font-bold">Section 2</div>
+        <p className="my-8 mx-auto max-w-[300px] text-gray-600">
+          Learn words, phrases, and grammar concepts for basic interactions
+        </p>
+        <Button className="w-full" variant="highlight">
+          Jump here?
+        </Button>
+      </Card>
     </div>
   );
 }

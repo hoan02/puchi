@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { Link } from "@/i18n/routing";
 
 const LearnTitle = (props) => {
-  const { numSection, numUnit, name, color } = props;
+  const { numSection, numUnit, name, color } = props.data;
 
   return (
     <div
