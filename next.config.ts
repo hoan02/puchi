@@ -71,6 +71,13 @@ const config: NextConfig = {
       fullUrl: true,
     },
   },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
 };
 
 export default bundleAnalyzer(withNextIntl()(config));

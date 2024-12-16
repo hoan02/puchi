@@ -12,8 +12,3 @@ declare module '*.svg?url' {
   const content: StaticImport | string;
   export default content;
 }
-
-declare module 'tailwindcss-motion' {
-  const tailwindcssMotion: unknown;
-  export default tailwindcssMotion;
-}
