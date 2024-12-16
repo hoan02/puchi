@@ -11,6 +11,12 @@ const isProtectedRoute = createRouteMatcher(localizedProtectedRoute);
 
 export default clerkMiddleware(
   async (auth, req) => {
+    const url = new URL(req.url);
+
+    if (url.pathname.startsWith("/api")) {
+      return NextResponse.next();
+    }
+
     if (isProtectedRoute(req)) {
       req.headers.set("x-app-route", "true");
       await auth.protect();
