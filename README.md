@@ -4,10 +4,9 @@ Master Vietnamese. Learn On The Go.
 
 <div align="center">
   <a href="https://puchi.io.vn/">
-    <img src="./assets/puchi-cover.webp" alt="Puchi brand banner" title="Puchi" />
+    <img src=".github/assets/puchi-cover.webp" alt="Puchi brand banner" title="Puchi" />
   </a>
 </div>
-
 
 ## Table of Contents
 
@@ -28,20 +27,21 @@ Puchi is an innovative platform designed to help users master Vietnamese. With P
 
 To get started with Puchi:
 
-1. Visit [puchi.io.vn](https://puchi.io.vn/), or search for it here:  
+1. Visit [puchi.io.vn](https://puchi.io.vn/), or search for it here:
    <div align="center">
      <a href="https://www.google.com/search?q=puchi+vietnamese">
-       <img src="./assets/search-puchi-vietnamese.png" alt="Search Puchi" />
+       <img src=".github/assets/search-puchi-vietnamese.png" alt="Search Puchi" />
      </a>
      <p>*(Hint: You’ll find it right at the top of the search results! 😘)*</p>
-   </div>  
+   </div>
 
-2. Sign up and choose your learning plan.  
+2. Sign up and choose your learning plan.
 3. Begin your Vietnamese learning journey today!
 
 ## Key Features
 
 - 🌐 **Built with Next.js 15** & Server Actions for fast and efficient server-side rendering.
+- 🔄 **React 19 Integration** for improved interactivity and dynamic updates without compromising performance.
 - 🎨 **Beautiful Component System** using Shadcn UI for a clean and consistent design.
 - 📱 **Responsive Design** for optimal experience on mobile and desktop devices.
 - 🌍 **Internationalization (i18n)** support for multiple languages.
@@ -72,6 +72,7 @@ Puchi is licensed under the MIT License. See the [LICENSE](./LICENSE) file for m
 ## Contact
 
 For any questions or support, please contact us at:
+
 > Email: lehoan.dev@gmail.com</br>
 > Facebook: [Lê Công Hoan](https://www.facebook.com/hoanit02)
 
