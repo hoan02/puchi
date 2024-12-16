@@ -1,80 +1,36 @@
-# Puchi
-
-Master Vietnamese. Learn On The Go.
-
-<div align="center">
-  <a href="https://puchi.io.vn/">
-    <img src="./assets/puchi-cover.webp" alt="Puchi brand banner" title="Puchi" />
-  </a>
-</div>
-
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Key Features](#key-features)
-- [Performance](#performance)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## Introduction
-
-Puchi is an innovative platform designed to help users master Vietnamese. With Puchi, you can learn Vietnamese anytime and anywhere, making it perfect for busy learners who want to study on the go.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-To get started with Puchi:
+First, run the development server:
 
-1. Visit [puchi.io.vn](https://puchi.io.vn/), or search for it here:  
-   <div align="center">
-     <a href="https://www.google.com/search?q=puchi+vietnamese">
-       <img src="./assets/search-puchi-vietnamese.png" alt="Search Puchi" />
-     </a>
-     <p>*(Hint: You’ll find it right at the top of the search results! 😘)*</p>
-   </div>  
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-2. Sign up and choose your learning plan.  
-3. Begin your Vietnamese learning journey today!
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Key Features
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- 🌐 **Built with Next.js 15** & Server Actions for fast and efficient server-side rendering.
-- 🎨 **Beautiful Component System** using Shadcn UI for a clean and consistent design.
-- 📱 **Responsive Design** for optimal experience on mobile and desktop devices.
-- 🌍 **Internationalization (i18n)** support for multiple languages.
-- 🔒 **Secure Authentication** powered by Clerk to keep your data safe.
-- 📊 **Analytics Integration** to track user progress and optimize the learning experience.
-- 🚀 **Optimized Performance** with efficient resource handling and caching.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Performance
+## Learn More
 
-Puchi is optimized for speed and performance. Check the latest Google PageSpeed Insights score below:
+To learn more about Next.js, take a look at the following resources:
 
-[![Google PageSpeed Insights](https://img.shields.io/badge/Google%20PageSpeed-Test%20Puchi-blue?style=for-the-badge&logo=google&labelColor=white)](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fpuchi.io.vn%2Fen)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Click the badge above to see Puchi’s current performance score and suggestions for further optimization.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Usage
+## Deploy on Vercel
 
-Puchi is designed to be accessible on both mobile and desktop devices. Simply log in, select your course, and begin learning.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Contributing
-
-We welcome contributions! Feel free to open issues, submit pull requests, or provide feedback to help us improve Puchi.
-
-## License
-
-Puchi is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
-
-## Contact
-
-For any questions or support, please contact us at:
-> Email: lehoan.dev@gmail.com</br>
-> Facebook: [Lê Công Hoan](https://www.facebook.com/hoanit02)
-
----
-
-Puchi © 2024. All rights reserved.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
