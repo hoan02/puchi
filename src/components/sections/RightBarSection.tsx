@@ -38,7 +38,7 @@ const RightBarSection = async () => {
             </Link>
           </CardHeader>
           <CardContent className="flex gap-6">
-            <Image alt="unlock" src="/icons/xp.svg" width={40} height={56} />
+            <Image alt="unlock" src="/icons/xp.svg" width={40} height={40} />
             <div className="w-full">
               <p className="text-lg font-bold">Earn 10 XP</p>
               <div className="flex items-center">
