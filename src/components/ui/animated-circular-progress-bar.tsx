@@ -17,6 +17,7 @@ export default function AnimatedCircularProgressBar({
   gaugePrimaryColor,
   gaugeSecondaryColor,
   className,
+  children,
 }: Props) {
   const circumference = 2 * Math.PI * 45;
   const percentPx = circumference / 100;
@@ -102,7 +103,7 @@ export default function AnimatedCircularProgressBar({
         data-current-value={currentPercent}
         className="duration-[var(--transition-length)] delay-[var(--delay)] absolute inset-0 m-auto size-fit ease-linear animate-in fade-in"
       >
-        {currentPercent}
+        {children ? children : currentPercent}
       </span>
     </div>
   );

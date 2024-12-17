@@ -7,36 +7,31 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 
-const colors = [
-  "#58CC02", // Green
-  "#CE82FF", // Purple
-  "#00CD9C", // Teal
-  "#1CB0F6", // Blue
-  "#FF86D0", // Pink
-  "#FF9600", // Orange
-  "#FF4B4B", // Red
-  "#CC348D", // Magenta
-  "#DC8F47", // Gold
-];
-
-const unitPlaying = 1;
-
 const data = Array.from({ length: 10 }, (_, index) => ({
   name: `Unit ${index + 1}`,
   numSection: 1,
   numUnit: index + 1,
-  color: colors[index % colors.length],
-  isPlaying: index + 1 === unitPlaying,
   lessons: [
     { id: 1, name: `Lesson 1: Lesson for Unit ${index + 1}`, completed: false },
-    { id: 2, name: `Lesson 2: Another lesson for Unit ${index + 1}`, completed: true },
-    { id: 3, name: `Lesson 3: Third lesson for Unit ${index + 1}`, completed: false },
-    { id: 4, name: `Lesson 4: Final lesson for Unit ${index + 1}`, completed: false },
+    {
+      id: 2,
+      name: `Lesson 2: Another lesson for Unit ${index + 1}`,
+      completed: false,
+    },
+    {
+      id: 3,
+      name: `Lesson 3: Third lesson for Unit ${index + 1}`,
+      completed: false,
+    },
+    {
+      id: 4,
+      name: `Lesson 4: Final lesson for Unit ${index + 1}`,
+      completed: false,
+    },
   ],
-  activeLesson: { id: 3 }, // Example of active lesson
-  activeLessonPercentage: 60, // Example percentage
+  activeLesson: { id: 1 },
+  activeLessonPercentage: 0,
 }));
-
 
 export default function ScrollHighlight() {
   const titlesRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -90,7 +85,7 @@ export default function ScrollHighlight() {
               titlesRef.current[index] = el;
             }}
           >
-            <Unit data={data[index]} />
+            <Unit data={title} />
           </div>
         ))}
       </div>

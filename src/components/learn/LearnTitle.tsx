@@ -8,26 +8,27 @@ interface LearnTitleProps {
     numSection: number;
     numUnit: number;
     name: string;
-    color: string;
   };
 }
 
 const LearnTitle = ({ data }: LearnTitleProps) => {
-  const { numSection, numUnit, name, color } = data;
+  const { numSection, numUnit, name } = data;
 
   return (
     <div
       className="p-4 mx-auto max-w-[560px] h-20 rounded-xl flex justify-between items-center"
-      style={{ backgroundColor: color }}
+      style={{ backgroundColor: `var(--unit-${numUnit % 10})` }}
     >
       <div className="">
-        <Link href="/sections" className="flex gap-2">
+        <Link href="/sections" className="flex gap-2 text-gray-200">
           <ArrowLeft className="cursor-pointer" />
-          <span className="text-gray-700 dark:text-gray-300 underline underline-offset-2 hover:text-blue-500">
+          <span className="underline underline-offset-2">
             SECTION {numSection}, UNIT {numUnit}:
           </span>
         </Link>
-        <h1 className="mt-2 lg:ml-2 ml-6 text-xl font-bold">{name}</h1>
+        <h1 className="mt-2 lg:ml-2 ml-6 text-xl font-bold text-gray-50">
+          {name}
+        </h1>
       </div>
 
       <Link
@@ -36,7 +37,7 @@ const LearnTitle = ({ data }: LearnTitleProps) => {
       >
         <Button variant="immersive">
           <Notebook />
-          <span className="ml-2 max-xl:hidden">GUIDEBOOK</span>
+          <span className="ml-2 max-xl:hidden text-gray-50">GUIDEBOOK</span>
         </Button>
       </Link>
     </div>

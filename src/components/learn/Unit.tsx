@@ -1,13 +1,10 @@
 import { Separator } from "../ui/separator";
-import { LessonButton } from "./lesson-button";
+import LessonButton from "../lesson-button";
 
-// Define the interface for the data prop
 interface UnitData {
   numSection: number;
   numUnit: number;
   name: string;
-  color: string;
-  isPlaying: boolean;
   lessons: {
     id: number;
     name: string;
@@ -24,10 +21,10 @@ interface UnitProps {
 }
 
 const Unit = ({ data }: UnitProps) => {
-  const { name, activeLesson, activeLessonPercentage, lessons } = data;
-
+  const { numUnit, name, activeLesson, activeLessonPercentage, lessons } = data;
+  const color = `var(--unit-${numUnit % 10})`;
   return (
-    <div className="h-[500px]">
+    <div className="h-[520px]">
       <div className="flex justify-center items-center">
         <Separator className="w-1/3 h-[3px]" />
         <h2 className="mx-4">{name}</h2>
@@ -43,11 +40,12 @@ const Unit = ({ data }: UnitProps) => {
             <LessonButton
               key={lesson.id}
               id={lesson.id}
-              index={i} // Pass the index
-              totalCount={lessons.length} // Pass the totalCount
+              index={i}
+              totalCount={lessons.length}
               current={isCurrent}
               locked={isLocked}
               percentage={activeLessonPercentage}
+              color={color}
             />
           );
         })}

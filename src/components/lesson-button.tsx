@@ -1,10 +1,10 @@
 "use client";
 
-import { Check, Crown, Star } from "lucide-react";
 import Link from "next/link";
+import { Check, Crown, Star, ChevronsRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import AnimatedCircularProgressBar from "../ui/animated-circular-progress-bar";
+import AnimatedCircularProgressBar from "./ui/animated-circular-progress-bar";
 import { cn } from "@/lib/utils";
 
 type LessonButtonProps = {
@@ -14,15 +14,17 @@ type LessonButtonProps = {
   locked?: boolean;
   current?: boolean;
   percentage: number;
+  color?: string;
 };
 
-export const LessonButton = ({
+const LessonButton = ({
   id,
   index,
   totalCount,
   locked,
   current,
   percentage,
+  color,
 }: LessonButtonProps) => {
   const cycleLength = 8;
   const cycleIndex = index % cycleLength;
@@ -39,8 +41,15 @@ export const LessonButton = ({
   const isFirst = index === 0;
   const isLast = index === totalCount;
   const isCompleted = !current && !locked;
+  const jump = isFirst && percentage === 0;
 
-  const Icon = isCompleted ? Check : isLast ? Crown : Star;
+  const Icon = jump
+    ? ChevronsRight
+    : isCompleted
+    ? Check
+    : isLast
+    ? Crown
+    : Star;
 
   const href = isCompleted ? `/lesson/${id}` : "/lesson";
 
@@ -59,8 +68,14 @@ export const LessonButton = ({
       >
         {current ? (
           <div className="relative h-[102px] w-[102px]">
-            <div className="absolute -top-6 left-2.5 z-10 animate-bounce rounded-xl border-2 bg-white px-3 py-2.5 font-bold uppercase tracking-wide text-green-500">
-              Start
+            <div
+              className="absolute -top-8 z-10 animate-bounce-slow rounded-xl border-2 px-3 py-2.5 font-bold uppercase tracking-wide bg-background/95 whitespace-nowrap"
+              style={{
+                color,
+                left: jump ? "-14px" : "11px",
+              }}
+            >
+              {jump ? "Jump here?" : "Start"}
               <div
                 className="absolute -bottom-2 left-1/2 h-0 w-0 -translate-x-1/2 transform border-x-8 border-t-8 border-x-transparent"
                 aria-hidden
@@ -70,21 +85,23 @@ export const LessonButton = ({
               max={100}
               min={0}
               value={Number.isNaN(percentage) ? 0 : percentage}
-              gaugePrimaryColor="#4ade80"
-              gaugeSecondaryColor="#e5e7eb"
+              gaugePrimaryColor="#58CC02"
+              gaugeSecondaryColor="#525252"
+              className="w-[100px] h-[96px]"
             >
               <Button
                 size="rounded"
-                variant={locked ? "locked" : "secondary"}
-                className="h-[70px] w-[70px] border-b-8"
+                variant={locked ? "locked" : "immersive"}
+                className="w-[70px] h-[68px] border-b-8 hover:translate-y-[1px] hover:border-b-[7px]"
+                style={{ backgroundColor: color }}
               >
                 <Icon
                   className={cn(
                     "h-10 w-10",
                     locked
                       ? "fill-neutral-400 stroke-neutral-400 text-neutral-400"
-                      : "fill-primary-foreground text-primary-foreground",
-                    isCompleted && "fill-none stroke-[4]"
+                      : "fill-gray-50 text-gray-50",
+                    (jump || isCompleted) && "fill-none stroke-[4]"
                   )}
                 />
               </Button>
@@ -94,7 +111,7 @@ export const LessonButton = ({
           <Button
             size="rounded"
             variant={locked ? "locked" : "secondary"}
-            className="h-[70px] w-[70px] border-b-8"
+            className="w-[70px] h-[70px] border-b-8"
           >
             <Icon
               className={cn(
@@ -111,3 +128,5 @@ export const LessonButton = ({
     </Link>
   );
 };
+
+export default LessonButton;

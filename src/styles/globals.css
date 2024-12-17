@@ -46,6 +46,16 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --unit-1: #58cc02;
+    --unit-2: #ce82ff;
+    --unit-3: #ff9600;
+    --unit-4: #ff4b4b;
+    --unit-5: #1cb0f6;
+    --unit-6: #00cd9c;
+    --unit-7: #ff86d0;
+    --unit-8: #dc8f47;
+    --unit-9: #cc348d;
+    --unit-0: #0047AB;
   }
 
   .dark {

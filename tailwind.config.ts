@@ -140,6 +140,17 @@ export default {
             transform: "scale(1)",
           },
         },
+        "bounce-slow": {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-5px)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -147,6 +158,7 @@ export default {
         "footer-marquee": "footer-marquee 20s linear infinite",
         "footer-pulse": "footer-pulse 2s ease-in-out infinite",
         "spin-slow": "spin 3s linear infinite",
+        "bounce-slow": "bounce-slow 2s ease-in-out infinite",
       },
     },
   },
