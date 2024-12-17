@@ -65,6 +65,14 @@ const config: NextConfig = {
   // Additional configuration options
   experimental: {
     // typedRoutes: true, // Uncomment if needed
+    turbo: {
+      rules: {
+        "*.svg": {
+          loaders: ["@svgr/webpack"],
+          as: "*.js",
+        },
+      },
+    },
   },
   logging: {
     fetches: {
