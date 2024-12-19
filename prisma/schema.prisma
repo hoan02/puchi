@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -13,13 +7,71 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum LessonType {
+  STORY
+  LISTENING
+  UNSCRAMBLE
+  DICTATION
+}
+
 model User {
-  id          String     @id @default(cuid())
-  clerkUserId String     @unique
-  email       String     @unique
-  firstName   String?
-  lastName    String?
-  imageUrl    String?
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
+  id             String         @id @default(cuid())
+  email          String         @unique
+  username       String         @unique
+  firstName      String?
+  lastName       String?
+  imageUrl       String?
+  activeLessonId String?
+  activeLesson   Lesson?        @relation("ActiveLesson", fields: [activeLessonId], references: [id])
+  progress       UserProgress[] @relation("UserProgress")
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+}
+
+model Section {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  order       Int      @default(1)
+  units       Unit[]   @relation("SectionUnits")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Unit {
+  id        String   @id @default(cuid())
+  title     String
+  order     Int      @default(1)
+  sectionId String
+  section   Section  @relation("SectionUnits", fields: [sectionId], references: [id])
+  lessons   Lesson[] @relation("UnitLessons")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Lesson {
+  id          String         @id @default(cuid())
+  type        LessonType
+  totalSteps  Int            @default(0)
+  unitId      String
+  unit        Unit           @relation("UnitLessons", fields: [unitId], references: [id])
+  progress    UserProgress[] @relation("UserProgress")
+  activeUsers User[]         @relation("ActiveLesson")
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model UserProgress {
+  id                 String    @id @default(cuid())
+  userId             String
+  lessonId           String
+  currentStep        Int       @default(0)
+  progressPercentage Float     @default(0.0)
+  startedAt          DateTime?
+  completedAt        DateTime?
+  user               User      @relation("UserProgress", fields: [userId], references: [id], onDelete: Cascade)
+  lesson             Lesson    @relation("UserProgress", fields: [lessonId], references: [id], onDelete: Cascade)
+  createdAt          DateTime  @default(now())
+
+  @@unique([userId, lessonId])
 }

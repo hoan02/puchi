@@ -4,7 +4,7 @@ import { Webhook } from "svix";
 import { headers } from "next/headers";
 import { WebhookEvent } from "@clerk/nextjs/server";
 
-import { createUser, updateUser, deleteUser } from "@/services/userService";
+import { createUser, updateUser, deleteUser } from "@/services/user.service";
 
 export async function GET() {
   return new Response("Welcome to the Webhook CLERK API!", {
@@ -57,19 +57,26 @@ export async function POST(req: Request) {
   try {
     if (eventType === "user.created") {
       const eventData = evt?.data as typeof evt.data;
-      const { id, first_name, last_name, image_url, email_addresses } =
-        eventData;
+      const {
+        id,
+        username,
+        first_name,
+        last_name,
+        image_url,
+        email_addresses,
+      } = eventData;
 
-      if (!id || !first_name || !last_name || !image_url || !email_addresses) {
+      if (!id || !username || !image_url || !email_addresses) {
         return new Response("Error occurred", {
           status: 400,
         });
       }
 
       await createUser({
-        clerkUserId: id,
-        firstName: first_name,
-        lastName: last_name,
+        id,
+        username,
+        firstName: first_name || "",
+        lastName: last_name || "",
         imageUrl: image_url,
         email: email_addresses[0].email_address,
       });

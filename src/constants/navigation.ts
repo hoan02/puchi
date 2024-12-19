@@ -1,7 +1,6 @@
 export enum NavigationSlugs {
   LEARN = "learn",
   CHARACTERS = "characters",
-  LEADER_BOARD = "leader-board",
   QUESTS = "quests",
   SHOP = "shop",
   PROFILE = "profile",
@@ -25,20 +24,15 @@ export const navigationList: ItemNav[] = [
     icon: "/icons/characters.svg",
   },
   {
-    slug: NavigationSlugs.LEADER_BOARD,
-    label: "Leader Board",
-    icon: "/icons/leader-board.svg",
-  },
-  {
     slug: NavigationSlugs.QUESTS,
     label: "Quests",
     icon: "/icons/quests.svg",
   },
-  // {
-  //   slug: NavigationSlugs.SHOP,
-  //   label: "Shop",
-  //   icon: "/icons/shop.svg",
-  // },
+  {
+    slug: NavigationSlugs.SHOP,
+    label: "Shop",
+    icon: "/icons/shop.svg",
+  },
   {
     slug: NavigationSlugs.PROFILE,
     label: "Profile",

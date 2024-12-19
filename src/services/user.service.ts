@@ -1,7 +1,10 @@
+"use server";
+
 import prisma from "@/lib/db";
 
 export async function createUser(params: {
-  clerkUserId: string;
+  id: string;
+  username: string;
   email: string;
   firstName: string;
   lastName: string;
@@ -18,9 +21,10 @@ export async function createUser(params: {
 }
 
 export async function updateUser(
-  clerkUserId: string,
+  id: string,
   params: {
     email?: string;
+    username?: string;
     firstName?: string;
     lastName?: string;
     imageUrl?: string;
@@ -28,7 +32,7 @@ export async function updateUser(
 ) {
   try {
     return await prisma.user.update({
-      where: { clerkUserId },
+      where: { id },
       data: params,
     });
   } catch (error) {
@@ -37,10 +41,10 @@ export async function updateUser(
   }
 }
 
-export async function deleteUser(clerkUserId: string) {
+export async function deleteUser(id: string) {
   try {
     return await prisma.user.delete({
-      where: { clerkUserId },
+      where: { id },
     });
   } catch (error) {
     console.error("Error in deleteUser:", error);

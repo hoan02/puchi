@@ -7,12 +7,12 @@ interface LearnTitleProps {
   data: {
     numSection: number;
     numUnit: number;
-    name: string;
+    titleUnit: string;
   };
 }
 
 const LearnTitle = ({ data }: LearnTitleProps) => {
-  const { numSection, numUnit, name } = data;
+  const { numSection, numUnit, titleUnit } = data;
 
   return (
     <div
@@ -27,7 +27,7 @@ const LearnTitle = ({ data }: LearnTitleProps) => {
           </span>
         </Link>
         <h1 className="mt-2 lg:ml-2 ml-6 text-xl font-bold text-gray-50">
-          {name}
+          {titleUnit}
         </h1>
       </div>
 

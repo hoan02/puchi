@@ -2,7 +2,7 @@ import LearnContainer from "@/components/learn/LearnContainer";
 
 const Lesson = () => {
   return (
-    <div>
+    <div className="w-full h-full">
       <LearnContainer />
     </div>
   );

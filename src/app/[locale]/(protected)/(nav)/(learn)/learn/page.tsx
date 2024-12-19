@@ -8,29 +8,17 @@ import { Card } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 
 const data = Array.from({ length: 10 }, (_, index) => ({
-  name: `Unit ${index + 1}`,
   numSection: 1,
+  titleUnit: "Learn photography!",
+  descriptionUnit:
+    "Vietnamese men rushed to learn smartphone photography to impress",
   numUnit: index + 1,
   lessons: [
-    { id: 1, name: `Lesson 1: Lesson for Unit ${index + 1}`, completed: false },
-    {
-      id: 2,
-      name: `Lesson 2: Another lesson for Unit ${index + 1}`,
-      completed: false,
-    },
-    {
-      id: 3,
-      name: `Lesson 3: Third lesson for Unit ${index + 1}`,
-      completed: false,
-    },
-    {
-      id: 4,
-      name: `Lesson 4: Final lesson for Unit ${index + 1}`,
-      completed: false,
-    },
+    { id: 1, type: "STORY", activePercentage: 0 },
+    { id: 2, type: "LISTENING", activePercentage: 0 },
+    { id: 3, type: "UNSCRAMBLE", activePercentage: 0 },
+    { id: 4, type: "DICTATION", activePercentage: 0 },
   ],
-  activeLesson: { id: 1 },
-  activeLessonPercentage: 0,
 }));
 
 export default function ScrollHighlight() {
@@ -89,7 +77,7 @@ export default function ScrollHighlight() {
           </div>
         ))}
       </div>
-      <Card className="p-8 text-center mb-10">
+      <Card className="p-8 text-center mb-20">
         <Badge variant="secondary" className="uppercase text-gray-100">
           up next
         </Badge>

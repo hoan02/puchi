@@ -1,19 +1,15 @@
 import { Separator } from "../ui/separator";
-import LessonButton from "../lesson-button";
+import LessonButton from "../LessonButton";
 
 interface UnitData {
   numSection: number;
   numUnit: number;
-  name: string;
+  titleUnit: string;
   lessons: {
     id: number;
-    name: string;
-    completed: boolean;
+    type: string;
+    activePercentage: number;
   }[];
-  activeLesson: {
-    id: number;
-  };
-  activeLessonPercentage: number;
 }
 
 interface UnitProps {
@@ -21,30 +17,23 @@ interface UnitProps {
 }
 
 const Unit = ({ data }: UnitProps) => {
-  const { numUnit, name, activeLesson, activeLessonPercentage, lessons } = data;
+  const { numUnit, lessons } = data;
   const color = `var(--unit-${numUnit % 10})`;
   return (
-    <div className="h-[520px]">
+    <div className="h-[620px]">
       <div className="flex justify-center items-center">
         <Separator className="w-1/3 h-[3px]" />
-        <h2 className="mx-4">{name}</h2>
+        <h2 className="mx-4">Unit {numUnit}</h2>
         <Separator className="w-1/3 h-[3px]" />
       </div>
 
       <div className="relative flex flex-col items-center">
-        {lessons.map((lesson, i) => {
-          const isCurrent = lesson.id === activeLesson?.id;
-          const isLocked = !lesson.completed && !isCurrent;
-
+        {lessons.map((lesson, index) => {
           return (
             <LessonButton
-              key={lesson.id}
-              id={lesson.id}
-              index={i}
-              totalCount={lessons.length}
-              current={isCurrent}
-              locked={isLocked}
-              percentage={activeLessonPercentage}
+              key={index}
+              index={index}
+              lesson={lesson}
               color={color}
             />
           );
