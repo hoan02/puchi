@@ -78,4 +78,4 @@ For any questions or support, please contact us at:
 
 ---
 
-Puchi © 2024. All rights reserved.
+Puchi © 2025. All rights reserved.
