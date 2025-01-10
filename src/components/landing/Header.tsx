@@ -8,7 +8,7 @@ import NavigationLocaleSwitcherPublic from "@/components/NavigationLocaleSwitche
 
 const LinkNav = () => {
   return (
-    <>
+    <div className="space-x-2">
       <ThemeToggle />
       <Button variant="ghost" size="icon" asChild>
         <a
@@ -30,7 +30,7 @@ const LinkNav = () => {
           <FacebookSVG className="size-6" />
         </a>
       </Button>
-    </>
+    </div>
   );
 };
 
@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <header className="relative flex justify-center">
       <div className="z-1 flex w-full items-center justify-between gap-2 px-2 sm:px-8">
-        <div className="flex flex-1 items-center justify-start gap-1 max-sm:hidden">
+        <div className="flex flex-1 max-sm:hidden">
           <LinkNav />
         </div>
         <Link

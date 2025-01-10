@@ -55,7 +55,7 @@ const LessonButton = ({ index, lesson, color }: LessonButtonProps) => {
           {isFirst ? (
             <>
               <div
-                className="absolute -top-8 animate-bounce-slow rounded-xl border-2 px-3 py-2.5 font-bold uppercase tracking-wide bg-background/95 whitespace-nowrap"
+                className="absolute z-1 -top-8 animate-bounce-slow rounded-xl border-2 px-3 py-2.5 font-bold uppercase tracking-wide bg-background/95 whitespace-nowrap"
                 style={{
                   color,
                   left: isJump ? "-14px" : "11px",

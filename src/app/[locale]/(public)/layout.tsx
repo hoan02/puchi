@@ -1,10 +1,13 @@
+import dynamic from "next/dynamic";
 import { getTranslations } from "next-intl/server";
 
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { locales, defaultLocale } from "@/i18n/config";
 import { getBaseUrl } from "@/lib/helpers";
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+const ScrollToTopButton = dynamic(
+  () => import("@/components/ScrollToTopButton")
+);
 
 export async function generateMetadata({
   params,

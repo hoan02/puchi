@@ -12,7 +12,6 @@ import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
-  generator: "Next.js",
   applicationName: "Puchi",
   referrer: "origin-when-cross-origin",
   keywords: [

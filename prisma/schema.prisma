@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  seed     = "ts-node prisma/seed.ts"
 }
 
 datasource db {
@@ -39,14 +40,40 @@ model Section {
 }
 
 model Unit {
-  id        String   @id @default(cuid())
+  id        String     @id @default(cuid())
   title     String
-  order     Int      @default(1)
+  order     Int        @default(1)
   sectionId String
-  section   Section  @relation("SectionUnits", fields: [sectionId], references: [id])
-  lessons   Lesson[] @relation("UnitLessons")
+  section   Section    @relation("SectionUnits", fields: [sectionId], references: [id])
+  lessons   Lesson[]   @relation("UnitLessons")
+  sentences Sentence[] @relation("UnitSentences")
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Sentence {
+  id        String   @id @default(cuid())
+  unitId    String
+  unit      Unit     @relation("UnitSentences", fields: [unitId], references: [id])
+  text      String
+  order     Int
+  startTime Float
+  endTime   Float
+  words     Word[]   @relation("SentenceWords")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+model Word {
+  id         String   @id @default(cuid())
+  sentenceId String
+  sentence   Sentence @relation("SentenceWords", fields: [sentenceId], references: [id])
+  word       String
+  order      Int
+  startTime  Float
+  endTime    Float
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 }
 
 model Lesson {
