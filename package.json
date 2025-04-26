@@ -6,20 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "prisma generate && prisma migrate deploy",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate deploy",
-    "prisma:studio": "prisma studio"
-  },
-  "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@clerk/localizations": "^3.9.2",
     "@clerk/nextjs": "^6.9.2",
     "@next/bundle-analyzer": "^15.1.0",
-    "@prisma/client": "^6.1.0",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-aspect-ratio": "^1.1.1",
     "@radix-ui/react-avatar": "^1.1.2",
@@ -59,7 +51,6 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "postcss": "^8",
-    "prisma": "^6.1.0",
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.16",
     "tailwindcss-motion": "^1.0.0",
