@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import { CirclePause, CirclePlay } from "lucide-react";
-import { getLessonData } from "@/services/lesson/lessonService";
+import { getLessonData } from "@/services/lesson.service";
 import { Lesson } from "@/types/learn";
 
 const LessonStory = () => {
