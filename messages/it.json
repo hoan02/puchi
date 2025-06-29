@@ -131,10 +131,95 @@
     }
   },
   "AboutPage": {
-    "title": "Informazioni su Puchi",
-    "intro": "Puchi è una piattaforma innovativa progettata per aiutare gli utenti a padroneggiare il vietnamita. Con il supporto per più lingue, Puchi garantisce l'accessibilità agli studenti di tutto il mondo.",
-    "technologies": "Sviluppato con tecnologie moderne come Next.js 15, Shadcn UI e l'autenticazione Clerk, Puchi offre un'esperienza di apprendimento veloce, sicura e senza interruzioni. L'internazionalizzazione (i18n) è una caratteristica fondamentale che consente agli utenti di esplorare i contenuti nella loro lingua preferita.",
-    "creator": "Creato da Lê Công Hoan, uno sviluppatore appassionato dedicato a sfruttare la tecnologia per l'educazione.",
-    "joinCommunity": "Unisciti alla nostra community su <facebookLink>Facebook</facebookLink> per connetterti con altri studenti, oppure esplora il codice sorgente del progetto su <githubLink>GitHub</githubLink>."
+    "title": "Su Puchi",
+    "intro": "Puchi è una piattaforma innovativa progettata per aiutare gli utenti a padroneggiare il vietnamita. Con il supporto per più lingue, Puchi garantisce l'accessibilità per gli studenti di tutto il mondo.",
+    "technologies": "Costruito con tecnologie moderne come Next.js 15, Shadcn UI e autenticazione Clerk, Puchi offre un'esperienza di apprendimento veloce, sicura e fluida. L'internazionalizzazione (i18n) è una funzionalità principale che consente agli utenti di esplorare contenuti nella loro lingua preferita.",
+    "creator": "Creato da Lê Công Hoan, uno sviluppatore appassionato dedicato all'utilizzo della tecnologia per l'educazione.",
+    "joinCommunity": "Unisciti alla nostra community su <facebookLink>Facebook</facebookLink> per connetterti con altri studenti, o esplora il codice sorgente del progetto su <githubLink>GitHub</githubLink>."
+  },
+  "ProfileActions": {
+    "actions": {
+      "title": "Azioni",
+      "accountSettings": {
+        "title": "Impostazioni account",
+        "description": "Gestisci informazioni personali e sicurezza"
+      },
+      "security": {
+        "title": "Sicurezza",
+        "description": "Cambia password e autenticazione a due fattori"
+      },
+      "signOut": {
+        "title": "Disconnetti",
+        "description": "Disconnetti dall'account corrente"
+      }
+    },
+    "dangerZone": {
+      "title": "Zona pericolo",
+      "deleteAccount": {
+        "title": "Elimina account",
+        "description": "Questa azione non può essere annullata. Tutti i dati verranno eliminati permanentemente."
+      }
+    },
+    "deleteAccount": {
+      "success": "Account eliminato con successo",
+      "error": {
+        "confirmationRequired": "Inserisci 'DELETE' per confermare",
+        "general": "Si è verificato un errore durante l'eliminazione dell'account"
+      },
+      "dialog": {
+        "title": "Conferma eliminazione account",
+        "description": "Questa azione non può essere annullata. Tutti i tuoi dati verranno eliminati permanentemente.",
+        "confirmation": "Per confermare, inserisci <strong>DELETE</strong> nel campo sottostante.",
+        "confirmationLabel": "Conferma",
+        "confirmationPlaceholder": "Inserisci DELETE per confermare",
+        "cancel": "Annulla",
+        "confirm": "Elimina account",
+        "deleting": "Eliminazione in corso..."
+      }
+    }
+  },
+  "ProfileHeader": {
+    "title": "Informazioni Personali",
+    "email": "Email",
+    "username": "Nome utente",
+    "joinDate": "Data di registrazione",
+    "member": "Membro"
+  },
+  "ProfileForm": {
+    "title": "Modifica Informazioni",
+    "edit": "Modifica",
+    "save": "Salva",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "username": "Nome utente",
+    "email": "Email",
+    "emailNote": "L'email non può essere modificata. Contatta il supporto se devi cambiarla.",
+    "success": "Informazioni aggiornate con successo!",
+    "error": "Si è verificato un errore durante l'aggiornamento delle informazioni"
+  },
+  "ProfileStats": {
+    "learningStats": {
+      "title": "Statistiche di Apprendimento"
+    },
+    "progress": {
+      "title": "Progresso di Apprendimento",
+      "completedLessons": "Lezioni Completate",
+      "completed": "{count} lezioni completate",
+      "remaining": "{count} lezioni rimanenti"
+    },
+    "performance": {
+      "title": "Prestazioni di Apprendimento",
+      "averageAccuracy": "Precisione Media",
+      "excellent": "Eccellente",
+      "needsImprovement": "Necessita Miglioramento"
+    },
+    "stats": {
+      "completedLessons": "Lezioni Completate",
+      "currentStreak": "Serie Attuale",
+      "streakDays": "{days} giorni",
+      "totalXP": "XP Totale",
+      "currentLevel": "Livello Attuale",
+      "level": "Livello {level}"
+    }
   }
 }

@@ -136,5 +136,90 @@
     "technologies": "Mit modernen Technologien wie Next.js 15, Shadcn UI und Clerk-Authentifizierung bietet Puchi ein schnelles, sicheres und nahtloses Lernerlebnis. Internationalisierung (i18n) ist eine Kernfunktion, die es Benutzern ermöglicht, Inhalte in ihrer bevorzugten Sprache zu erkunden.",
     "creator": "Erstellt von Lê Công Hoan, einem leidenschaftlichen Entwickler, der sich der Nutzung von Technologie für Bildung widmet.",
     "joinCommunity": "Treten Sie unserer Community auf <facebookLink>Facebook</facebookLink> bei, um sich mit anderen Lernenden zu verbinden, oder erkunden Sie den Quellcode des Projekts auf <githubLink>GitHub</githubLink>."
+  },
+  "ProfileActions": {
+    "actions": {
+      "title": "Aktionen",
+      "accountSettings": {
+        "title": "Kontoeinstellungen",
+        "description": "Persönliche Informationen und Sicherheit verwalten"
+      },
+      "security": {
+        "title": "Sicherheit",
+        "description": "Passwort und Zwei-Faktor-Authentifizierung ändern"
+      },
+      "signOut": {
+        "title": "Abmelden",
+        "description": "Vom aktuellen Konto abmelden"
+      }
+    },
+    "dangerZone": {
+      "title": "Gefahrenbereich",
+      "deleteAccount": {
+        "title": "Konto löschen",
+        "description": "Diese Aktion kann nicht rückgängig gemacht werden. Alle Daten werden dauerhaft gelöscht."
+      }
+    },
+    "deleteAccount": {
+      "success": "Konto erfolgreich gelöscht",
+      "error": {
+        "confirmationRequired": "Bitte geben Sie 'DELETE' zur Bestätigung ein",
+        "general": "Beim Löschen des Kontos ist ein Fehler aufgetreten"
+      },
+      "dialog": {
+        "title": "Kontolöschung bestätigen",
+        "description": "Diese Aktion kann nicht rückgängig gemacht werden. Alle Ihre Daten werden dauerhaft gelöscht.",
+        "confirmation": "Zur Bestätigung geben Sie bitte <strong>DELETE</strong> in das Feld unten ein.",
+        "confirmationLabel": "Bestätigung",
+        "confirmationPlaceholder": "DELETE eingeben zur Bestätigung",
+        "cancel": "Abbrechen",
+        "confirm": "Konto löschen",
+        "deleting": "Wird gelöscht..."
+      }
+    }
+  },
+  "ProfileHeader": {
+    "title": "Persönliche Informationen",
+    "email": "E-Mail",
+    "username": "Benutzername",
+    "joinDate": "Beitrittsdatum",
+    "member": "Mitglied"
+  },
+  "ProfileForm": {
+    "title": "Informationen bearbeiten",
+    "edit": "Bearbeiten",
+    "save": "Speichern",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "username": "Benutzername",
+    "email": "E-Mail",
+    "emailNote": "E-Mail kann nicht geändert werden. Bitte kontaktieren Sie den Support, wenn Sie sie ändern müssen.",
+    "success": "Informationen erfolgreich aktualisiert!",
+    "error": "Beim Aktualisieren der Informationen ist ein Fehler aufgetreten"
+  },
+  "ProfileStats": {
+    "learningStats": {
+      "title": "Lernstatistiken"
+    },
+    "progress": {
+      "title": "Lernfortschritt",
+      "completedLessons": "Abgeschlossene Lektionen",
+      "completed": "{count} Lektionen abgeschlossen",
+      "remaining": "{count} Lektionen verbleibend"
+    },
+    "performance": {
+      "title": "Lernleistung",
+      "averageAccuracy": "Durchschnittliche Genauigkeit",
+      "excellent": "Ausgezeichnet",
+      "needsImprovement": "Verbesserung erforderlich"
+    },
+    "stats": {
+      "completedLessons": "Abgeschlossene Lektionen",
+      "currentStreak": "Aktuelle Serie",
+      "streakDays": "{days} Tage",
+      "totalXP": "Gesamt-XP",
+      "currentLevel": "Aktuelles Level",
+      "level": "Level {level}"
+    }
   }
 }

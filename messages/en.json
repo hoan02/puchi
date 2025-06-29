@@ -136,5 +136,90 @@
     "technologies": "Built with modern technologies such as Next.js 15, Shadcn UI, and Clerk authentication, Puchi offers a fast, secure, and seamless learning experience. Internationalization (i18n) is a core feature, allowing users to explore content in their preferred language.",
     "creator": "Created by Lê Công Hoan, a passionate developer dedicated to leveraging technology for education.",
     "joinCommunity": "Join our community on <facebookLink>Facebook</facebookLink> to connect with other learners, or explore the project source code on <githubLink>GitHub</githubLink>."
+  },
+  "ProfileActions": {
+    "actions": {
+      "title": "Actions",
+      "accountSettings": {
+        "title": "Account Settings",
+        "description": "Manage personal information and security"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Change password and two-factor authentication"
+      },
+      "signOut": {
+        "title": "Sign Out",
+        "description": "Sign out of current account"
+      }
+    },
+    "dangerZone": {
+      "title": "Danger Zone",
+      "deleteAccount": {
+        "title": "Delete Account",
+        "description": "This action cannot be undone. All data will be permanently deleted."
+      }
+    },
+    "deleteAccount": {
+      "success": "Account deleted successfully",
+      "error": {
+        "confirmationRequired": "Please enter 'DELETE' to confirm",
+        "general": "An error occurred while deleting the account"
+      },
+      "dialog": {
+        "title": "Confirm Account Deletion",
+        "description": "This action cannot be undone. All your data will be permanently deleted.",
+        "confirmation": "To confirm, please enter <strong>DELETE</strong> in the field below.",
+        "confirmationLabel": "Confirmation",
+        "confirmationPlaceholder": "Enter DELETE to confirm",
+        "cancel": "Cancel",
+        "confirm": "Delete Account",
+        "deleting": "Deleting..."
+      }
+    }
+  },
+  "ProfileHeader": {
+    "title": "Personal Information",
+    "email": "Email",
+    "username": "Username",
+    "joinDate": "Join Date",
+    "member": "Member"
+  },
+  "ProfileForm": {
+    "title": "Edit Information",
+    "edit": "Edit",
+    "save": "Save",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "emailNote": "Email cannot be changed. Please contact support if you need to change it.",
+    "success": "Information updated successfully!",
+    "error": "An error occurred while updating information"
+  },
+  "ProfileStats": {
+    "learningStats": {
+      "title": "Learning Statistics"
+    },
+    "progress": {
+      "title": "Learning Progress",
+      "completedLessons": "Completed Lessons",
+      "completed": "{count} lessons completed",
+      "remaining": "{count} lessons remaining"
+    },
+    "performance": {
+      "title": "Learning Performance",
+      "averageAccuracy": "Average Accuracy",
+      "excellent": "Excellent",
+      "needsImprovement": "Needs Improvement"
+    },
+    "stats": {
+      "completedLessons": "Completed",
+      "currentStreak": "Current Streak",
+      "streakDays": "{days} days",
+      "totalXP": "Total XP",
+      "currentLevel": "Current Level",
+      "level": "Level {level}"
+    }
   }
 }

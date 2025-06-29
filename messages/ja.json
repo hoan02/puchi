@@ -132,9 +132,94 @@
   },
   "AboutPage": {
     "title": "Puchiについて",
-    "intro": "Puchiは、ユーザーがベトナム語を習得するのを支援するために設計された革新的なプラットフォームです。複数の言語をサポートしており、世界中の学習者にアクセス可能です。",
-    "technologies": "Next.js 15、Shadcn UI、Clerk認証などの最新技術を使用して構築されており、Puchiは高速で安全でシームレスな学習体験を提供します。国際化（i18n）は主要な機能であり、ユーザーが好みの言語でコンテンツを探索することを可能にします。",
-    "creator": "教育のためにテクノロジーを活用することに情熱を注ぐ開発者、Lê Công Hoanによって作成されました。",
-    "joinCommunity": "他の学習者とつながるために<facebookLink>Facebook</facebookLink>のコミュニティに参加するか、プロジェクトのソースコードを<githubLink>GitHub</githubLink>で探索してください。"
+    "intro": "Puchiは、ユーザーがベトナム語を習得するのを支援する革新的なプラットフォームです。多言語サポートにより、世界中の学習者がアクセスできるようになっています。",
+    "technologies": "Next.js 15、Shadcn UI、Clerk認証などの最新技術で構築されたPuchiは、高速で安全、シームレスな学習体験を提供します。国際化（i18n）は、ユーザーが好みの言語でコンテンツを探索できるようにする主要機能です。",
+    "creator": "教育における技術活用に情熱を注ぐ開発者、Lê Công Hoanによって作成されました。",
+    "joinCommunity": "<facebookLink>Facebook</facebookLink>でコミュニティに参加して他の学習者とつながるか、<githubLink>GitHub</githubLink>でプロジェクトのソースコードを探索してください。"
+  },
+  "ProfileActions": {
+    "actions": {
+      "title": "アクション",
+      "accountSettings": {
+        "title": "アカウント設定",
+        "description": "個人情報とセキュリティを管理"
+      },
+      "security": {
+        "title": "セキュリティ",
+        "description": "パスワードと二要素認証を変更"
+      },
+      "signOut": {
+        "title": "サインアウト",
+        "description": "現在のアカウントからサインアウト"
+      }
+    },
+    "dangerZone": {
+      "title": "危険区域",
+      "deleteAccount": {
+        "title": "アカウント削除",
+        "description": "この操作は取り消せません。すべてのデータが永続的に削除されます。"
+      }
+    },
+    "deleteAccount": {
+      "success": "アカウントが正常に削除されました",
+      "error": {
+        "confirmationRequired": "確認のため「DELETE」と入力してください",
+        "general": "アカウント削除中にエラーが発生しました"
+      },
+      "dialog": {
+        "title": "アカウント削除の確認",
+        "description": "この操作は取り消せません。すべてのデータが永続的に削除されます。",
+        "confirmation": "確認するには、下のフィールドに<strong>DELETE</strong>と入力してください。",
+        "confirmationLabel": "確認",
+        "confirmationPlaceholder": "確認のためDELETEと入力",
+        "cancel": "キャンセル",
+        "confirm": "アカウント削除",
+        "deleting": "削除中..."
+      }
+    }
+  },
+  "ProfileHeader": {
+    "title": "個人情報",
+    "email": "メールアドレス",
+    "username": "ユーザー名",
+    "joinDate": "登録日",
+    "member": "メンバー"
+  },
+  "ProfileForm": {
+    "title": "情報編集",
+    "edit": "編集",
+    "save": "保存",
+    "firstName": "名",
+    "lastName": "姓",
+    "username": "ユーザー名",
+    "email": "メールアドレス",
+    "emailNote": "メールアドレスは変更できません。変更が必要な場合はサポートにお問い合わせください。",
+    "success": "情報が正常に更新されました！",
+    "error": "情報更新中にエラーが発生しました"
+  },
+  "ProfileStats": {
+    "learningStats": {
+      "title": "学習統計"
+    },
+    "progress": {
+      "title": "学習進捗",
+      "completedLessons": "完了レッスン",
+      "completed": "{count}レッスン完了",
+      "remaining": "{count}レッスン残り"
+    },
+    "performance": {
+      "title": "学習パフォーマンス",
+      "averageAccuracy": "平均精度",
+      "excellent": "優秀",
+      "needsImprovement": "改善が必要"
+    },
+    "stats": {
+      "completedLessons": "完了レッスン",
+      "currentStreak": "現在の連続",
+      "streakDays": "{days}日",
+      "totalXP": "総XP",
+      "currentLevel": "現在のレベル",
+      "level": "レベル{level}"
+    }
   }
 }

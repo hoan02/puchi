@@ -131,10 +131,95 @@
     }
   },
   "AboutPage": {
-    "title": "푸치에 대하여",
-    "intro": "푸치는 사용자가 베트남어를 마스터할 수 있도록 설계된 혁신적인 플랫폼입니다. 여러 언어를 지원하여 전 세계 학습자들에게 접근성을 보장합니다.",
-    "technologies": "Next.js 15, Shadcn UI 및 Clerk 인증과 같은 최신 기술로 구축된 Puchi는 빠르고 안전하며 원활한 학습 경험을 제공합니다. 국제화(i18n)는 핵심 기능으로, 사용자가 선호하는 언어로 콘텐츠를 탐색할 수 있습니다.",
-    "creator": "교육을 위해 기술을 활용하는 데 열정을 가진 개발자 Lê Công Hoan이 제작했습니다.",
-    "joinCommunity": "<facebookLink>Facebook</facebookLink>에서 커뮤니티에 가입하여 다른 학습자와 연결하거나 <githubLink>GitHub</githubLink>에서 프로젝트 소스 코드를 탐색하세요."
+    "title": "Puchi 소개",
+    "intro": "Puchi는 사용자가 베트남어를 마스터하는 데 도움을 주는 혁신적인 플랫폼입니다. 다국어 지원으로 전 세계 학습자들이 접근할 수 있도록 보장합니다.",
+    "technologies": "Next.js 15, Shadcn UI, Clerk 인증 등 최신 기술로 구축된 Puchi는 빠르고 안전하며 원활한 학습 경험을 제공합니다. 국제화(i18n)는 사용자가 선호하는 언어로 콘텐츠를 탐색할 수 있게 하는 핵심 기능입니다.",
+    "creator": "교육을 위한 기술 활용에 열정을 가진 개발자 Lê Công Hoan이 만들었습니다.",
+    "joinCommunity": "<facebookLink>Facebook</facebookLink>에서 커뮤니티에 참여하여 다른 학습자들과 연결하거나, <githubLink>GitHub</githubLink>에서 프로젝트 소스 코드를 탐색하세요."
+  },
+  "ProfileActions": {
+    "actions": {
+      "title": "작업",
+      "accountSettings": {
+        "title": "계정 설정",
+        "description": "개인 정보 및 보안 관리"
+      },
+      "security": {
+        "title": "보안",
+        "description": "비밀번호 및 2단계 인증 변경"
+      },
+      "signOut": {
+        "title": "로그아웃",
+        "description": "현재 계정에서 로그아웃"
+      }
+    },
+    "dangerZone": {
+      "title": "위험 구역",
+      "deleteAccount": {
+        "title": "계정 삭제",
+        "description": "이 작업은 취소할 수 없습니다. 모든 데이터가 영구적으로 삭제됩니다."
+      }
+    },
+    "deleteAccount": {
+      "success": "계정이 성공적으로 삭제되었습니다",
+      "error": {
+        "confirmationRequired": "확인을 위해 'DELETE'를 입력하세요",
+        "general": "계정 삭제 중 오류가 발생했습니다"
+      },
+      "dialog": {
+        "title": "계정 삭제 확인",
+        "description": "이 작업은 취소할 수 없습니다. 모든 데이터가 영구적으로 삭제됩니다.",
+        "confirmation": "확인하려면 아래 필드에 <strong>DELETE</strong>를 입력하세요.",
+        "confirmationLabel": "확인",
+        "confirmationPlaceholder": "확인을 위해 DELETE 입력",
+        "cancel": "취소",
+        "confirm": "계정 삭제",
+        "deleting": "삭제 중..."
+      }
+    }
+  },
+  "ProfileHeader": {
+    "title": "개인 정보",
+    "email": "이메일",
+    "username": "사용자명",
+    "joinDate": "가입일",
+    "member": "회원"
+  },
+  "ProfileForm": {
+    "title": "정보 편집",
+    "edit": "편집",
+    "save": "저장",
+    "firstName": "이름",
+    "lastName": "성",
+    "username": "사용자명",
+    "email": "이메일",
+    "emailNote": "이메일은 변경할 수 없습니다. 변경이 필요한 경우 지원팀에 문의하세요.",
+    "success": "정보가 성공적으로 업데이트되었습니다!",
+    "error": "정보 업데이트 중 오류가 발생했습니다"
+  },
+  "ProfileStats": {
+    "learningStats": {
+      "title": "학습 통계"
+    },
+    "progress": {
+      "title": "학습 진행률",
+      "completedLessons": "완료된 레슨",
+      "completed": "{count}개 레슨 완료",
+      "remaining": "{count}개 레슨 남음"
+    },
+    "performance": {
+      "title": "학습 성과",
+      "averageAccuracy": "평균 정확도",
+      "excellent": "우수",
+      "needsImprovement": "개선 필요"
+    },
+    "stats": {
+      "completedLessons": "완료된 레슨",
+      "currentStreak": "현재 연속",
+      "streakDays": "{days}일",
+      "totalXP": "총 XP",
+      "currentLevel": "현재 레벨",
+      "level": "레벨 {level}"
+    }
   }
 }
