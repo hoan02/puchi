@@ -7,7 +7,7 @@ const HeaderStory = () => {
   return (
     <div className="sticky top-0 left-0 w-full h-16 z-50 bg-background border-b">
       <div className="flex h-full mx-2 md:mx-8 justify-between items-center">
-        <Link href="/learn">
+        <Link href="/welcome">
           <ChevronLeft />
         </Link>
         <div className="space-x-2">
