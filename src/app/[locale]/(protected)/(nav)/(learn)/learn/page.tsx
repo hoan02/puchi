@@ -14,10 +14,10 @@ const data = Array.from({ length: 10 }, (_, index) => ({
     "Vietnamese men rushed to learn smartphone photography to impress",
   numUnit: index + 1,
   lessons: [
-    { id: 1, type: "STORY", activePercentage: 0 },
+    { id: 1, type: "DICTATION", activePercentage: 0 },
     { id: 2, type: "LISTENING", activePercentage: 0 },
-    { id: 3, type: "UNSCRAMBLE", activePercentage: 0 },
-    { id: 4, type: "DICTATION", activePercentage: 0 },
+    { id: 3, type: "STORY", activePercentage: 0 },
+    { id: 4, type: "UNSCRAMBLE", activePercentage: 0 },
   ],
 }));
 

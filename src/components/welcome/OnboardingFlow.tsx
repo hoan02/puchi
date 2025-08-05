@@ -326,7 +326,7 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.2 }}
-                className="flex items-start gap-4 p-4 rounded-lg border border-border bg-card"
+                className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card"
               >
                 <div className="flex-shrink-0">
                   <Image

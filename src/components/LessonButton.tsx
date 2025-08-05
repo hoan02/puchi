@@ -30,7 +30,7 @@ const LessonButton = ({ index, lesson, color }: LessonButtonProps) => {
 
   const rightPosition = indentationLevel * 40;
 
-  const isFirst = lesson.type === "STORY";
+  const isFirst = lesson.type === "DICTATION";
   const isNotStarted = lesson.activePercentage === 0;
   const isCompleted = lesson.activePercentage === 100;
   const isJump = isFirst && lesson.activePercentage === 0;
