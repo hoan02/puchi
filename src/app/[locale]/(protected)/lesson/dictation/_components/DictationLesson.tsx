@@ -1,26 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { X, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import type { DictationLesson } from "@/types/dictation";
+import type { DictationLesson, DictationAnswer } from "@/types/dictation";
 import { DictationWord } from "@/types/dictation";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+import { dictationService } from "@/services/dictation.service";
 
 interface DictationLessonProps {
   lesson: DictationLesson;
-  onLessonComplete: (lesson: DictationLesson) => void;
-  onLessonFailed: (lesson: DictationLesson) => void;
-  onExit: () => void;
+  lessonId: string;
 }
 
 const DictationLessonComponent = ({
   lesson: initialLesson,
-  onLessonComplete,
-  onLessonFailed,
-  onExit,
+  lessonId,
 }: DictationLessonProps) => {
+  const router = useRouter();
   const [lesson, setLesson] = useState<DictationLesson>(initialLesson);
   const [selectedWords, setSelectedWords] = useState<DictationWord[]>([]);
   const [isChecking, setIsChecking] = useState(false);
@@ -35,6 +34,28 @@ const DictationLessonComponent = ({
   const remainingWords = currentQuestion.wordOptions.filter(
     (w) => !selectedWords.some((sw) => sw.id === w.id)
   );
+
+  const handleLessonComplete = async () => {
+    try {
+      const answers: DictationAnswer[] = []; // Collect answers from lesson
+      await dictationService.completeLesson(lessonId, answers);
+      // Optionally redirect or show success message
+      router.push("/dictation"); // or wherever you want to redirect
+    } catch (error) {
+      console.error("Failed to complete lesson:", error);
+    }
+  };
+
+  const handleLessonFailed = () => {
+    // Handle lesson failure (out of lives)
+    console.log("Lesson failed - out of lives");
+    // Optionally redirect or show failure message
+    router.push("/dictation"); // or wherever you want to redirect
+  };
+
+  const handleExit = () => {
+    router.back();
+  };
 
   const handleWordSelect = (word: DictationWord) => {
     if (isChecking) return;
@@ -82,7 +103,7 @@ const DictationLessonComponent = ({
             score: lesson.score + 10,
           };
           setLesson(completedLesson);
-          onLessonComplete(completedLesson);
+          handleLessonComplete();
         }
       } else {
         const failedLesson = {
@@ -91,7 +112,7 @@ const DictationLessonComponent = ({
         };
         setLesson(failedLesson);
         if (failedLesson.lives <= 0) {
-          onLessonFailed(failedLesson);
+          handleLessonFailed();
         }
       }
     }, 2000);
@@ -109,7 +130,7 @@ const DictationLessonComponent = ({
     setLesson(updatedLesson);
     setSelectedWords([]);
     if (updatedLesson.lives <= 0) {
-      onLessonFailed(updatedLesson);
+      handleLessonFailed();
     }
   };
 
@@ -119,7 +140,7 @@ const DictationLessonComponent = ({
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Lesson Completed!</h1>
           <p className="text-muted-foreground mb-4">Score: {lesson.score}</p>
-          <Button onClick={onExit}>Exit</Button>
+          <Button onClick={handleExit}>Exit</Button>
         </div>
       </div>
     );
@@ -131,7 +152,7 @@ const DictationLessonComponent = ({
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Out of Lives!</h1>
           <p className="text-muted-foreground mb-4">Try again later</p>
-          <Button onClick={onExit}>Exit</Button>
+          <Button onClick={handleExit}>Exit</Button>
         </div>
       </div>
     );
@@ -141,7 +162,7 @@ const DictationLessonComponent = ({
     <div className="min-h-screen max-w-screen-lg w-full mx-auto bg-background flex flex-col">
       {/* Top Bar */}
       <div className="flex items-center justify-between p-4 border-b border-border">
-        <Button variant="ghost" size="icon" onClick={onExit}>
+        <Button variant="ghost" size="icon" onClick={handleExit}>
           <X className="h-5 w-5" />
         </Button>
         <div className="flex-1 mx-4">

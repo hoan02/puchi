@@ -1,5 +1,7 @@
 import LoadingCustom from "@/components/LoadingCustom";
 
-export default function Loading() {
+const TestPage = () => {
   return <LoadingCustom />;
-}
+};
+
+export default TestPage;

@@ -1,5 +1,7 @@
-import { use } from "react";
-import DictationPageClient from "./DictationPageClient";
+import { Suspense } from "react";
+import LoadingCustom from "@/components/LoadingCustom";
+import { dictationService } from "@/services/dictation.service";
+import DictationLessonComponent from "../_components/DictationLesson";
 
 interface DictationPageProps {
   params: Promise<{
@@ -7,10 +9,15 @@ interface DictationPageProps {
   }>;
 }
 
-const DictationPage = ({ params }: DictationPageProps) => {
-  const { id } = use(params);
+const DictationPage = async ({ params }: DictationPageProps) => {
+  const { id } = await params;
+  const lessonData = await dictationService.getLesson(id);
 
-  return <DictationPageClient lessonId={id} />;
+  return (
+    <Suspense fallback={<LoadingCustom />}>
+      <DictationLessonComponent lesson={lessonData} lessonId={id} />
+    </Suspense>
+  );
 };
 
 export default DictationPage;

@@ -21,7 +21,7 @@ const OnboardingComplete = ({
   ];
 
   return (
-    <div className="min-h-screen bg-background flex flex-col p-6 max-w-2xl mx-auto w-full">
+    <div className="min-h-screen bg-background flex flex-col justify-center p-6 max-w-2xl mx-auto w-full">
       {/* Success Icon */}
       <div className="flex justify-center mb-6">
         <CheckCircle className="w-16 h-16 text-green-500" />
