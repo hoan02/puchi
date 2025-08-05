@@ -66,12 +66,12 @@ const config: NextConfig = {
   experimental: {
     globalNotFound: true,
     // typedRoutes: true, // Uncomment if needed
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js",
-        },
+  },
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
     },
   },
