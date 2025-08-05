@@ -64,6 +64,7 @@ const config: NextConfig = {
 
   // Additional configuration options
   experimental: {
+    globalNotFound: true,
     // typedRoutes: true, // Uncomment if needed
     turbo: {
       rules: {
