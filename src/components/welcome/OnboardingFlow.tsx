@@ -250,9 +250,9 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
           <span className="text-xs sm:text-sm text-muted-foreground">
             Step {currentStep + 1} of {conversations.length}
           </span>
-          <span className="text-xs sm:text-sm font-medium">
+          {/* <span className="text-xs sm:text-sm font-medium">
             {Math.round(progress)}%
-          </span>
+          </span> */}
         </div>
         <Progress value={progress} className="h-2" />
       </div>
@@ -366,7 +366,7 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
                   <Button
                     variant={
                       answers[currentStep] === option.text
-                        ? "primary"
+                        ? "secondary"
                         : "default"
                     }
                     className="w-full justify-start text-sm sm:text-base py-3 sm:py-2"
@@ -405,6 +405,7 @@ const OnboardingFlow = ({ onComplete }: OnboardingFlowProps) => {
         <Button
           onClick={handleContinue}
           disabled={!hasAnswered}
+          variant="primary"
           className="ml-auto text-sm sm:text-base"
         >
           {currentStep === conversations.length - 1 ? "Finished" : "Continue"}
