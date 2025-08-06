@@ -1,14 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { X, Heart } from "lucide-react";
+import { X, Heart, Play } from "lucide-react";
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+
+import type {
+  DictationLesson,
+  DictationAnswer,
+  DictationWord,
+} from "@/types/dictation";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import type { DictationLesson, DictationAnswer } from "@/types/dictation";
-import { DictationWord } from "@/types/dictation";
-import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { dictationService } from "@/services/dictation.service";
+import { shuffleArray } from "@/utils/shuffle-array";
 
 interface DictationLessonProps {
   lesson: DictationLesson;
@@ -22,6 +27,7 @@ const DictationLessonComponent = ({
   const router = useRouter();
   const [lesson, setLesson] = useState<DictationLesson>(initialLesson);
   const [selectedWords, setSelectedWords] = useState<DictationWord[]>([]);
+  const [shuffledWords, setShuffledWords] = useState<DictationWord[]>([]);
   const [isChecking, setIsChecking] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -30,27 +36,32 @@ const DictationLessonComponent = ({
   const progress =
     ((lesson.currentQuestionIndex + 1) / lesson.totalQuestions) * 100;
 
-  // Tách các từ chưa chọn
-  const remainingWords = currentQuestion.wordOptions.filter(
+  // Shuffle từ khi đổi câu hỏi
+  useEffect(() => {
+    setShuffledWords(shuffleArray(currentQuestion.wordOptions));
+    setSelectedWords([]); // reset chọn từ
+  }, [currentQuestion.wordOptions, lesson.currentQuestionIndex]);
+
+  const remainingWords = shuffledWords.filter(
     (w) => !selectedWords.some((sw) => sw.id === w.id)
+  );
+
+  const isCompoundSentence = currentQuestion.correctAnswers.some(
+    (answer) => answer.length > 1
   );
 
   const handleLessonComplete = async () => {
     try {
-      const answers: DictationAnswer[] = []; // Collect answers from lesson
+      const answers: DictationAnswer[] = []; // TODO: Collect user answers history
       await dictationService.completeLesson(lessonId, answers);
-      // Optionally redirect or show success message
-      router.push("/dictation"); // or wherever you want to redirect
+      router.push("/dictation");
     } catch (error) {
       console.error("Failed to complete lesson:", error);
     }
   };
 
   const handleLessonFailed = () => {
-    // Handle lesson failure (out of lives)
-    console.log("Lesson failed - out of lives");
-    // Optionally redirect or show failure message
-    router.push("/dictation"); // or wherever you want to redirect
+    router.push("/dictation");
   };
 
   const handleExit = () => {
@@ -70,50 +81,44 @@ const DictationLessonComponent = ({
   const handleCheck = () => {
     if (selectedWords.length === 0) return;
     setIsChecking(true);
-    const userAnswer = selectedWords.map((w) => w.text).join(" ");
 
-    // Get all correct answers from word options
-    const correctAnswers = currentQuestion.wordOptions
-      .filter((w) => w.isCorrect)
-      .map((w) => w.text.toLowerCase());
+    const userAnswerIds = selectedWords.map((w) => w.id);
 
-    // Check if user answer matches any correct answer
-    const correct = correctAnswers.includes(userAnswer.toLowerCase());
+    const correct = currentQuestion.correctAnswers.some((answerSet) => {
+      if (answerSet.length !== userAnswerIds.length) return false;
+      return answerSet.every((id, index) => id === userAnswerIds[index]);
+    });
 
     setIsCorrect(correct);
     setShowResult(true);
+
     setTimeout(() => {
       setShowResult(false);
       setIsChecking(false);
       setSelectedWords([]);
       if (correct) {
         if (lesson.currentQuestionIndex < lesson.totalQuestions - 1) {
-          const updatedLesson = {
-            ...lesson,
-            currentQuestionIndex: lesson.currentQuestionIndex + 1,
+          setLesson((prev) => ({
+            ...prev,
+            currentQuestionIndex: prev.currentQuestionIndex + 1,
             progress:
-              ((lesson.currentQuestionIndex + 2) / lesson.totalQuestions) * 100,
-            score: lesson.score + 10,
-          };
-          setLesson(updatedLesson);
+              ((prev.currentQuestionIndex + 2) / prev.totalQuestions) * 100,
+            score: prev.score + 10,
+          }));
         } else {
-          const completedLesson = {
-            ...lesson,
+          setLesson((prev) => ({
+            ...prev,
             isCompleted: true,
-            score: lesson.score + 10,
-          };
-          setLesson(completedLesson);
+            score: prev.score + 10,
+          }));
           handleLessonComplete();
         }
       } else {
-        const failedLesson = {
-          ...lesson,
-          lives: lesson.lives - 1,
-        };
-        setLesson(failedLesson);
-        if (failedLesson.lives <= 0) {
-          handleLessonFailed();
-        }
+        setLesson((prev) => {
+          const updated = { ...prev, lives: prev.lives - 1 };
+          if (updated.lives <= 0) handleLessonFailed();
+          return updated;
+        });
       }
     }, 2000);
   };
@@ -186,21 +191,43 @@ const DictationLessonComponent = ({
               <span className="text-white text-xs">💀</span>
             </div>
           )}
+          {isCompoundSentence && (
+            <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+              SENTENCE
+            </div>
+          )}
         </div>
 
-        {/* Instruction */}
         <h2 className="text-xl font-bold text-center mb-4">
           {currentQuestion.instruction}
         </h2>
 
-        {/* Target Word */}
+        {isCompoundSentence && selectedWords.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="w-full max-w-md mx-auto mb-6 p-3 bg-blue-50 border border-blue-200 rounded-lg"
+          >
+            <div className="text-sm text-blue-700 text-center">
+              💡 <strong>Tip:</strong> Select words in the correct order to form
+              a sentence.
+            </div>
+          </motion.div>
+        )}
+
         <div className="text-center mb-8">
           <div className="text-2xl font-bold text-purple-500 mb-2">
             {currentQuestion.targetWord}
           </div>
+          {currentQuestion.audioUrl && (
+            <Button variant="ghost" size="sm" className="mt-2">
+              <Play className="h-4 w-4 mr-2" />
+              Listen
+            </Button>
+          )}
         </div>
 
-        {/* Answer Line (Selected Words) */}
+        {/* Selected Words */}
         <div className="relative w-full flex flex-col items-center mb-8">
           <div className="flex flex-wrap gap-2 min-h-[48px] items-center justify-center w-full z-10">
             <AnimatePresence>
@@ -211,12 +238,7 @@ const DictationLessonComponent = ({
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.8, opacity: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 500,
-                    damping: 30,
-                    mass: 1,
-                  }}
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 >
                   <Button
                     variant="secondary"
@@ -240,11 +262,10 @@ const DictationLessonComponent = ({
               />
             )}
           </div>
-          {/* Baseline border-b luôn hiển thị */}
           <div className="absolute left-0 right-0 bottom-0 w-full max-w-md mx-auto h-0.5 border-b border-muted-foreground pointer-events-none" />
         </div>
 
-        {/* Word Options (Remaining) */}
+        {/* Remaining Words */}
         <LayoutGroup>
           <div className="flex flex-wrap gap-2 w-full justify-center mb-8">
             <AnimatePresence>
@@ -255,12 +276,7 @@ const DictationLessonComponent = ({
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.8, opacity: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 500,
-                    damping: 30,
-                    mass: 1,
-                  }}
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

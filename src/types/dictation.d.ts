@@ -1,7 +1,6 @@
 export interface DictationWord {
   id: string;
   text: string;
-  isCorrect: boolean;
 }
 
 export interface DictationQuestion {
@@ -12,7 +11,7 @@ export interface DictationQuestion {
   targetLanguage: 'vi' | 'en';
   answerLanguage: 'vi' | 'en';
   wordOptions: DictationWord[];
-  correctAnswer: string;
+  correctAnswers: string[][]; // Array of possible correct answers (each answer is a sequence of word IDs)
   explanation?: string;
   audioUrl?: string;
 }
@@ -33,7 +32,7 @@ export interface DictationLesson {
 
 export interface DictationAnswer {
   questionId: string;
-  userAnswer: string;
+  userAnswerIds: string[]; 
   isCorrect: boolean;
   timeSpent: number;
-} 
+}
