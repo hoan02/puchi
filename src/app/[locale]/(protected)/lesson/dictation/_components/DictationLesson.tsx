@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { dictationService } from "@/services/dictation.service";
 import { shuffleArray } from "@/utils/shuffle-array";
+import { useDrawerStore } from "@/store/drawer";
 
 interface DictationLessonProps {
   lesson: DictationLesson;
@@ -25,11 +26,11 @@ const DictationLessonComponent = ({
   lessonId,
 }: DictationLessonProps) => {
   const router = useRouter();
+  const { openDrawer } = useDrawerStore();
   const [lesson, setLesson] = useState<DictationLesson>(initialLesson);
   const [selectedWords, setSelectedWords] = useState<DictationWord[]>([]);
   const [shuffledWords, setShuffledWords] = useState<DictationWord[]>([]);
   const [isChecking, setIsChecking] = useState(false);
-  const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
 
   const currentQuestion = lesson.questions[lesson.currentQuestionIndex];
@@ -90,10 +91,9 @@ const DictationLessonComponent = ({
     });
 
     setIsCorrect(correct);
-    setShowResult(true);
 
-    setTimeout(() => {
-      setShowResult(false);
+    // Create callback function for when drawer is closed
+    const handleDrawerClose = () => {
       setIsChecking(false);
       setSelectedWords([]);
       if (correct) {
@@ -120,7 +120,18 @@ const DictationLessonComponent = ({
           return updated;
         });
       }
-    }, 2000);
+    };
+
+    // Open drawer with result and callback
+    openDrawer(
+      {
+        isCorrect: correct,
+        message: correct ? "Correct!" : "Incorrect!",
+        explanation: currentQuestion.explanation,
+        score: correct ? 10 : 0,
+      },
+      handleDrawerClose
+    );
   };
 
   const handleSkip = () => {
@@ -294,28 +305,6 @@ const DictationLessonComponent = ({
             </AnimatePresence>
           </div>
         </LayoutGroup>
-
-        {/* Result Display */}
-        <AnimatePresence>
-          {showResult && (
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className={`w-full text-center mb-6 p-4 rounded-lg ${
-                isCorrect
-                  ? "bg-green-500/20 text-green-600"
-                  : "bg-red-500/20 text-red-600"
-              }`}
-            >
-              <div className="text-lg font-bold">
-                {isCorrect ? "Correct!" : "Incorrect!"}
-              </div>
-              <div className="text-sm mt-1">{currentQuestion.explanation}</div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
 
       {/* Bottom Navigation */}

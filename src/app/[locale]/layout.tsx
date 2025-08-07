@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 
 import ThemeProvider from "@/components/providers/ThemeProvider";
 import LazyMotionProvider from "@/components/providers/LazyMotionProvider";
+import { DrawerCustom } from "@/components/DrawerCustom";
 import { getBaseUrl } from "@/lib/helpers";
 import { cn } from "@/lib/utils";
 import { fonts } from "@/styles/fonts";
@@ -60,7 +61,10 @@ export default async function RootLayout({
       >
         <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <LazyMotionProvider>{children}</LazyMotionProvider>
+            <LazyMotionProvider>
+              {children}
+              <DrawerCustom />
+            </LazyMotionProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
