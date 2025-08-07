@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle, XCircle, Star, Trophy } from "lucide-react";
+import Image from "next/image";
 import {
   Drawer,
   DrawerContent,
@@ -23,6 +24,13 @@ export const DrawerCustom = () => {
   return (
     <Drawer open={isOpen} onOpenChange={closeDrawer}>
       <DrawerContent className="max-h-[80vh] max-w-screen-lg px-4 mx-auto">
+        <Image
+          alt="Panda drawer"
+          src="/images/panda/panda-drawer.png"
+          width={200}
+          height={200}
+          className="absolute -top-[86px] left-4 lg:left-10"
+        />
         <DrawerHeader className="text-center">
           <motion.div
             initial={{ scale: 0 }}
